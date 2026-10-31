@@ -22,6 +22,7 @@ export class BattleScene extends Phaser.Scene {
   private tokens = new Map<string, Token>();
   private overlay?: BattleOverlay;
   private choosing: BattleMoveView | null = null;
+  private aim: string | null = null; // the target the keyboard points at while choosing
   private queued: string | null = null;
   private ready = false;
   private finished = false;
@@ -36,6 +37,7 @@ export class BattleScene extends Phaser.Scene {
     this.tokens = new Map();
     this.overlay = undefined;
     this.choosing = null;
+    this.aim = null;
     this.queued = null;
     this.ready = false;
     this.finished = false;
@@ -46,6 +48,7 @@ export class BattleScene extends Phaser.Scene {
     this.events.once(Phaser.Scenes.Events.SHUTDOWN, this.onShutdown, this);
     this.cameras.main.setBackgroundColor('#1a1d16');
     this.scale.on(Phaser.Scale.Events.RESIZE, this.relayout, this);
+    window.addEventListener('keydown', this.onKey);
     void this.connect(data.seat);
   }
 
@@ -102,8 +105,43 @@ export class BattleScene extends Phaser.Scene {
       const pickable = !!move && !t.fighter.downed && (allies ? t.fighter.side === 'party' : t.fighter.side === 'enemy');
       t.ring.setVisible(pickable).setStrokeStyle(3, 0xffffff, 0.9);
     }
+    this.aim = this.pickable()[0]?.fighter.id ?? null;
+    this.showAim();
     this.mark();
   }
+
+  private pickable(): Token[] {
+    return [...this.tokens.values()].filter((t) => t.ring.visible);
+  }
+
+  private showAim(): void {
+    for (const t of this.pickable()) t.ring.setStrokeStyle(t.fighter.id === this.aim ? 5 : 3, t.fighter.id === this.aim ? 0xf5d06f : 0xffffff, 0.9);
+  }
+
+  // While a move waits for a target: arrows or Tab move the aim, Enter or Space uses it, Esc puts the move back.
+  // The move keys 1-8 are the overlay's.
+  private onKey = (e: KeyboardEvent) => {
+    if (!this.choosing) return;
+    const all = this.pickable();
+    const i = all.findIndex((t) => t.fighter.id === this.aim);
+    switch (e.code) {
+      case 'ArrowRight': case 'ArrowDown': case 'Tab': case 'KeyD': case 'KeyS':
+        e.preventDefault();
+        this.aim = all[(i + 1) % all.length]?.fighter.id ?? null;
+        return this.showAim();
+      case 'ArrowLeft': case 'ArrowUp': case 'KeyA': case 'KeyW':
+        e.preventDefault();
+        this.aim = all[(i - 1 + all.length) % all.length]?.fighter.id ?? null;
+        return this.showAim();
+      case 'Enter': case 'Space': {
+        e.preventDefault();
+        const t = all[i];
+        if (t) this.target(t);
+        return;
+      }
+      case 'Escape': return this.setChoosing(null);
+    }
+  };
 
   private target(t: Token): void {
     if (!this.choosing || !t.ring.visible) return;
@@ -174,6 +212,7 @@ export class BattleScene extends Phaser.Scene {
 
   private onShutdown(): void {
     this.scale.off(Phaser.Scale.Events.RESIZE, this.relayout, this);
+    window.removeEventListener('keydown', this.onKey);
     this.time.removeAllEvents();
     this.tweens.killAll();
     this.overlay?.destroy();

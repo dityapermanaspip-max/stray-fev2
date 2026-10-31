@@ -34,3 +34,12 @@
 }
 .town-panel .recipe small { grid-column: 1; color: #c9c1ad; font-size: 13px; }
 .town-panel .recipe button { grid-column: 2; grid-row: 1 / span 2; }
+.ask-panel { top: auto; bottom: 88px; left: 50%; right: auto; transform: translateX(-50%); width: min(420px, calc(100% - 32px)); text-align: center; }
+.ask-panel .choices { display: flex; gap: 12px; justify-content: center; margin-top: 8px; }
+.ask-panel .choices button { min-width: 96px; font-size: 18px; }
+.service-panel .shop-tools { display: flex; gap: 6px; justify-content: flex-end; margin: 4px 0; }
+.service-panel button.lit { border-color: #f5d06f; background: #3a3220; }
+.map-toggle {
+  position: fixed; top: 16px; right: 68px; z-index: 11; width: 44px; height: 44px; font-size: 20px;
+  color: #f2ead8; background: #15181ccc; border: 1px solid #4a4a4a; border-radius: 8px; cursor: pointer;
+}

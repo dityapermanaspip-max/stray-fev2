@@ -1,10 +1,11 @@
-import type { GearRequest, LoadoutRequest, StatusPanel } from '../../../stray-bev1/shared/town.ts';
+import type { EatRequest, GearRequest, LoadoutRequest, StatusPanel } from '../../../stray-bev1/shared/town.ts';
 import './town.css';
 
 // The status window: body words, the move slots and known moves, and the bag. Text comes from the server.
 // In a town's square: pick a known move, then a slot, to place it (✕ empties a slot); ⇡ wears an item, ⇣ takes it off.
+// Anywhere: 🍴 eats a food item.
 
-export type StatusActions = { loadout: (req: LoadoutRequest) => void; gear: (req: GearRequest) => void };
+export type StatusActions = { loadout: (req: LoadoutRequest) => void; gear: (req: GearRequest) => void; eat: (req: EatRequest) => void };
 
 export class StatusWindow {
   private root = document.createElement('div');
@@ -68,6 +69,7 @@ export class StatusWindow {
             ? this.button('⇣', () => this.act.gear({ remove: item.slot! }))
             : this.button('⇡', () => this.act.gear({ wear: item.ref })));
         }
+        if (item.edible) li.append(this.button('🍴', () => this.act.eat({ ref: item.ref })));
         bag.append(li);
       }
       this.root.append(bag);

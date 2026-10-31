@@ -4,4 +4,5 @@ export const SceneKeys = {
   Login: 'login',
   Field: 'field',
   Battle: 'battle',
+  WorldMap: 'world-map',
 } as const;

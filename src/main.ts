@@ -3,6 +3,7 @@ import { BattleScene } from './scenes/battle_scene.ts';
 import { BootScene } from './scenes/boot_scene.ts';
 import { FieldScene } from './scenes/field_scene.ts';
 import { LoginScene } from './scenes/login_scene.ts';
+import { WorldMapScene } from './scenes/world_map_scene.ts';
 
 // The client only renders server state and sends requests.
 new Phaser.Game({
@@ -13,5 +14,5 @@ new Phaser.Game({
     mode: Phaser.Scale.RESIZE,
     autoCenter: Phaser.Scale.CENTER_BOTH,
   },
-  scene: [BootScene, LoginScene, FieldScene, BattleScene],
+  scene: [BootScene, LoginScene, FieldScene, BattleScene, WorldMapScene],
 });

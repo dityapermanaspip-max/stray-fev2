@@ -8,9 +8,12 @@ import './town.css';
 const COIN = '◎'; // copper mark next to prices and the purse
 const BUY = '⇲'; // the shelf: tap a price to buy one
 const SELL = '⇱'; // the bag: tap a price to sell one
+const HAGGLE = '⚖'; // try to haggle (one try per visit; shown only when the keeper is open to it)
+const GENEROUS = '♡'; // while lit, the next trades pay over or take under the price
 
 export class ServicePanel {
   private root = document.createElement('div');
+  private generous = false; // kept while the panel is open
 
   constructor(private send: (req: ServiceRequest) => void) {
     this.root.className = 'town-panel service-panel';
@@ -41,8 +44,13 @@ export class ServicePanel {
     };
     const count = (qty: number) => (qty > 1 ? ` ×${qty}` : '');
     if (v.shop) {
-      list(BUY, v.shop.wares.map((w) => ({ label: `${w.name}${count(w.qty)}`, price: w.price, can: w.price <= v.purse, req: { action: 'buy', key: w.key } })));
-      list(SELL, v.shop.offers.map((o) => ({ label: `${o.name}${count(o.qty)}`, price: o.price, can: o.price > 0, req: { action: 'sell', ref: o.ref } })));
+      const g = this.generous;
+      const tools = el('div', '', 'shop-tools');
+      if (v.shop.haggle) tools.append(this.button(HAGGLE, () => this.send({ action: 'haggle' })));
+      tools.append(this.button(GENEROUS, () => { this.generous = !this.generous; this.show(v); }, g ? 'lit' : ''));
+      this.root.append(tools);
+      list(BUY, v.shop.wares.map((w) => ({ label: `${w.name}${count(w.qty)}`, price: w.price, can: w.price <= v.purse, req: { action: 'buy', key: w.key, generous: g } })));
+      list(SELL, v.shop.offers.map((o) => ({ label: `${o.name}${count(o.qty)}`, price: o.price, can: o.price > 0, req: { action: 'sell', ref: o.ref, generous: g } })));
     }
     if (v.craft) {
       for (const r of v.craft.recipes) {
@@ -57,8 +65,13 @@ export class ServicePanel {
     this.root.hidden = false;
   }
 
+  get visible(): boolean {
+    return !this.root.hidden;
+  }
+
   hide(): void {
     this.root.hidden = true;
+    this.generous = false;
   }
 
   destroy(): void {

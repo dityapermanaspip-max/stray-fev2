@@ -1,13 +1,17 @@
 import Phaser from 'phaser';
 import type { Room } from '@colyseus/sdk';
-import type { EncounterNotice, FieldLine, FieldView, TravelOrder } from '../../../stray-bev1/shared/field.ts';
+import type { AskAnswer, AskView, EncounterNotice, FieldLine, FieldView, GatherNotice, TravelOrder } from '../../../stray-bev1/shared/field.ts';
+import type { MapView } from '../../../stray-bev1/shared/map.ts';
+import { FieldKeys, nextTile } from '../field/field_keys.ts';
 import { drawGround } from '../field/ground.ts';
 import { depthAt, pickTile, tileCenter } from '../field/iso.ts';
 import { SceneKeys } from '../keys.ts';
 import { joinField, whereIs, type Seat } from '../net/game_net.ts';
+import { AskPanel, gatheredText } from '../town/ask_panel.ts';
 import { ServicePanel } from '../town/service_panel.ts';
 import { StatusWindow } from '../town/status_panel.ts';
-import type { GearRequest, LoadoutRequest, ServiceRequest, ServiceView, StatusPanel } from '../../../stray-bev1/shared/town.ts';
+import { MAP_CLOSED } from './world_map_scene.ts';
+import type { EatRequest, GearRequest, LoadoutRequest, ServiceRequest, ServiceView, StatusPanel } from '../../../stray-bev1/shared/town.ts';
 
 // The field: draws the tile grid the server sent, the players the server moves, and sends "walk to tile".
 // The client never decides where anyone is; it only animates between the tiles the server reports.
@@ -22,6 +26,7 @@ const ENCOUNTER_MS = 900; // the encounter line shows before the battle opens
 const ZOOM = { min: 0.5, max: 2, step: 0.1 };
 const SELF_COLOR = 0xf5d06f;
 const OTHER_COLOR = 0x9ec5f0;
+const KEY_STEP_MS = 120; // least time between keyboard steps sent
 
 export class FieldScene extends Phaser.Scene {
   private name = '';
@@ -32,7 +37,12 @@ export class FieldScene extends Phaser.Scene {
   private lineTimer?: Phaser.Time.TimerEvent;
   private travelling = false;
   private service?: ServicePanel;
+  private askPanel?: AskPanel;
   private status?: StatusWindow;
+  private keys?: FieldKeys;
+  private mapButton?: HTMLButtonElement;
+  private mapOpen = false;
+  private lastKeyStep = 0;
 
   constructor() {
     super(SceneKeys.Field);
@@ -44,6 +54,8 @@ export class FieldScene extends Phaser.Scene {
     this.view = undefined;
     this.shown = new Map();
     this.travelling = false;
+    this.mapOpen = false;
+    this.lastKeyStep = 0;
   }
 
   create(): void {
@@ -58,10 +70,22 @@ export class FieldScene extends Phaser.Scene {
     this.input.on(Phaser.Input.Events.POINTER_DOWN, this.onPointer, this);
     this.input.on(Phaser.Input.Events.POINTER_WHEEL, this.onWheel, this);
     this.service = new ServicePanel((req) => void this.ask<ServiceView>('service', req).then((v) => v && this.service?.show(v)));
+    this.askPanel = new AskPanel((yes) => this.room?.send('answer', { yes } satisfies AskAnswer));
     this.status = new StatusWindow(() => void this.refreshStatus('status'), {
       loadout: (req: LoadoutRequest) => void this.refreshStatus('loadout', req),
       gear: (req: GearRequest) => void this.refreshStatus('gear', req),
+      eat: (req: EatRequest) => void this.refreshStatus('eat', req),
     });
+    this.keys = new FieldKeys({
+      confirm: () => this.askPanel?.choose(true),
+      cancel: () => this.cancel(),
+      map: () => (this.mapOpen ? this.closeMap() : void this.openMap()),
+      status: () => (this.status?.visible ? this.status.hide() : void this.refreshStatus('status')),
+      zoom: (dir) => this.zoomBy(dir),
+    });
+    this.mapButton = Object.assign(document.createElement('button'), { type: 'button', className: 'map-toggle', textContent: '◈' });
+    this.mapButton.addEventListener('click', () => (this.mapOpen ? this.closeMap() : void this.openMap()));
+    document.body.append(this.mapButton);
     void this.connect();
   }
 
@@ -77,6 +101,8 @@ export class FieldScene extends Phaser.Scene {
       room.onMessage('travel', (order: TravelOrder) => this.travel(order));
       room.onMessage('encounter', (notice: EncounterNotice) => this.encounter(notice));
       room.onMessage('service', (v: ServiceView) => this.service?.show(v));
+      room.onMessage('ask', (v: AskView) => this.askPanel?.show(v));
+      room.onMessage('gathered', (n: GatherNotice) => this.showLine({ key: 'gathered', text: gatheredText(n) }));
       room.onLeave(() => {
         if (this.room === room && !this.travelling && this.scene.isActive()) this.scene.start(SceneKeys.Login);
       });
@@ -97,7 +123,7 @@ export class FieldScene extends Phaser.Scene {
     }
   }
 
-  private async refreshStatus(type: string, payload?: LoadoutRequest | GearRequest | ServiceRequest): Promise<void> {
+  private async refreshStatus(type: string, payload?: LoadoutRequest | GearRequest | EatRequest | ServiceRequest): Promise<void> {
     const panel = await this.ask<StatusPanel>(type, payload);
     if (panel) this.status?.show(panel);
   }
@@ -116,6 +142,48 @@ export class FieldScene extends Phaser.Scene {
         this.shown.delete(id);
       }
     }
+    this.keyWalk(players.get(this.room!.sessionId));
+  }
+
+  // Held arrow / WASD keys: one tile at a time, sent when the last step is done. A blocked diagonal tries its sides.
+  private keyWalk(me: SyncedPlayer | undefined): void {
+    const step = this.keys?.step();
+    if (!step || !me || me.walking || this.mapOpen || this.travelling || this.time.now - this.lastKeyStep < KEY_STEP_MS) return;
+    const tile = nextTile(this.view!, me, step);
+    if (!tile) return this.keys?.took(); // a tap into a wall is dropped
+    this.lastKeyStep = this.time.now;
+    this.keys?.took();
+    this.walkTo(tile);
+  }
+
+  private walkTo(tile: { x: number; y: number }): void {
+    this.room?.send('walk', tile);
+    this.service?.hide(); // walking away from a door closes it
+    this.askPanel?.hide(); // and drops the question (the server drops it too)
+  }
+
+  // Esc: close the map, else say no to the question, else close the door panel, else the status window.
+  private cancel(): void {
+    if (this.mapOpen) return this.closeMap();
+    if (this.askPanel?.visible) return this.askPanel.choose(false);
+    if (this.service?.visible) return this.service.hide();
+    if (this.status?.visible) this.status.hide();
+  }
+
+  private async openMap(): Promise<void> {
+    if (this.mapOpen) return;
+    const view = await this.ask<MapView>('map');
+    if (!view || this.mapOpen || !this.scene.isActive()) return;
+    this.mapOpen = true;
+    this.keys?.clear();
+    this.scene.launch(SceneKeys.WorldMap, { view });
+    this.scene.get(SceneKeys.WorldMap).events.once(MAP_CLOSED, () => { this.mapOpen = false; });
+  }
+
+  private closeMap(): void {
+    if (!this.mapOpen) return;
+    this.mapOpen = false;
+    this.scene.stop(SceneKeys.WorldMap);
   }
 
   private heightAt(x: number, y: number): number {
@@ -155,11 +223,10 @@ export class FieldScene extends Phaser.Scene {
   }
 
   private onPointer(pointer: Phaser.Input.Pointer): void {
-    if (!this.room || !this.view || this.travelling) return;
+    if (!this.room || !this.view || this.travelling || this.mapOpen) return;
     const tile = pickTile(this.view, pointer.worldX, pointer.worldY);
     if (!tile) return;
-    this.room.send('walk', tile);
-    this.service?.hide(); // walking away from a door closes it
+    this.walkTo(tile);
     this.markTarget(tile.x, tile.y);
   }
 
@@ -170,8 +237,12 @@ export class FieldScene extends Phaser.Scene {
   }
 
   private onWheel(_p: Phaser.Input.Pointer, _o: unknown, _dx: number, dy: number): void {
+    if (!this.mapOpen) this.zoomBy(dy > 0 ? -1 : 1);
+  }
+
+  private zoomBy(dir: 1 | -1): void {
     const cam = this.cameras.main;
-    cam.setZoom(Phaser.Math.Clamp(cam.zoom - Math.sign(dy) * ZOOM.step, ZOOM.min, ZOOM.max));
+    cam.setZoom(Phaser.Math.Clamp(cam.zoom + dir * ZOOM.step, ZOOM.min, ZOOM.max));
   }
 
   private placeLine(): void {
@@ -214,7 +285,11 @@ export class FieldScene extends Phaser.Scene {
     this.time.removeAllEvents();
     this.tweens.killAll();
     this.service?.destroy();
+    this.askPanel?.destroy();
     this.status?.destroy();
+    this.keys?.destroy();
+    this.mapButton?.remove();
+    if (this.mapOpen) this.scene.stop(SceneKeys.WorldMap);
     if (!this.travelling) void this.room?.leave();
   }
 }
