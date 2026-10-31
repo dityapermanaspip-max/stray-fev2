@@ -2,7 +2,7 @@ import type { ServiceRequest, ServiceView } from '../../../stray-bev1/shared/tow
 import './town.css';
 
 // The panel a town door opens: the service's name, what the player hears, and its actions.
-// Inn: rest for a price. Shop: the shelf (count, price for one) and what it would pay for each thing in the bag.
+// Inn: rest for a price. Shop: the shelf of finished goods (count, price for one) and what it would pay for each thing in the bag.
 // Craftsmen: recipes with what they take, what the player has, and the fee. Money and counts are the only numbers.
 
 const COIN = '◎'; // copper mark next to prices and the purse
@@ -50,7 +50,7 @@ export class ServicePanel {
         const needs = r.inputs.map((x) => `${x.name} ${x.have}/${x.qty}`).join(' · ');
         const b = this.button(`${COIN} ${r.fee}`, () => this.send({ action: 'craft', name: r.name }));
         b.disabled = r.inputs.some((x) => x.have < x.qty) || r.fee > v.purse;
-        box.append(el('span', `${r.output}${count(r.qty)}`), el('small', `← ${needs}`), b);
+        box.append(el('span', r.outputs.map((x) => `${x.name}${count(x.qty)}`).join(' · ')), el('small', `← ${needs}`), b);
         this.root.append(box);
       }
     }
