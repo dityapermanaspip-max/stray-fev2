@@ -17,12 +17,14 @@ const SCREEN: Record<'up' | 'down' | 'left' | 'right', Step> = {
 };
 
 // The tile a keyboard step lands on: the step itself, or one of its two sides when a diagonal is blocked.
-// Only a walkable tile on the map; the server still decides whether the walk happens.
+// Only a walkable tile on the map, or a resource node (a step into one asks to work it from where you stand);
+// the server still decides whether the walk happens.
 export function nextTile(v: FieldView, at: { x: number; y: number }, step: Step): { x: number; y: number } | null {
   const tries = [step, { dx: step.dx, dy: 0 }, { dx: 0, dy: step.dy }].filter((t) => t.dx !== 0 || t.dy !== 0);
   for (const t of tries) {
     const x = at.x + t.dx, y = at.y + t.dy;
     if (x >= 0 && y >= 0 && x < v.width && y < v.height && v.tiles[y * v.width + x]?.w) return { x, y };
+    if ((t.dx === 0 || t.dy === 0) && v.nodes.some((n) => n.x === x && n.y === y)) return { x, y };
   }
   return null;
 }

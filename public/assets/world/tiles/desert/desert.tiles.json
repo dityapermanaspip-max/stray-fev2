@@ -1,0 +1,103 @@
+{
+  "about": "How the field uses this biome's sheets. Same fields as meadow/meadow.tiles.json (see its about). Objects and water only so far: desert is not in TILE_BIOMES until a ground sheet exists.",
+  "sheets": [
+    {
+      "file": "desert_nobg_objects_r1.png",
+      "names": [
+        "desert_ore_01",
+        "desert_rocks",
+        "desert_succulent",
+        "desert_dead_tree",
+        "desert_thorn_bush",
+        "desert_ore_crystal"
+      ]
+    },
+    {
+      "file": "desert_nobg_water_r1.png",
+      "names": [
+        "desert_oasis_shore_top",
+        "desert_oasis_shore_ur",
+        "desert_oasis_shore_right",
+        "desert_oasis_shore_ul",
+        "desert_oasis_open",
+        "desert_oasis_shore_lr",
+        "desert_oasis_shore_left",
+        "desert_oasis_shore_ll",
+        "desert_oasis_shore_bottom",
+        "desert_oasis_lily",
+        "desert_oasis_frog",
+        "desert_oasis_reeds",
+        "desert_oasis_lotus",
+        "desert_oasis_fish",
+        "desert_oasis_deep"
+      ]
+    }
+  ],
+  "slopes": {},
+  "filler": "desert_rocks",
+  "block_levels": 2,
+  "terrain": {
+    "rock": [
+      "desert_rocks"
+    ],
+    "dry_bush": [
+      "desert_thorn_bush"
+    ],
+    "water": {
+      "edge": [],
+      "inner": [
+        "desert_oasis_open",
+        "desert_oasis_open",
+        "desert_oasis_open",
+        "desert_oasis_open",
+        "desert_oasis_open",
+        "desert_oasis_lily",
+        "desert_oasis_frog",
+        "desert_oasis_reeds",
+        "desert_oasis_lotus",
+        "desert_oasis_fish",
+        "desert_oasis_deep"
+      ]
+    }
+  },
+  "node": {
+    "rock": [
+      "desert_ore_01",
+      "desert_ore_crystal"
+    ],
+    "herb": [
+      "desert_succulent"
+    ]
+  },
+  "marker": [
+    "cactus"
+  ],
+  "marker_ground": "sand",
+  "slope": {},
+  "mirror": {
+    "desert_oasis_shore_ul_m": "desert_oasis_shore_ul",
+    "desert_oasis_shore_ur_m": "desert_oasis_shore_ur",
+    "desert_oasis_shore_lr_m": "desert_oasis_shore_lr",
+    "desert_oasis_shore_ll_m": "desert_oasis_shore_ll"
+  },
+  "bank": {
+    "water": {
+      "lr": [
+        "desert_oasis_shore_ul",
+        "desert_oasis_shore_ur_m"
+      ],
+      "ll": [
+        "desert_oasis_shore_ur",
+        "desert_oasis_shore_ul_m"
+      ],
+      "ul": [
+        "desert_oasis_shore_lr",
+        "desert_oasis_shore_ll_m"
+      ],
+      "ur": [
+        "desert_oasis_shore_ll",
+        "desert_oasis_shore_lr_m"
+      ]
+    }
+  }
+}

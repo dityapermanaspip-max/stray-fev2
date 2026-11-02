@@ -1,0 +1,44 @@
+{
+  "about": "Actor sheets for `npm run actors:slice -- characters/human/tourist/tourist`. sheets: 3 x 5 poses each, names in reading order (rows by the feet, left to right; null skips). Front poses face down-right (+x), back poses face up-left (-x); the client mirrors them for +y and -y. shadow: the sheets have their own shadow under the feet (the client then draws none). anims: name -> frames, frames per second, repeat (-1 loops).",
+  "shadow": true,
+  "sheets": [
+    {
+      "file": "tourist_field_nobg.png",
+      "names": ["idle_1", "idle_2", "idle_3", "walk_1", "walk_2", "walk_3", "stand", "jump", "land", "crouch", "pick_up", "gather", "hands_on_hips", "tired", "sit"]
+    },
+    {
+      "file": "tourist_fieldback_nobg.png",
+      "names": ["back_idle_1", "back_idle_2", "back_idle_3", "back_walk_1", "back_walk_2", "back_walk_3", "back_stand", "back_jump", "back_land", "back_crouch", "back_pick_up", "back_gather", "back_hands_on_hips", "back_tired", "back_sit"]
+    },
+    {
+      "file": "tourist_battle_nobg.png",
+      "names": ["stance_1", "stance_2", "guard", "punch_1", "punch_2", "punch_3", "kick_1", "kick_2", "dodge", "hurt", "stagger", "down", "cheer", "potion", "rest"]
+    },
+    {
+      "file": "tourist_battleback_nobg.png",
+      "names": ["back_stance_1", "back_stance_2", "back_guard", "back_punch_1", "back_punch_2", "back_punch_3", "back_kick_1", "back_kick_2", "back_dodge", "back_hurt", "back_stagger", "back_down", "back_cheer", "back_potion", "back_rest"]
+    }
+  ],
+  "anims": {
+    "idle_front": { "frames": ["idle_1", "idle_2", "idle_3", "idle_2"], "fps": 3, "repeat": -1 },
+    "idle_back": { "frames": ["back_idle_1", "back_idle_2", "back_idle_3", "back_idle_2"], "fps": 3, "repeat": -1 },
+    "walk_front": { "frames": ["walk_1", "walk_2", "walk_3", "walk_2"], "fps": 7, "repeat": -1 },
+    "walk_back": { "frames": ["back_walk_1", "back_walk_2", "back_walk_3", "back_walk_2"], "fps": 7, "repeat": -1 },
+    "stance_front": { "frames": ["stance_1", "stance_2"], "fps": 2, "repeat": -1 },
+    "stance_back": { "frames": ["back_stance_1", "back_stance_2"], "fps": 2, "repeat": -1 },
+    "punch_front": { "frames": ["punch_1", "punch_2", "punch_3"], "fps": 10, "repeat": 0 },
+    "punch_back": { "frames": ["back_punch_1", "back_punch_2", "back_punch_3"], "fps": 10, "repeat": 0 },
+    "kick_front": { "frames": ["kick_1", "kick_2"], "fps": 7, "repeat": 0 },
+    "kick_back": { "frames": ["back_kick_1", "back_kick_2"], "fps": 7, "repeat": 0 },
+    "hurt_front": { "frames": ["hurt"], "fps": 3, "repeat": 0 },
+    "hurt_back": { "frames": ["back_hurt"], "fps": 3, "repeat": 0 },
+    "stagger_front": { "frames": ["stagger"], "fps": 2, "repeat": 0 },
+    "stagger_back": { "frames": ["back_stagger"], "fps": 2, "repeat": 0 },
+    "dodge_front": { "frames": ["dodge"], "fps": 3, "repeat": 0 },
+    "dodge_back": { "frames": ["back_dodge"], "fps": 3, "repeat": 0 },
+    "down_front": { "frames": ["down"], "fps": 1, "repeat": -1 },
+    "down_back": { "frames": ["back_down"], "fps": 1, "repeat": -1 },
+    "cheer_front": { "frames": ["cheer"], "fps": 1, "repeat": -1 },
+    "cheer_back": { "frames": ["back_cheer"], "fps": 1, "repeat": -1 }
+  }
+}

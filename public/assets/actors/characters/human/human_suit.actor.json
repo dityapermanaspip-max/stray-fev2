@@ -1,0 +1,15 @@
+{
+  "about": "Actor sheet for `npm run actors:slice -- characters/human/human_suit`. names: a frame name per pose in reading order (rows by the feet, left to right; null skips). Front poses face down-right (+x), back poses face up-left (-x); the client mirrors them for +y and -y. anims: name -> frames and frames per second (repeat -1 loops).",
+  "sheet": "human_suit_nobg.png",
+  "names": [
+    "idle_front", "walk_front_1", "walk_front_2", "stance", "punch_1", "punch_2",
+    "walk_back_1", "walk_back_2", "walk_back_3", "kick_1", "kick_2", "walk_front_3",
+    "idle_front_2", "walk_back_4", "walk_front_4", "hit", "down", "sit"
+  ],
+  "anims": {
+    "idle_front": { "frames": ["idle_front"], "fps": 1, "repeat": -1 },
+    "idle_back": { "frames": ["walk_back_4"], "fps": 1, "repeat": -1 },
+    "walk_front": { "frames": ["walk_front_2", "idle_front_2", "walk_front_4", "idle_front_2"], "fps": 7, "repeat": -1 },
+    "walk_back": { "frames": ["walk_back_1", "walk_back_2", "walk_back_4", "walk_back_2"], "fps": 7, "repeat": -1 }
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "about": "How the field uses this biome's sheets. Same fields as meadow/meadow.tiles.json (see its about).",
+  "sheets": [
+    {
+      "file": "seashore_nobg_r1.png",
+      "names": [
+        "seashore_shingle",
+        "seashore_wet_shells",
+        "seashore_sand_01",
+        "seashore_seaweed",
+        "seashore_glass_rock",
+        "seashore_wet_sand_01",
+        "seashore_tide_pool",
+        "seashore_dune_flowers",
+        "seashore_sea",
+        "seashore_sand_02",
+        "seashore_shallows",
+        "seashore_paving",
+        "seashore_footprints",
+        "seashore_barnacle_rock",
+        "seashore_doorstep"
+      ]
+    },
+    {
+      "file": "seashore_nobg_objects_r1.png",
+      "names": [
+        "seashore_tide_rock",
+        "seashore_shells",
+        "seashore_dune_grass",
+        "seashore_driftwood",
+        "seashore_urchin",
+        "seashore_gem_rock"
+      ]
+    }
+  ],
+  "slopes": {
+    "slope": [
+      "seashore_sand_01",
+      "seashore_sand_02"
+    ],
+    "wet_slope": [
+      "seashore_wet_sand_01"
+    ]
+  },
+  "filler": "seashore_sand_01",
+  "block_levels": 2,
+  "terrain": {
+    "sand": [
+      "seashore_sand_01",
+      "seashore_sand_01",
+      "seashore_sand_02"
+    ],
+    "wet_sand": [
+      "seashore_wet_sand_01",
+      "seashore_wet_sand_01",
+      "seashore_wet_shells",
+      "seashore_footprints"
+    ],
+    "shingle": [
+      "seashore_shingle",
+      "seashore_shells"
+    ],
+    "sea": [
+      "seashore_sea"
+    ],
+    "rock": [
+      "seashore_barnacle_rock",
+      "seashore_glass_rock",
+      "seashore_tide_rock"
+    ],
+    "dune_grass": [
+      "seashore_dune_grass",
+      "seashore_dune_flowers"
+    ],
+    "paving": [
+      "seashore_paving"
+    ],
+    "road": [
+      "seashore_footprints"
+    ],
+    "door": [
+      "seashore_doorstep"
+    ],
+    "driftwood": [
+      "seashore_driftwood"
+    ]
+  },
+  "node": {
+    "herb": [
+      "seashore_seaweed",
+      "seashore_urchin"
+    ],
+    "rock": [
+      "seashore_gem_rock"
+    ]
+  },
+  "marker": [],
+  "marker_ground": "sand",
+  "slope": {
+    "default": "slope",
+    "wet_sand": "wet_slope"
+  }
+}

@@ -43,3 +43,8 @@
   position: fixed; top: 16px; right: 68px; z-index: 11; width: 44px; height: 44px; font-size: 20px;
   color: #f2ead8; background: #15181ccc; border: 1px solid #4a4a4a; border-radius: 8px; cursor: pointer;
 }
+
+/* Status window: the formation grid (back row left, front row right). */
+.formation { display: flex; gap: 6px; justify-content: center; align-items: center; margin: 8px 0; }
+.formation > div { display: flex; flex-direction: column; gap: 4px; }
+.formation button { width: 36px; height: 30px; }

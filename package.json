@@ -10,7 +10,10 @@
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "tiles:slice": "node tools/tiles/slice.ts",
+    "actors:slice": "node tools/actors/slice.ts",
+    "buildings:slice": "node tools/buildings/slice.ts"
   },
   "dependencies": {
     "@colyseus/sdk": "0.18.5",

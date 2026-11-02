@@ -1,0 +1,158 @@
+{
+ "frames": {
+  "grove_crystals": {
+   "frame": {
+    "x": 151,
+    "y": 2,
+    "w": 147,
+    "h": 142
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 142
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 142
+   },
+   "pivot": {
+    "x": 0.501,
+    "y": 0.5491
+   }
+  },
+  "grove_dead_tree": {
+   "frame": {
+    "x": 2,
+    "y": 2,
+    "w": 147,
+    "h": 202
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 202
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 202
+   },
+   "pivot": {
+    "x": 0.501,
+    "y": 0.6793
+   }
+  },
+  "grove_forest_floor": {
+   "frame": {
+    "x": 448,
+    "y": 2,
+    "w": 147,
+    "h": 129
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 129
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 129
+   },
+   "pivot": {
+    "x": 0.4982,
+    "y": 0.4991
+   }
+  },
+  "grove_grass": {
+   "frame": {
+    "x": 597,
+    "y": 2,
+    "w": 146,
+    "h": 129
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 129
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 129
+   },
+   "pivot": {
+    "x": 0.5016,
+    "y": 0.4959
+   }
+  },
+  "grove_log_stream": {
+   "frame": {
+    "x": 745,
+    "y": 2,
+    "w": 146,
+    "h": 119
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 119
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 119
+   },
+   "pivot": {
+    "x": 0.5016,
+    "y": 0.4546
+   }
+  },
+  "grove_mushrooms": {
+   "frame": {
+    "x": 300,
+    "y": 2,
+    "w": 146,
+    "h": 132
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 132
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 132
+   },
+   "pivot": {
+    "x": 0.4988,
+    "y": 0.5127
+   }
+  }
+ },
+ "meta": {
+  "app": "stray-fev2 tools/tiles/slice.ts",
+  "image": "grove_atlas.png",
+  "size": {
+   "w": 893,
+   "h": 206
+  },
+  "scale": "1",
+  "tileWidth": 144
+ }
+}

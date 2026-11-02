@@ -1,0 +1,614 @@
+{
+ "frames": {
+  "desert_dead_tree": {
+   "frame": {
+    "x": 2,
+    "y": 2,
+    "w": 147,
+    "h": 203
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 203
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 203
+   },
+   "pivot": {
+    "x": 0.501,
+    "y": 0.684
+   }
+  },
+  "desert_oasis_deep": {
+   "frame": {
+    "x": 449,
+    "y": 207,
+    "w": 146,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.5007,
+    "y": 0.4122
+   }
+  },
+  "desert_oasis_fish": {
+   "frame": {
+    "x": 1792,
+    "y": 2,
+    "w": 147,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.501,
+    "y": 0.4234
+   }
+  },
+  "desert_oasis_frog": {
+   "frame": {
+    "x": 2,
+    "y": 207,
+    "w": 147,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.501,
+    "y": 0.4135
+   }
+  },
+  "desert_oasis_lily": {
+   "frame": {
+    "x": 597,
+    "y": 207,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.501,
+    "y": 0.4172
+   }
+  },
+  "desert_oasis_lotus": {
+   "frame": {
+    "x": 746,
+    "y": 207,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.501,
+    "y": 0.4222
+   }
+  },
+  "desert_oasis_open": {
+   "frame": {
+    "x": 895,
+    "y": 207,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.4973,
+    "y": 0.4172
+   }
+  },
+  "desert_oasis_reeds": {
+   "frame": {
+    "x": 599,
+    "y": 2,
+    "w": 147,
+    "h": 123
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 123
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 123
+   },
+   "pivot": {
+    "x": 0.4973,
+    "y": 0.467
+   }
+  },
+  "desert_oasis_shore_bottom": {
+   "frame": {
+    "x": 449,
+    "y": 2,
+    "w": 148,
+    "h": 124
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 124
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 124
+   },
+   "pivot": {
+    "x": 0.5013,
+    "y": 0.4853
+   }
+  },
+  "desert_oasis_shore_left": {
+   "frame": {
+    "x": 1046,
+    "y": 2,
+    "w": 148,
+    "h": 114
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 114
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 114
+   },
+   "pivot": {
+    "x": 0.4976,
+    "y": 0.4267
+   }
+  },
+  "desert_oasis_shore_ll": {
+   "frame": {
+    "x": 1044,
+    "y": 207,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.501,
+    "y": 0.4122
+   }
+  },
+  "desert_oasis_shore_ll_m": {
+   "frame": {
+    "x": 1193,
+    "y": 207,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.499,
+    "y": 0.4122
+   }
+  },
+  "desert_oasis_shore_lr": {
+   "frame": {
+    "x": 1342,
+    "y": 207,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.501,
+    "y": 0.4172
+   }
+  },
+  "desert_oasis_shore_lr_m": {
+   "frame": {
+    "x": 1491,
+    "y": 207,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.499,
+    "y": 0.4172
+   }
+  },
+  "desert_oasis_shore_right": {
+   "frame": {
+    "x": 1640,
+    "y": 207,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.501,
+    "y": 0.4222
+   }
+  },
+  "desert_oasis_shore_top": {
+   "frame": {
+    "x": 1494,
+    "y": 2,
+    "w": 147,
+    "h": 113
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 113
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 113
+   },
+   "pivot": {
+    "x": 0.501,
+    "y": 0.4353
+   }
+  },
+  "desert_oasis_shore_ul": {
+   "frame": {
+    "x": 151,
+    "y": 207,
+    "w": 147,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.501,
+    "y": 0.4234
+   }
+  },
+  "desert_oasis_shore_ul_m": {
+   "frame": {
+    "x": 300,
+    "y": 207,
+    "w": 147,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.499,
+    "y": 0.4234
+   }
+  },
+  "desert_oasis_shore_ur": {
+   "frame": {
+    "x": 1196,
+    "y": 2,
+    "w": 147,
+    "h": 114
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 114
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 114
+   },
+   "pivot": {
+    "x": 0.501,
+    "y": 0.4411
+   }
+  },
+  "desert_oasis_shore_ur_m": {
+   "frame": {
+    "x": 1345,
+    "y": 2,
+    "w": 147,
+    "h": 114
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 114
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 114
+   },
+   "pivot": {
+    "x": 0.499,
+    "y": 0.4411
+   }
+  },
+  "desert_ore_01": {
+   "frame": {
+    "x": 748,
+    "y": 2,
+    "w": 147,
+    "h": 123
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 123
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 123
+   },
+   "pivot": {
+    "x": 0.501,
+    "y": 0.4833
+   }
+  },
+  "desert_ore_crystal": {
+   "frame": {
+    "x": 151,
+    "y": 2,
+    "w": 147,
+    "h": 142
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 142
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 142
+   },
+   "pivot": {
+    "x": 0.501,
+    "y": 0.5548
+   }
+  },
+  "desert_rocks": {
+   "frame": {
+    "x": 1643,
+    "y": 2,
+    "w": 147,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4982,
+    "y": 0.4353
+   }
+  },
+  "desert_succulent": {
+   "frame": {
+    "x": 897,
+    "y": 2,
+    "w": 147,
+    "h": 119
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 119
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 119
+   },
+   "pivot": {
+    "x": 0.5038,
+    "y": 0.465
+   }
+  },
+  "desert_thorn_bush": {
+   "frame": {
+    "x": 300,
+    "y": 2,
+    "w": 147,
+    "h": 130
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 130
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 130
+   },
+   "pivot": {
+    "x": 0.4982,
+    "y": 0.5048
+   }
+  }
+ },
+ "meta": {
+  "app": "stray-fev2 tools/tiles/slice.ts",
+  "image": "desert_atlas.png",
+  "size": {
+   "w": 1941,
+   "h": 320
+  },
+  "scale": "1",
+  "tileWidth": 144
+ }
+}

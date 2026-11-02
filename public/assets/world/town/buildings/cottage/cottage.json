@@ -1,0 +1,374 @@
+{
+ "frames": {
+  "cottage_01": {
+   "frame": {
+    "x": 329,
+    "y": 2,
+    "w": 327,
+    "h": 263
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 327,
+    "h": 263
+   },
+   "sourceSize": {
+    "w": 327,
+    "h": 263
+   },
+   "pivot": {
+    "x": 0.4984,
+    "y": 0.6805
+   }
+  },
+  "cottage_02": {
+   "frame": {
+    "x": 986,
+    "y": 2,
+    "w": 327,
+    "h": 260
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 327,
+    "h": 260
+   },
+   "sourceSize": {
+    "w": 327,
+    "h": 260
+   },
+   "pivot": {
+    "x": 0.4984,
+    "y": 0.6746
+   }
+  },
+  "cottage_03": {
+   "frame": {
+    "x": 1315,
+    "y": 2,
+    "w": 327,
+    "h": 260
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 327,
+    "h": 260
+   },
+   "sourceSize": {
+    "w": 327,
+    "h": 260
+   },
+   "pivot": {
+    "x": 0.4984,
+    "y": 0.6746
+   }
+  },
+  "cottage_04": {
+   "frame": {
+    "x": 648,
+    "y": 517,
+    "w": 327,
+    "h": 231
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 327,
+    "h": 231
+   },
+   "sourceSize": {
+    "w": 327,
+    "h": 231
+   },
+   "pivot": {
+    "x": 0.4984,
+    "y": 0.6362
+   }
+  },
+  "cottage_05": {
+   "frame": {
+    "x": 980,
+    "y": 274,
+    "w": 324,
+    "h": 238
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 324,
+    "h": 238
+   },
+   "sourceSize": {
+    "w": 324,
+    "h": 238
+   },
+   "pivot": {
+    "x": 0.4975,
+    "y": 0.6511
+   }
+  },
+  "cottage_06": {
+   "frame": {
+    "x": 2,
+    "y": 2,
+    "w": 325,
+    "h": 270
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 325,
+    "h": 270
+   },
+   "sourceSize": {
+    "w": 325,
+    "h": 270
+   },
+   "pivot": {
+    "x": 0.4978,
+    "y": 0.6914
+   }
+  },
+  "cottage_07": {
+   "frame": {
+    "x": 1644,
+    "y": 2,
+    "w": 326,
+    "h": 241
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 326,
+    "h": 241
+   },
+   "sourceSize": {
+    "w": 326,
+    "h": 241
+   },
+   "pivot": {
+    "x": 0.4981,
+    "y": 0.6504
+   }
+  },
+  "cottage_08": {
+   "frame": {
+    "x": 658,
+    "y": 2,
+    "w": 326,
+    "h": 262
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 326,
+    "h": 262
+   },
+   "sourceSize": {
+    "w": 326,
+    "h": 262
+   },
+   "pivot": {
+    "x": 0.4981,
+    "y": 0.6797
+   }
+  },
+  "cottage_09": {
+   "frame": {
+    "x": 2,
+    "y": 274,
+    "w": 325,
+    "h": 241
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 325,
+    "h": 241
+   },
+   "sourceSize": {
+    "w": 325,
+    "h": 241
+   },
+   "pivot": {
+    "x": 0.4978,
+    "y": 0.6516
+   }
+  },
+  "cottage_10": {
+   "frame": {
+    "x": 329,
+    "y": 274,
+    "w": 322,
+    "h": 239
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 322,
+    "h": 239
+   },
+   "sourceSize": {
+    "w": 322,
+    "h": 239
+   },
+   "pivot": {
+    "x": 0.4987,
+    "y": 0.6546
+   }
+  },
+  "cottage_11": {
+   "frame": {
+    "x": 1306,
+    "y": 274,
+    "w": 324,
+    "h": 238
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 324,
+    "h": 238
+   },
+   "sourceSize": {
+    "w": 324,
+    "h": 238
+   },
+   "pivot": {
+    "x": 0.4975,
+    "y": 0.6511
+   }
+  },
+  "cottage_12": {
+   "frame": {
+    "x": 653,
+    "y": 274,
+    "w": 325,
+    "h": 239
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 325,
+    "h": 239
+   },
+   "sourceSize": {
+    "w": 325,
+    "h": 239
+   },
+   "pivot": {
+    "x": 0.4978,
+    "y": 0.6521
+   }
+  },
+  "cottage_13": {
+   "frame": {
+    "x": 1632,
+    "y": 274,
+    "w": 322,
+    "h": 238
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 322,
+    "h": 238
+   },
+   "sourceSize": {
+    "w": 322,
+    "h": 238
+   },
+   "pivot": {
+    "x": 0.4987,
+    "y": 0.6523
+   }
+  },
+  "cottage_14": {
+   "frame": {
+    "x": 2,
+    "y": 517,
+    "w": 322,
+    "h": 238
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 322,
+    "h": 238
+   },
+   "sourceSize": {
+    "w": 322,
+    "h": 238
+   },
+   "pivot": {
+    "x": 0.4987,
+    "y": 0.6523
+   }
+  },
+  "cottage_15": {
+   "frame": {
+    "x": 326,
+    "y": 517,
+    "w": 320,
+    "h": 237
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 320,
+    "h": 237
+   },
+   "sourceSize": {
+    "w": 320,
+    "h": 237
+   },
+   "pivot": {
+    "x": 0.4981,
+    "y": 0.6526
+   }
+  }
+ },
+ "meta": {
+  "app": "stray-fev2 tools/buildings/slice.ts",
+  "image": "cottage_atlas.png",
+  "size": {
+   "w": 1972,
+   "h": 757
+  },
+  "scale": "1",
+  "unitWidth": 320
+ }
+}

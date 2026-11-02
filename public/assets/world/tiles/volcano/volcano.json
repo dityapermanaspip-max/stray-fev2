@@ -1,0 +1,1310 @@
+{
+ "frames": {
+  "volcano_ash_flowers": {
+   "frame": {
+    "x": 1650,
+    "y": 209,
+    "w": 147,
+    "h": 121
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 121
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 121
+   },
+   "pivot": {
+    "x": 0.4993,
+    "y": 0.456
+   }
+  },
+  "volcano_ash_plain": {
+   "frame": {
+    "x": 451,
+    "y": 463,
+    "w": 149,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 149,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 149,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.4107
+   }
+  },
+  "volcano_ash_tracks": {
+   "frame": {
+    "x": 2,
+    "y": 463,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4996,
+    "y": 0.412
+   }
+  },
+  "volcano_basalt_paving": {
+   "frame": {
+    "x": 152,
+    "y": 463,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4996,
+    "y": 0.417
+   }
+  },
+  "volcano_basalt_plain": {
+   "frame": {
+    "x": 601,
+    "y": 341,
+    "w": 148,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4996,
+    "y": 0.4133
+   }
+  },
+  "volcano_basalt_slope_dl_01": {
+   "frame": {
+    "x": 449,
+    "y": 2,
+    "w": 148,
+    "h": 132
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 132
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 132
+   },
+   "pivot": {
+    "x": 0.4996,
+    "y": 0.4264
+   }
+  },
+  "volcano_basalt_slope_dr_01": {
+   "frame": {
+    "x": 599,
+    "y": 2,
+    "w": 148,
+    "h": 132
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 132
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 132
+   },
+   "pivot": {
+    "x": 0.4996,
+    "y": 0.4264
+   }
+  },
+  "volcano_basalt_slope_ul_01": {
+   "frame": {
+    "x": 749,
+    "y": 2,
+    "w": 148,
+    "h": 132
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 132
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 132
+   },
+   "pivot": {
+    "x": 0.4996,
+    "y": 0.4264
+   }
+  },
+  "volcano_basalt_slope_ur_01": {
+   "frame": {
+    "x": 899,
+    "y": 2,
+    "w": 148,
+    "h": 132
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 132
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 132
+   },
+   "pivot": {
+    "x": 0.4996,
+    "y": 0.4264
+   }
+  },
+  "volcano_cinders": {
+   "frame": {
+    "x": 602,
+    "y": 463,
+    "w": 148,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.4996,
+    "y": 0.4056
+   }
+  },
+  "volcano_dead_tree": {
+   "frame": {
+    "x": 2,
+    "y": 2,
+    "w": 147,
+    "h": 205
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 205
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 205
+   },
+   "pivot": {
+    "x": 0.5024,
+    "y": 0.6838
+   }
+  },
+  "volcano_ember_moss": {
+   "frame": {
+    "x": 751,
+    "y": 341,
+    "w": 149,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 149,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 149,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.4133
+   }
+  },
+  "volcano_fire_flowers": {
+   "frame": {
+    "x": 151,
+    "y": 341,
+    "w": 148,
+    "h": 116
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 116
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 116
+   },
+   "pivot": {
+    "x": 0.4996,
+    "y": 0.4422
+   }
+  },
+  "volcano_fire_herbs": {
+   "frame": {
+    "x": 1501,
+    "y": 209,
+    "w": 147,
+    "h": 122
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 122
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 122
+   },
+   "pivot": {
+    "x": 0.4996,
+    "y": 0.476
+   }
+  },
+  "volcano_hot_spring": {
+   "frame": {
+    "x": 902,
+    "y": 341,
+    "w": 148,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4996,
+    "y": 0.4083
+   }
+  },
+  "volcano_lava_cracks": {
+   "frame": {
+    "x": 1052,
+    "y": 341,
+    "w": 147,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4993,
+    "y": 0.4133
+   }
+  },
+  "volcano_lava_deep": {
+   "frame": {
+    "x": 1201,
+    "y": 341,
+    "w": 148,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4996,
+    "y": 0.4182
+   }
+  },
+  "volcano_magma_deep": {
+   "frame": {
+    "x": 752,
+    "y": 463,
+    "w": 146,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.4969,
+    "y": 0.4172
+   }
+  },
+  "volcano_magma_drift": {
+   "frame": {
+    "x": 1351,
+    "y": 341,
+    "w": 147,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.501,
+    "y": 0.4294
+   }
+  },
+  "volcano_magma_frog": {
+   "frame": {
+    "x": 302,
+    "y": 463,
+    "w": 147,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.501,
+    "y": 0.4184
+   }
+  },
+  "volcano_magma_lily": {
+   "frame": {
+    "x": 900,
+    "y": 463,
+    "w": 148,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.4976,
+    "y": 0.4222
+   }
+  },
+  "volcano_magma_lotus": {
+   "frame": {
+    "x": 1050,
+    "y": 463,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.501,
+    "y": 0.4272
+   }
+  },
+  "volcano_magma_open": {
+   "frame": {
+    "x": 1199,
+    "y": 463,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.4973,
+    "y": 0.4222
+   }
+  },
+  "volcano_magma_reeds": {
+   "frame": {
+    "x": 1205,
+    "y": 209,
+    "w": 146,
+    "h": 123
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 123
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 123
+   },
+   "pivot": {
+    "x": 0.4969,
+    "y": 0.4714
+   }
+  },
+  "volcano_magma_shore_bottom": {
+   "frame": {
+    "x": 1055,
+    "y": 209,
+    "w": 148,
+    "h": 124
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 124
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 124
+   },
+   "pivot": {
+    "x": 0.5013,
+    "y": 0.4809
+   }
+  },
+  "volcano_magma_shore_left": {
+   "frame": {
+    "x": 301,
+    "y": 341,
+    "w": 148,
+    "h": 113
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 113
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 113
+   },
+   "pivot": {
+    "x": 0.4976,
+    "y": 0.4353
+   }
+  },
+  "volcano_magma_shore_ll": {
+   "frame": {
+    "x": 1348,
+    "y": 463,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.501,
+    "y": 0.4172
+   }
+  },
+  "volcano_magma_shore_lr": {
+   "frame": {
+    "x": 1497,
+    "y": 463,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.4973,
+    "y": 0.4222
+   }
+  },
+  "volcano_magma_shore_lr_m": {
+   "frame": {
+    "x": 1646,
+    "y": 463,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.5027,
+    "y": 0.4222
+   }
+  },
+  "volcano_magma_shore_right": {
+   "frame": {
+    "x": 1500,
+    "y": 341,
+    "w": 147,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.501,
+    "y": 0.4245
+   }
+  },
+  "volcano_magma_shore_top": {
+   "frame": {
+    "x": 1799,
+    "y": 209,
+    "w": 147,
+    "h": 121
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 121
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 121
+   },
+   "pivot": {
+    "x": 0.501,
+    "y": 0.4747
+   }
+  },
+  "volcano_magma_shore_ul": {
+   "frame": {
+    "x": 1795,
+    "y": 463,
+    "w": 148,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.4976,
+    "y": 0.4222
+   }
+  },
+  "volcano_magma_shore_ul_m": {
+   "frame": {
+    "x": 2,
+    "y": 576,
+    "w": 148,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.5024,
+    "y": 0.4222
+   }
+  },
+  "volcano_magma_shore_ur": {
+   "frame": {
+    "x": 1649,
+    "y": 341,
+    "w": 147,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.501,
+    "y": 0.4294
+   }
+  },
+  "volcano_obsidian_shards": {
+   "frame": {
+    "x": 152,
+    "y": 576,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.4993,
+    "y": 0.4056
+   }
+  },
+  "volcano_obsidian_spikes": {
+   "frame": {
+    "x": 151,
+    "y": 2,
+    "w": 147,
+    "h": 144
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 144
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 144
+   },
+   "pivot": {
+    "x": 0.4968,
+    "y": 0.5494
+   }
+  },
+  "volcano_ore_lava": {
+   "frame": {
+    "x": 1353,
+    "y": 209,
+    "w": 146,
+    "h": 123
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 123
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 123
+   },
+   "pivot": {
+    "x": 0.5002,
+    "y": 0.4755
+   }
+  },
+  "volcano_ore_sulfur": {
+   "frame": {
+    "x": 300,
+    "y": 2,
+    "w": 147,
+    "h": 142
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 142
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 142
+   },
+   "pivot": {
+    "x": 0.4996,
+    "y": 0.5455
+   }
+  },
+  "volcano_ore_vents": {
+   "frame": {
+    "x": 2,
+    "y": 341,
+    "w": 147,
+    "h": 120
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 120
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 120
+   },
+   "pivot": {
+    "x": 0.4968,
+    "y": 0.4633
+   }
+  },
+  "volcano_path_slope_dl_01": {
+   "frame": {
+    "x": 1049,
+    "y": 2,
+    "w": 147,
+    "h": 132
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 132
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 132
+   },
+   "pivot": {
+    "x": 0.4993,
+    "y": 0.4264
+   }
+  },
+  "volcano_path_slope_dr_01": {
+   "frame": {
+    "x": 1198,
+    "y": 2,
+    "w": 147,
+    "h": 132
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 132
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 132
+   },
+   "pivot": {
+    "x": 0.4993,
+    "y": 0.4264
+   }
+  },
+  "volcano_path_slope_ul_01": {
+   "frame": {
+    "x": 1347,
+    "y": 2,
+    "w": 147,
+    "h": 132
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 132
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 132
+   },
+   "pivot": {
+    "x": 0.4993,
+    "y": 0.4264
+   }
+  },
+  "volcano_path_slope_ur_01": {
+   "frame": {
+    "x": 1496,
+    "y": 2,
+    "w": 147,
+    "h": 132
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 132
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 132
+   },
+   "pivot": {
+    "x": 0.4993,
+    "y": 0.4264
+   }
+  },
+  "volcano_slope_dl_01": {
+   "frame": {
+    "x": 1645,
+    "y": 2,
+    "w": 149,
+    "h": 130
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 149,
+    "h": 130
+   },
+   "sourceSize": {
+    "w": 149,
+    "h": 130
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.4244
+   }
+  },
+  "volcano_slope_dl_02": {
+   "frame": {
+    "x": 1796,
+    "y": 2,
+    "w": 148,
+    "h": 130
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 130
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 130
+   },
+   "pivot": {
+    "x": 0.4996,
+    "y": 0.4201
+   }
+  },
+  "volcano_slope_dr_01": {
+   "frame": {
+    "x": 2,
+    "y": 209,
+    "w": 149,
+    "h": 130
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 149,
+    "h": 130
+   },
+   "sourceSize": {
+    "w": 149,
+    "h": 130
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.4244
+   }
+  },
+  "volcano_slope_dr_02": {
+   "frame": {
+    "x": 153,
+    "y": 209,
+    "w": 148,
+    "h": 130
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 130
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 130
+   },
+   "pivot": {
+    "x": 0.4996,
+    "y": 0.4201
+   }
+  },
+  "volcano_slope_ul_01": {
+   "frame": {
+    "x": 303,
+    "y": 209,
+    "w": 149,
+    "h": 130
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 149,
+    "h": 130
+   },
+   "sourceSize": {
+    "w": 149,
+    "h": 130
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.4244
+   }
+  },
+  "volcano_slope_ul_02": {
+   "frame": {
+    "x": 454,
+    "y": 209,
+    "w": 148,
+    "h": 130
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 130
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 130
+   },
+   "pivot": {
+    "x": 0.4996,
+    "y": 0.4201
+   }
+  },
+  "volcano_slope_ur_01": {
+   "frame": {
+    "x": 604,
+    "y": 209,
+    "w": 149,
+    "h": 130
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 149,
+    "h": 130
+   },
+   "sourceSize": {
+    "w": 149,
+    "h": 130
+   },
+   "pivot": {
+    "x": 0.5,
+    "y": 0.4244
+   }
+  },
+  "volcano_slope_ur_02": {
+   "frame": {
+    "x": 755,
+    "y": 209,
+    "w": 148,
+    "h": 130
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 130
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 130
+   },
+   "pivot": {
+    "x": 0.4996,
+    "y": 0.4201
+   }
+  },
+  "volcano_steps": {
+   "frame": {
+    "x": 451,
+    "y": 341,
+    "w": 148,
+    "h": 113
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 113
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 113
+   },
+   "pivot": {
+    "x": 0.4996,
+    "y": 0.4244
+   }
+  },
+  "volcano_sulfur_reeds": {
+   "frame": {
+    "x": 905,
+    "y": 209,
+    "w": 148,
+    "h": 126
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 126
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 126
+   },
+   "pivot": {
+    "x": 0.4996,
+    "y": 0.4821
+   }
+  },
+  "volcano_sulfur_stone": {
+   "frame": {
+    "x": 1798,
+    "y": 341,
+    "w": 147,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4993,
+    "y": 0.4133
+   }
+  }
+ },
+ "meta": {
+  "app": "stray-fev2 tools/tiles/slice.ts",
+  "image": "volcano_atlas.png",
+  "size": {
+   "w": 1948,
+   "h": 688
+  },
+  "scale": "1",
+  "tileWidth": 144
+ }
+}

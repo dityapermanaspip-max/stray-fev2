@@ -1,0 +1,326 @@
+{
+ "frames": {
+  "sandstone_01": {
+   "frame": {
+    "x": 2,
+    "y": 2,
+    "w": 311,
+    "h": 285
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 311,
+    "h": 285
+   },
+   "sourceSize": {
+    "w": 311,
+    "h": 285
+   },
+   "pivot": {
+    "x": 0.498,
+    "y": 0.7182
+   }
+  },
+  "sandstone_02": {
+   "frame": {
+    "x": 636,
+    "y": 2,
+    "w": 335,
+    "h": 278
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 335,
+    "h": 278
+   },
+   "sourceSize": {
+    "w": 335,
+    "h": 278
+   },
+   "pivot": {
+    "x": 0.498,
+    "y": 0.6902
+   }
+  },
+  "sandstone_03": {
+   "frame": {
+    "x": 315,
+    "y": 2,
+    "w": 319,
+    "h": 284
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 319,
+    "h": 284
+   },
+   "sourceSize": {
+    "w": 319,
+    "h": 284
+   },
+   "pivot": {
+    "x": 0.498,
+    "y": 0.7097
+   }
+  },
+  "sandstone_04": {
+   "frame": {
+    "x": 973,
+    "y": 2,
+    "w": 318,
+    "h": 266
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 318,
+    "h": 266
+   },
+   "sourceSize": {
+    "w": 318,
+    "h": 266
+   },
+   "pivot": {
+    "x": 0.4978,
+    "y": 0.6946
+   }
+  },
+  "sandstone_05": {
+   "frame": {
+    "x": 1620,
+    "y": 2,
+    "w": 344,
+    "h": 256
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 344,
+    "h": 256
+   },
+   "sourceSize": {
+    "w": 344,
+    "h": 256
+   },
+   "pivot": {
+    "x": 0.4982,
+    "y": 0.6561
+   }
+  },
+  "sandstone_06": {
+   "frame": {
+    "x": 980,
+    "y": 289,
+    "w": 323,
+    "h": 251
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 323,
+    "h": 251
+   },
+   "sourceSize": {
+    "w": 323,
+    "h": 251
+   },
+   "pivot": {
+    "x": 0.4989,
+    "y": 0.6669
+   }
+  },
+  "sandstone_07": {
+   "frame": {
+    "x": 1305,
+    "y": 289,
+    "w": 331,
+    "h": 251
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 331,
+    "h": 251
+   },
+   "sourceSize": {
+    "w": 331,
+    "h": 251
+   },
+   "pivot": {
+    "x": 0.4989,
+    "y": 0.659
+   }
+  },
+  "sandstone_08": {
+   "frame": {
+    "x": 2,
+    "y": 289,
+    "w": 320,
+    "h": 255
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 320,
+    "h": 255
+   },
+   "sourceSize": {
+    "w": 320,
+    "h": 255
+   },
+   "pivot": {
+    "x": 0.4982,
+    "y": 0.6777
+   }
+  },
+  "sandstone_09": {
+   "frame": {
+    "x": 1293,
+    "y": 2,
+    "w": 325,
+    "h": 262
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 325,
+    "h": 262
+   },
+   "sourceSize": {
+    "w": 325,
+    "h": 262
+   },
+   "pivot": {
+    "x": 0.4976,
+    "y": 0.6813
+   }
+  },
+  "sandstone_11": {
+   "frame": {
+    "x": 324,
+    "y": 289,
+    "w": 323,
+    "h": 254
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 323,
+    "h": 254
+   },
+   "sourceSize": {
+    "w": 323,
+    "h": 254
+   },
+   "pivot": {
+    "x": 0.4989,
+    "y": 0.6725
+   }
+  },
+  "sandstone_12": {
+   "frame": {
+    "x": 1638,
+    "y": 289,
+    "w": 328,
+    "h": 248
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 328,
+    "h": 248
+   },
+   "sourceSize": {
+    "w": 328,
+    "h": 248
+   },
+   "pivot": {
+    "x": 0.4982,
+    "y": 0.6612
+   }
+  },
+  "sandstone_13": {
+   "frame": {
+    "x": 2,
+    "y": 546,
+    "w": 336,
+    "h": 248
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 336,
+    "h": 248
+   },
+   "sourceSize": {
+    "w": 336,
+    "h": 248
+   },
+   "pivot": {
+    "x": 0.4982,
+    "y": 0.6532
+   }
+  },
+  "sandstone_14": {
+   "frame": {
+    "x": 649,
+    "y": 289,
+    "w": 329,
+    "h": 254
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 329,
+    "h": 254
+   },
+   "sourceSize": {
+    "w": 329,
+    "h": 254
+   },
+   "pivot": {
+    "x": 0.4984,
+    "y": 0.6669
+   }
+  }
+ },
+ "meta": {
+  "app": "stray-fev2 tools/buildings/slice.ts",
+  "image": "sandstone_atlas.png",
+  "size": {
+   "w": 1968,
+   "h": 796
+  },
+  "scale": "1",
+  "unitWidth": 320
+ }
+}

@@ -1,0 +1,42 @@
+{
+  "about": "How the field uses this biome's sheets. Same fields as meadow/meadow.tiles.json (see its about). Objects only so far: grove is not in TILE_BIOMES until a ground sheet exists.",
+  "sheets": [
+    {
+      "file": "grove_nobg_objects_r1.png",
+      "names": [
+        "grove_log_stream",
+        "grove_forest_floor",
+        "grove_grass",
+        "grove_dead_tree",
+        "grove_mushrooms",
+        "grove_crystals"
+      ]
+    }
+  ],
+  "slopes": {},
+  "filler": "grove_grass",
+  "block_levels": 2,
+  "terrain": {
+    "leaves": [
+      "grove_forest_floor"
+    ],
+    "grass": [
+      "grove_grass"
+    ]
+  },
+  "node": {
+    "herb": [
+      "grove_mushrooms"
+    ],
+    "rock": [
+      "grove_crystals"
+    ]
+  },
+  "marker": [
+    "tree",
+    "rock",
+    "bush"
+  ],
+  "marker_ground": "grass",
+  "slope": {}
+}

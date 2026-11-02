@@ -3,29 +3,29 @@ import type { Room } from '@colyseus/sdk';
 import type { AskAnswer, AskView, EncounterNotice, FieldLine, FieldView, GatherNotice, TravelOrder } from '../../../stray-bev1/shared/field.ts';
 import type { MapView } from '../../../stray-bev1/shared/map.ts';
 import { FieldKeys, nextTile } from '../field/field_keys.ts';
-import { drawGround } from '../field/ground.ts';
-import { depthAt, pickTile, tileCenter } from '../field/iso.ts';
+import { ActorBody, loadActors } from '../field/actor.ts';
+import { fadeBuildings } from '../field/buildings.ts';
+import { drawField } from '../field/ground_tiles.ts';
+import { depthAt, pickTile, surfaceHeight, tileCenter } from '../field/iso.ts';
 import { SceneKeys } from '../keys.ts';
 import { joinField, whereIs, type Seat } from '../net/game_net.ts';
 import { AskPanel, gatheredText } from '../town/ask_panel.ts';
 import { ServicePanel } from '../town/service_panel.ts';
 import { StatusWindow } from '../town/status_panel.ts';
 import { MAP_CLOSED } from './world_map_scene.ts';
-import type { EatRequest, GearRequest, LoadoutRequest, ServiceRequest, ServiceView, StatusPanel } from '../../../stray-bev1/shared/town.ts';
+import type { EatRequest, FormationRequest, GearRequest, LoadoutRequest, ServiceRequest, ServiceView, StatusPanel } from '../../../stray-bev1/shared/town.ts';
 
 // The field: draws the tile grid the server sent, the players the server moves, and sends "walk to tile".
 // The client never decides where anyone is; it only animates between the tiles the server reports.
 
 type FieldData = { name: string };
-type Shown = { body: Phaser.GameObjects.Container; x: number; y: number };
+type Shown = { actor: ActorBody; body: Phaser.GameObjects.Container; x: number; y: number };
 type SyncedPlayer = { name: string; x: number; y: number; walking: boolean; stepMs: number; connected: boolean };
 
 const LINE_MS = 4000;
 const RETRY_MS = 2000;
 const ENCOUNTER_MS = 900; // the encounter line shows before the battle opens
 const ZOOM = { min: 0.5, max: 2, step: 0.1 };
-const SELF_COLOR = 0xf5d06f;
-const OTHER_COLOR = 0x9ec5f0;
 const KEY_STEP_MS = 120; // least time between keyboard steps sent
 
 export class FieldScene extends Phaser.Scene {
@@ -74,6 +74,7 @@ export class FieldScene extends Phaser.Scene {
     this.status = new StatusWindow(() => void this.refreshStatus('status'), {
       loadout: (req: LoadoutRequest) => void this.refreshStatus('loadout', req),
       gear: (req: GearRequest) => void this.refreshStatus('gear', req),
+      formation: (req: FormationRequest) => void this.refreshStatus('formation', req),
       eat: (req: EatRequest) => void this.refreshStatus('eat', req),
     });
     this.keys = new FieldKeys({
@@ -91,12 +92,13 @@ export class FieldScene extends Phaser.Scene {
 
   private async connect(): Promise<void> {
     try {
+      await loadActors(this); // a failed sheet leaves the round tokens
       const where = await whereIs(this.name);
       const { room, view } = await joinField(this.name, where.ref);
       if (!this.scene.isActive()) return void room.leave();
       this.room = room;
       this.view = view;
-      drawGround(this, view);
+      void drawField(this, view);
       room.onMessage('line', (line: FieldLine) => this.showLine(line));
       room.onMessage('travel', (order: TravelOrder) => this.travel(order));
       room.onMessage('encounter', (notice: EncounterNotice) => this.encounter(notice));
@@ -123,7 +125,7 @@ export class FieldScene extends Phaser.Scene {
     }
   }
 
-  private async refreshStatus(type: string, payload?: LoadoutRequest | GearRequest | EatRequest | ServiceRequest): Promise<void> {
+  private async refreshStatus(type: string, payload?: LoadoutRequest | GearRequest | EatRequest | FormationRequest | ServiceRequest): Promise<void> {
     const panel = await this.ask<StatusPanel>(type, payload);
     if (panel) this.status?.show(panel);
   }
@@ -143,6 +145,7 @@ export class FieldScene extends Phaser.Scene {
       }
     }
     this.keyWalk(players.get(this.room!.sessionId));
+    fadeBuildings(this, this.shown.get(this.room!.sessionId)?.body);
   }
 
   // Held arrow / WASD keys: one tile at a time, sent when the last step is done. A blocked diagonal tries its sides.
@@ -187,20 +190,24 @@ export class FieldScene extends Phaser.Scene {
   }
 
   private heightAt(x: number, y: number): number {
-    return this.view!.tiles[y * this.view!.width + x]?.h ?? 0;
+    const t = this.view!.tiles[y * this.view!.width + x];
+    return t ? surfaceHeight(t) : 0;
   }
 
   private syncPlayer(id: string, p: SyncedPlayer): void {
     let s = this.shown.get(id);
     if (!s) {
-      s = { body: this.makeBody(p.name, id === this.room!.sessionId), x: p.x, y: p.y };
+      const actor = new ActorBody(this, p.name, id === this.room!.sessionId);
+      s = { actor, body: actor.root, x: p.x, y: p.y };
       const at = tileCenter(p.x, p.y, this.heightAt(p.x, p.y));
       s.body.setPosition(at.x, at.y).setDepth(depthAt(p.x, p.y));
       this.shown.set(id, s);
       if (id === this.room!.sessionId) this.cameras.main.startFollow(s.body, true, 0.15, 0.15);
     }
     s.body.setAlpha(p.connected ? 1 : 0.4);
+    s.actor.walk(p.walking || this.tweens.isTweening(s.body));
     if (s.x === p.x && s.y === p.y) return;
+    s.actor.face(p.x - s.x, p.y - s.y);
     s.x = p.x;
     s.y = p.y;
     const to = tileCenter(p.x, p.y, this.heightAt(p.x, p.y));
@@ -210,16 +217,6 @@ export class FieldScene extends Phaser.Scene {
       targets: s.body, x: to.x, y: to.y, duration: Math.max(p.stepMs, 1), ease: 'Linear',
       onComplete: () => s!.body.setDepth(depthAt(p.x, p.y)),
     });
-  }
-
-  // Placeholder body: a shadow, a round token and the name above it.
-  private makeBody(name: string, self: boolean): Phaser.GameObjects.Container {
-    const shadow = this.add.ellipse(0, 0, 28, 12, 0x000000, 0.35);
-    const token = this.add.circle(0, -16, 11, self ? SELF_COLOR : OTHER_COLOR).setStrokeStyle(2, 0x1b1b1b);
-    const label = this.add.text(0, -34, name, {
-      fontFamily: 'system-ui, sans-serif', fontSize: '12px', color: '#ffffff', stroke: '#000000', strokeThickness: 3,
-    }).setOrigin(0.5, 1);
-    return this.add.container(0, 0, [shadow, token, label]);
   }
 
   private onPointer(pointer: Phaser.Input.Pointer): void {

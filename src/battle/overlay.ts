@@ -14,6 +14,7 @@ export class BattleOverlay {
   private menu = document.createElement('div');
   private box = document.createElement('div');
   private buttons = new Map<string, HTMLButtonElement>();
+  private front: string[] = []; // moves only usable from the front row
 
   constructor(moves: BattleMoveView[], slots: number, private handlers: OverlayHandlers) {
     this.root.className = 'battle-ui';
@@ -29,6 +30,7 @@ export class BattleOverlay {
       if (move) {
         b.addEventListener('click', () => handlers.pick(move));
         this.buttons.set(move.move, b);
+        if (move.front) this.front.push(move.move);
       }
       this.menu.append(b);
     }
@@ -50,6 +52,11 @@ export class BattleOverlay {
       b.classList.toggle('choosing', move === state.choosing);
       b.classList.toggle('queued', move === state.queued);
     }
+  }
+
+  // Greys the front-row-only moves while the player stands in the back row.
+  reach(back: boolean): void {
+    for (const move of this.front) this.buttons.get(move)!.disabled = back || this.menu.classList.contains('locked');
   }
 
   lock(): void {

@@ -1,0 +1,2702 @@
+{
+ "frames": {
+  "meadow_boulder_01": {
+   "frame": {
+    "x": 896,
+    "y": 492,
+    "w": 147,
+    "h": 127
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 127
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 127
+   },
+   "pivot": {
+    "x": 0.5024,
+    "y": 0.493
+   }
+  },
+  "meadow_boulder_02": {
+   "frame": {
+    "x": 1045,
+    "y": 492,
+    "w": 147,
+    "h": 127
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 127
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 127
+   },
+   "pivot": {
+    "x": 0.4976,
+    "y": 0.493
+   }
+  },
+  "meadow_bush_01": {
+   "frame": {
+    "x": 1343,
+    "y": 623,
+    "w": 146,
+    "h": 117
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 117
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 117
+   },
+   "pivot": {
+    "x": 0.4988,
+    "y": 0.4448
+   }
+  },
+  "meadow_bush_02": {
+   "frame": {
+    "x": 299,
+    "y": 623,
+    "w": 146,
+    "h": 120
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 120
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 120
+   },
+   "pivot": {
+    "x": 0.5002,
+    "y": 0.4564
+   }
+  },
+  "meadow_bush_03": {
+   "frame": {
+    "x": 1491,
+    "y": 623,
+    "w": 146,
+    "h": 117
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 117
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 117
+   },
+   "pivot": {
+    "x": 0.5012,
+    "y": 0.4448
+   }
+  },
+  "meadow_bush_04": {
+   "frame": {
+    "x": 447,
+    "y": 623,
+    "w": 146,
+    "h": 120
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 120
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 120
+   },
+   "pivot": {
+    "x": 0.4998,
+    "y": 0.4564
+   }
+  },
+  "meadow_crystals": {
+   "frame": {
+    "x": 1091,
+    "y": 2,
+    "w": 147,
+    "h": 142
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 142
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 142
+   },
+   "pivot": {
+    "x": 0.5038,
+    "y": 0.5433
+   }
+  },
+  "meadow_dark_bush_01": {
+   "frame": {
+    "x": 1194,
+    "y": 492,
+    "w": 146,
+    "h": 127
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 127
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 127
+   },
+   "pivot": {
+    "x": 0.5002,
+    "y": 0.4951
+   }
+  },
+  "meadow_dark_ore_01": {
+   "frame": {
+    "x": 1240,
+    "y": 2,
+    "w": 147,
+    "h": 142
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 142
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 142
+   },
+   "pivot": {
+    "x": 0.4996,
+    "y": 0.5525
+   }
+  },
+  "meadow_dark_tree_01": {
+   "frame": {
+    "x": 795,
+    "y": 2,
+    "w": 146,
+    "h": 208
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 208
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 208
+   },
+   "pivot": {
+    "x": 0.5002,
+    "y": 0.6908
+   }
+  },
+  "meadow_deep_water": {
+   "frame": {
+    "x": 1346,
+    "y": 748,
+    "w": 147,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4954,
+    "y": 0.4126
+   }
+  },
+  "meadow_dirt_01": {
+   "frame": {
+    "x": 1495,
+    "y": 748,
+    "w": 148,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4995,
+    "y": 0.4175
+   }
+  },
+  "meadow_dirt_02": {
+   "frame": {
+    "x": 1645,
+    "y": 748,
+    "w": 147,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4175
+   }
+  },
+  "meadow_dirt_03": {
+   "frame": {
+    "x": 1794,
+    "y": 748,
+    "w": 147,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4954,
+    "y": 0.4175
+   }
+  },
+  "meadow_dirt_slope_dl_01": {
+   "frame": {
+    "x": 600,
+    "y": 220,
+    "w": 148,
+    "h": 132
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 132
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 132
+   },
+   "pivot": {
+    "x": 0.4995,
+    "y": 0.43
+   }
+  },
+  "meadow_dirt_slope_dl_02": {
+   "frame": {
+    "x": 750,
+    "y": 220,
+    "w": 147,
+    "h": 132
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 132
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 132
+   },
+   "pivot": {
+    "x": 0.4954,
+    "y": 0.43
+   }
+  },
+  "meadow_dirt_slope_dr_01": {
+   "frame": {
+    "x": 899,
+    "y": 220,
+    "w": 148,
+    "h": 132
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 132
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 132
+   },
+   "pivot": {
+    "x": 0.4995,
+    "y": 0.43
+   }
+  },
+  "meadow_dirt_slope_dr_02": {
+   "frame": {
+    "x": 1049,
+    "y": 220,
+    "w": 147,
+    "h": 132
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 132
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 132
+   },
+   "pivot": {
+    "x": 0.4954,
+    "y": 0.43
+   }
+  },
+  "meadow_dirt_slope_ul_01": {
+   "frame": {
+    "x": 1198,
+    "y": 220,
+    "w": 148,
+    "h": 132
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 132
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 132
+   },
+   "pivot": {
+    "x": 0.4995,
+    "y": 0.43
+   }
+  },
+  "meadow_dirt_slope_ul_02": {
+   "frame": {
+    "x": 1348,
+    "y": 220,
+    "w": 147,
+    "h": 132
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 132
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 132
+   },
+   "pivot": {
+    "x": 0.4954,
+    "y": 0.43
+   }
+  },
+  "meadow_dirt_slope_ur_01": {
+   "frame": {
+    "x": 1497,
+    "y": 220,
+    "w": 148,
+    "h": 132
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 132
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 132
+   },
+   "pivot": {
+    "x": 0.4995,
+    "y": 0.43
+   }
+  },
+  "meadow_dirt_slope_ur_02": {
+   "frame": {
+    "x": 1647,
+    "y": 220,
+    "w": 147,
+    "h": 132
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 132
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 132
+   },
+   "pivot": {
+    "x": 0.4954,
+    "y": 0.43
+   }
+  },
+  "meadow_doorstep": {
+   "frame": {
+    "x": 302,
+    "y": 748,
+    "w": 147,
+    "h": 114
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 114
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 114
+   },
+   "pivot": {
+    "x": 0.4954,
+    "y": 0.4198
+   }
+  },
+  "meadow_flower_slope_dl_01": {
+   "frame": {
+    "x": 1389,
+    "y": 2,
+    "w": 148,
+    "h": 136
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 136
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 136
+   },
+   "pivot": {
+    "x": 0.4995,
+    "y": 0.4457
+   }
+  },
+  "meadow_flower_slope_dl_02": {
+   "frame": {
+    "x": 1539,
+    "y": 2,
+    "w": 147,
+    "h": 136
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 136
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 136
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4457
+   }
+  },
+  "meadow_flower_slope_dr_01": {
+   "frame": {
+    "x": 1688,
+    "y": 2,
+    "w": 148,
+    "h": 136
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 136
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 136
+   },
+   "pivot": {
+    "x": 0.4995,
+    "y": 0.4457
+   }
+  },
+  "meadow_flower_slope_dr_02": {
+   "frame": {
+    "x": 1838,
+    "y": 2,
+    "w": 147,
+    "h": 136
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 136
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 136
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4457
+   }
+  },
+  "meadow_flower_slope_ul_01": {
+   "frame": {
+    "x": 2,
+    "y": 220,
+    "w": 148,
+    "h": 136
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 136
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 136
+   },
+   "pivot": {
+    "x": 0.4995,
+    "y": 0.4457
+   }
+  },
+  "meadow_flower_slope_ul_02": {
+   "frame": {
+    "x": 152,
+    "y": 220,
+    "w": 147,
+    "h": 136
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 136
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 136
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4457
+   }
+  },
+  "meadow_flower_slope_ur_01": {
+   "frame": {
+    "x": 301,
+    "y": 220,
+    "w": 148,
+    "h": 136
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 136
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 136
+   },
+   "pivot": {
+    "x": 0.4995,
+    "y": 0.4457
+   }
+  },
+  "meadow_flower_slope_ur_02": {
+   "frame": {
+    "x": 451,
+    "y": 220,
+    "w": 147,
+    "h": 136
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 136
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 136
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4457
+   }
+  },
+  "meadow_flowers_01": {
+   "frame": {
+    "x": 1639,
+    "y": 623,
+    "w": 148,
+    "h": 116
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 116
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 116
+   },
+   "pivot": {
+    "x": 0.4995,
+    "y": 0.4364
+   }
+  },
+  "meadow_flowers_02": {
+   "frame": {
+    "x": 1789,
+    "y": 623,
+    "w": 147,
+    "h": 116
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 116
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 116
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4364
+   }
+  },
+  "meadow_forest_floor": {
+   "frame": {
+    "x": 1786,
+    "y": 358,
+    "w": 147,
+    "h": 129
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 129
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 129
+   },
+   "pivot": {
+    "x": 0.4982,
+    "y": 0.4959
+   }
+  },
+  "meadow_grass_plain_01": {
+   "frame": {
+    "x": 2,
+    "y": 865,
+    "w": 147,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4126
+   }
+  },
+  "meadow_grass_plain_02": {
+   "frame": {
+    "x": 1346,
+    "y": 865,
+    "w": 147,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4113
+   }
+  },
+  "meadow_herb_02": {
+   "frame": {
+    "x": 151,
+    "y": 865,
+    "w": 147,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4996,
+    "y": 0.4258
+   }
+  },
+  "meadow_log_stream": {
+   "frame": {
+    "x": 595,
+    "y": 623,
+    "w": 149,
+    "h": 119
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 149,
+    "h": 119
+   },
+   "sourceSize": {
+    "w": 149,
+    "h": 119
+   },
+   "pivot": {
+    "x": 0.4998,
+    "y": 0.4512
+   }
+  },
+  "meadow_lush_01": {
+   "frame": {
+    "x": 1049,
+    "y": 1092,
+    "w": 147,
+    "h": 108
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 108
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 108
+   },
+   "pivot": {
+    "x": 0.5009,
+    "y": 0.4141
+   }
+  },
+  "meadow_lush_02": {
+   "frame": {
+    "x": 751,
+    "y": 1092,
+    "w": 147,
+    "h": 109
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 109
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 109
+   },
+   "pivot": {
+    "x": 0.5009,
+    "y": 0.4204
+   }
+  },
+  "meadow_lush_03": {
+   "frame": {
+    "x": 1495,
+    "y": 865,
+    "w": 147,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.5009,
+    "y": 0.4177
+   }
+  },
+  "meadow_lush_04": {
+   "frame": {
+    "x": 1644,
+    "y": 865,
+    "w": 147,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.5009,
+    "y": 0.4177
+   }
+  },
+  "meadow_lush_05": {
+   "frame": {
+    "x": 596,
+    "y": 979,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.5009,
+    "y": 0.4215
+   }
+  },
+  "meadow_lush_dirt_01": {
+   "frame": {
+    "x": 599,
+    "y": 748,
+    "w": 147,
+    "h": 113
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 113
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 113
+   },
+   "pivot": {
+    "x": 0.5009,
+    "y": 0.4296
+   }
+  },
+  "meadow_lush_dirt_02": {
+   "frame": {
+    "x": 900,
+    "y": 1092,
+    "w": 147,
+    "h": 109
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 109
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 109
+   },
+   "pivot": {
+    "x": 0.5009,
+    "y": 0.4204
+   }
+  },
+  "meadow_lush_pebbles_01": {
+   "frame": {
+    "x": 745,
+    "y": 979,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.5009,
+    "y": 0.4215
+   }
+  },
+  "meadow_lush_pebbles_02": {
+   "frame": {
+    "x": 1492,
+    "y": 492,
+    "w": 147,
+    "h": 124
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 124
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 124
+   },
+   "pivot": {
+    "x": 0.5009,
+    "y": 0.4883
+   }
+  },
+  "meadow_lush_pebbles_03": {
+   "frame": {
+    "x": 894,
+    "y": 979,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.5009,
+    "y": 0.4215
+   }
+  },
+  "meadow_mud_01": {
+   "frame": {
+    "x": 300,
+    "y": 865,
+    "w": 148,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4995,
+    "y": 0.4175
+   }
+  },
+  "meadow_mud_02": {
+   "frame": {
+    "x": 450,
+    "y": 865,
+    "w": 148,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4995,
+    "y": 0.4126
+   }
+  },
+  "meadow_mushrooms": {
+   "frame": {
+    "x": 1796,
+    "y": 220,
+    "w": 147,
+    "h": 132
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 132
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 132
+   },
+   "pivot": {
+    "x": 0.4954,
+    "y": 0.5096
+   }
+  },
+  "meadow_oak": {
+   "frame": {
+    "x": 2,
+    "y": 2,
+    "w": 169,
+    "h": 216
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 169,
+    "h": 216
+   },
+   "sourceSize": {
+    "w": 169,
+    "h": 216
+   },
+   "pivot": {
+    "x": 0.5151,
+    "y": 0.7025
+   }
+  },
+  "meadow_oak_m": {
+   "frame": {
+    "x": 173,
+    "y": 2,
+    "w": 169,
+    "h": 216
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 169,
+    "h": 216
+   },
+   "sourceSize": {
+    "w": 169,
+    "h": 216
+   },
+   "pivot": {
+    "x": 0.4849,
+    "y": 0.7025
+   }
+  },
+  "meadow_ore_01": {
+   "frame": {
+    "x": 2,
+    "y": 623,
+    "w": 146,
+    "h": 123
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 123
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 123
+   },
+   "pivot": {
+    "x": 0.5002,
+    "y": 0.4745
+   }
+  },
+  "meadow_ore_02": {
+   "frame": {
+    "x": 600,
+    "y": 865,
+    "w": 146,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4974,
+    "y": 0.4258
+   }
+  },
+  "meadow_path_slope_dl_01": {
+   "frame": {
+    "x": 598,
+    "y": 358,
+    "w": 146,
+    "h": 131
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 131
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 131
+   },
+   "pivot": {
+    "x": 0.4994,
+    "y": 0.4427
+   }
+  },
+  "meadow_path_slope_dr_01": {
+   "frame": {
+    "x": 746,
+    "y": 358,
+    "w": 146,
+    "h": 131
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 131
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 131
+   },
+   "pivot": {
+    "x": 0.5006,
+    "y": 0.4427
+   }
+  },
+  "meadow_path_slope_ul_01": {
+   "frame": {
+    "x": 894,
+    "y": 358,
+    "w": 146,
+    "h": 131
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 131
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 131
+   },
+   "pivot": {
+    "x": 0.5006,
+    "y": 0.4427
+   }
+  },
+  "meadow_path_slope_ur_01": {
+   "frame": {
+    "x": 1042,
+    "y": 358,
+    "w": 146,
+    "h": 131
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 131
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 131
+   },
+   "pivot": {
+    "x": 0.4994,
+    "y": 0.4427
+   }
+  },
+  "meadow_pebbles_01": {
+   "frame": {
+    "x": 1793,
+    "y": 865,
+    "w": 147,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4982,
+    "y": 0.4207
+   }
+  },
+  "meadow_pebbles_02": {
+   "frame": {
+    "x": 2,
+    "y": 979,
+    "w": 147,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4996,
+    "y": 0.4228
+   }
+  },
+  "meadow_reeds_01": {
+   "frame": {
+    "x": 2,
+    "y": 748,
+    "w": 147,
+    "h": 115
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 115
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 115
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4354
+   }
+  },
+  "meadow_reeds_02": {
+   "frame": {
+    "x": 1641,
+    "y": 492,
+    "w": 147,
+    "h": 124
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 124
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 124
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4661
+   }
+  },
+  "meadow_rose_bush_01": {
+   "frame": {
+    "x": 896,
+    "y": 623,
+    "w": 147,
+    "h": 118
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 118
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 118
+   },
+   "pivot": {
+    "x": 0.4982,
+    "y": 0.4515
+   }
+  },
+  "meadow_rose_bush_02": {
+   "frame": {
+    "x": 1045,
+    "y": 623,
+    "w": 147,
+    "h": 118
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 118
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 118
+   },
+   "pivot": {
+    "x": 0.4968,
+    "y": 0.4537
+   }
+  },
+  "meadow_rose_bush_03": {
+   "frame": {
+    "x": 1194,
+    "y": 623,
+    "w": 147,
+    "h": 118
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 118
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 118
+   },
+   "pivot": {
+    "x": 0.5018,
+    "y": 0.4515
+   }
+  },
+  "meadow_sapling": {
+   "frame": {
+    "x": 943,
+    "y": 2,
+    "w": 146,
+    "h": 162
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 162
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 162
+   },
+   "pivot": {
+    "x": 0.5016,
+    "y": 0.6006
+   }
+  },
+  "meadow_slope_dl_01": {
+   "frame": {
+    "x": 2,
+    "y": 358,
+    "w": 147,
+    "h": 132
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 132
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 132
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4258
+   }
+  },
+  "meadow_slope_dl_02": {
+   "frame": {
+    "x": 1190,
+    "y": 358,
+    "w": 147,
+    "h": 131
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 131
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 131
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4248
+   }
+  },
+  "meadow_slope_dl_03": {
+   "frame": {
+    "x": 151,
+    "y": 492,
+    "w": 147,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 128
+   },
+   "pivot": {
+    "x": 0.5009,
+    "y": 0.4276
+   }
+  },
+  "meadow_slope_dr_01": {
+   "frame": {
+    "x": 151,
+    "y": 358,
+    "w": 147,
+    "h": 132
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 132
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 132
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4258
+   }
+  },
+  "meadow_slope_dr_02": {
+   "frame": {
+    "x": 1339,
+    "y": 358,
+    "w": 147,
+    "h": 131
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 131
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 131
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4248
+   }
+  },
+  "meadow_slope_dr_03": {
+   "frame": {
+    "x": 300,
+    "y": 492,
+    "w": 147,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 128
+   },
+   "pivot": {
+    "x": 0.5009,
+    "y": 0.4276
+   }
+  },
+  "meadow_slope_ul_01": {
+   "frame": {
+    "x": 300,
+    "y": 358,
+    "w": 147,
+    "h": 132
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 132
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 132
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4258
+   }
+  },
+  "meadow_slope_ul_02": {
+   "frame": {
+    "x": 1488,
+    "y": 358,
+    "w": 147,
+    "h": 131
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 131
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 131
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4248
+   }
+  },
+  "meadow_slope_ul_03": {
+   "frame": {
+    "x": 449,
+    "y": 492,
+    "w": 147,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 128
+   },
+   "pivot": {
+    "x": 0.5009,
+    "y": 0.4276
+   }
+  },
+  "meadow_slope_ur_01": {
+   "frame": {
+    "x": 449,
+    "y": 358,
+    "w": 147,
+    "h": 132
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 132
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 132
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4258
+   }
+  },
+  "meadow_slope_ur_02": {
+   "frame": {
+    "x": 1637,
+    "y": 358,
+    "w": 147,
+    "h": 131
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 131
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 131
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4248
+   }
+  },
+  "meadow_slope_ur_03": {
+   "frame": {
+    "x": 598,
+    "y": 492,
+    "w": 147,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 128
+   },
+   "pivot": {
+    "x": 0.5009,
+    "y": 0.4276
+   }
+  },
+  "meadow_standing_stone": {
+   "frame": {
+    "x": 646,
+    "y": 2,
+    "w": 147,
+    "h": 209
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 209
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 209
+   },
+   "pivot": {
+    "x": 0.501,
+    "y": 0.6919
+   }
+  },
+  "meadow_swamp_algae": {
+   "frame": {
+    "x": 1043,
+    "y": 979,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.4973,
+    "y": 0.4222
+   }
+  },
+  "meadow_swamp_deep": {
+   "frame": {
+    "x": 1192,
+    "y": 979,
+    "w": 146,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.5007,
+    "y": 0.4222
+   }
+  },
+  "meadow_swamp_frog": {
+   "frame": {
+    "x": 1340,
+    "y": 979,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.501,
+    "y": 0.4222
+   }
+  },
+  "meadow_swamp_lily": {
+   "frame": {
+    "x": 1489,
+    "y": 979,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.501,
+    "y": 0.4222
+   }
+  },
+  "meadow_swamp_lotus": {
+   "frame": {
+    "x": 1638,
+    "y": 979,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.501,
+    "y": 0.4222
+   }
+  },
+  "meadow_swamp_open": {
+   "frame": {
+    "x": 1787,
+    "y": 979,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.4973,
+    "y": 0.4222
+   }
+  },
+  "meadow_swamp_reeds": {
+   "frame": {
+    "x": 150,
+    "y": 623,
+    "w": 147,
+    "h": 121
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 121
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 121
+   },
+   "pivot": {
+    "x": 0.501,
+    "y": 0.4792
+   }
+  },
+  "meadow_swamp_shore_bottom": {
+   "frame": {
+    "x": 151,
+    "y": 748,
+    "w": 149,
+    "h": 115
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 149,
+    "h": 115
+   },
+   "sourceSize": {
+    "w": 149,
+    "h": 115
+   },
+   "pivot": {
+    "x": 0.498,
+    "y": 0.4516
+   }
+  },
+  "meadow_swamp_shore_left": {
+   "frame": {
+    "x": 748,
+    "y": 865,
+    "w": 149,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 149,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 149,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.498,
+    "y": 0.4245
+   }
+  },
+  "meadow_swamp_shore_ll": {
+   "frame": {
+    "x": 2,
+    "y": 1092,
+    "w": 149,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 149,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 149,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.5017,
+    "y": 0.4122
+   }
+  },
+  "meadow_swamp_shore_ll_m": {
+   "frame": {
+    "x": 153,
+    "y": 1092,
+    "w": 149,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 149,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 149,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.4983,
+    "y": 0.4122
+   }
+  },
+  "meadow_swamp_shore_lr": {
+   "frame": {
+    "x": 304,
+    "y": 1092,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.4973,
+    "y": 0.4222
+   }
+  },
+  "meadow_swamp_shore_lr_m": {
+   "frame": {
+    "x": 453,
+    "y": 1092,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.5027,
+    "y": 0.4222
+   }
+  },
+  "meadow_swamp_shore_right": {
+   "frame": {
+    "x": 602,
+    "y": 1092,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.501,
+    "y": 0.4272
+   }
+  },
+  "meadow_swamp_shore_top": {
+   "frame": {
+    "x": 748,
+    "y": 748,
+    "w": 147,
+    "h": 113
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 113
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 113
+   },
+   "pivot": {
+    "x": 0.501,
+    "y": 0.4353
+   }
+  },
+  "meadow_swamp_shore_ul": {
+   "frame": {
+    "x": 897,
+    "y": 748,
+    "w": 148,
+    "h": 113
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 113
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 113
+   },
+   "pivot": {
+    "x": 0.5013,
+    "y": 0.4353
+   }
+  },
+  "meadow_swamp_shore_ul_m": {
+   "frame": {
+    "x": 1047,
+    "y": 748,
+    "w": 148,
+    "h": 113
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 113
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 113
+   },
+   "pivot": {
+    "x": 0.4987,
+    "y": 0.4353
+   }
+  },
+  "meadow_swamp_shore_ur": {
+   "frame": {
+    "x": 899,
+    "y": 865,
+    "w": 147,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.501,
+    "y": 0.4294
+   }
+  },
+  "meadow_swamp_shore_ur_m": {
+   "frame": {
+    "x": 1048,
+    "y": 865,
+    "w": 147,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.499,
+    "y": 0.4294
+   }
+  },
+  "meadow_tall_grass_01": {
+   "frame": {
+    "x": 746,
+    "y": 623,
+    "w": 148,
+    "h": 119
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 119
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 119
+   },
+   "pivot": {
+    "x": 0.4995,
+    "y": 0.4532
+   }
+  },
+  "meadow_tall_grass_02": {
+   "frame": {
+    "x": 1342,
+    "y": 492,
+    "w": 148,
+    "h": 126
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 126
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 126
+   },
+   "pivot": {
+    "x": 0.4995,
+    "y": 0.4806
+   }
+  },
+  "meadow_tall_grass_03": {
+   "frame": {
+    "x": 451,
+    "y": 748,
+    "w": 146,
+    "h": 114
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 114
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 114
+   },
+   "pivot": {
+    "x": 0.5016,
+    "y": 0.4277
+   }
+  },
+  "meadow_tall_grass_04": {
+   "frame": {
+    "x": 747,
+    "y": 492,
+    "w": 147,
+    "h": 128
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 128
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 128
+   },
+   "pivot": {
+    "x": 0.4996,
+    "y": 0.4988
+   }
+  },
+  "meadow_track_01": {
+   "frame": {
+    "x": 151,
+    "y": 979,
+    "w": 146,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.5006,
+    "y": 0.4324
+   }
+  },
+  "meadow_track_02": {
+   "frame": {
+    "x": 1197,
+    "y": 865,
+    "w": 147,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.5009,
+    "y": 0.4334
+   }
+  },
+  "meadow_track_circle_01": {
+   "frame": {
+    "x": 1197,
+    "y": 748,
+    "w": 147,
+    "h": 113
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 113
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 113
+   },
+   "pivot": {
+    "x": 0.5009,
+    "y": 0.4393
+   }
+  },
+  "meadow_track_circle_02": {
+   "frame": {
+    "x": 299,
+    "y": 979,
+    "w": 147,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4972,
+    "y": 0.4275
+   }
+  },
+  "meadow_track_fork": {
+   "frame": {
+    "x": 1790,
+    "y": 492,
+    "w": 146,
+    "h": 124
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 124
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 124
+   },
+   "pivot": {
+    "x": 0.4969,
+    "y": 0.4839
+   }
+  },
+  "meadow_track_y_01": {
+   "frame": {
+    "x": 448,
+    "y": 979,
+    "w": 146,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4994,
+    "y": 0.4324
+   }
+  },
+  "meadow_tree_02": {
+   "frame": {
+    "x": 344,
+    "y": 2,
+    "w": 149,
+    "h": 214
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 149,
+    "h": 214
+   },
+   "sourceSize": {
+    "w": 149,
+    "h": 214
+   },
+   "pivot": {
+    "x": 0.4943,
+    "y": 0.695
+   }
+  },
+  "meadow_tree_03": {
+   "frame": {
+    "x": 495,
+    "y": 2,
+    "w": 149,
+    "h": 214
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 149,
+    "h": 214
+   },
+   "sourceSize": {
+    "w": 149,
+    "h": 214
+   },
+   "pivot": {
+    "x": 0.5057,
+    "y": 0.695
+   }
+  },
+  "meadow_wildflowers": {
+   "frame": {
+    "x": 2,
+    "y": 492,
+    "w": 147,
+    "h": 129
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 129
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 129
+   },
+   "pivot": {
+    "x": 0.5038,
+    "y": 0.4928
+   }
+  }
+ },
+ "meta": {
+  "app": "stray-fev2 tools/tiles/slice.ts",
+  "image": "meadow_atlas.png",
+  "size": {
+   "w": 1987,
+   "h": 1204
+  },
+  "scale": "1",
+  "tileWidth": 144
+ }
+}

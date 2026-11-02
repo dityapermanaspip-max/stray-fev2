@@ -1,0 +1,286 @@
+{
+  "about": "How the field uses the meadow sheets. sheets: PNG files in one of two layouts, 3 x 5 (ground) or 3 x 2 (objects), and a frame name per tile in reading order (rows by the tiles' feet, left to right; null skips). mirror: new frame -> frame mirrored left-right (swaps the grid axes). slopes: group -> flat frames the slicer skews into one-level slopes for all four directions (a list), or { x, y } frames for slopes along each axis (paths). terrain: frames per server terrain, one picked per tile by position (repeat a name to weight it); water and the like may split into edge and inner (inner = all four neighbours the same terrain) and add shore: pieces by where the other terrain is (ul = -x, ur = -y, lr = +x, ll = +y; corners top, right, bottom, left). bank: water terrain -> pieces for a land tile beside it, by the side the water is on. node: frames that replace the ground of a flat tile holding that resource node. marker: obstacles drawn as marker_ground with the placeholder mark on top. slope: frame group per terrain (default for the rest). filler: the block stacked under raised tiles; block_levels: height levels one block covers.",
+  "sheets": [
+    {
+      "file": "meadow_nobg_ground_r3.png",
+      "names": [
+        "meadow_dirt_01",
+        "meadow_dirt_02",
+        "meadow_grass_plain_01",
+        "meadow_tall_grass_01",
+        "meadow_tall_grass_02",
+        "meadow_grass_plain_02",
+        "meadow_flowers_01",
+        "meadow_flowers_02",
+        "meadow_deep_water",
+        "meadow_mud_01",
+        "meadow_reeds_01",
+        "meadow_dirt_03",
+        "meadow_mud_02",
+        "meadow_reeds_02",
+        "meadow_doorstep"
+      ]
+    },
+    {
+      "file": "meadow_nobg_objects_r3.png",
+      "names": [
+        "meadow_ore_01",
+        "meadow_ore_02",
+        "meadow_herb_02",
+        "meadow_dark_tree_01",
+        "meadow_dark_bush_01",
+        "meadow_dark_ore_01"
+      ]
+    },
+    {
+      "file": "meadow_nobg_grass_r4.png",
+      "names": [
+        "meadow_lush_01",
+        "meadow_track_01",
+        "meadow_lush_pebbles_01",
+        "meadow_lush_02",
+        "meadow_track_02",
+        "meadow_lush_pebbles_02",
+        "meadow_lush_03",
+        "meadow_track_fork",
+        "meadow_lush_04",
+        "meadow_lush_dirt_01",
+        "meadow_track_circle_01",
+        "meadow_lush_dirt_02",
+        "meadow_lush_05",
+        "meadow_track_circle_02",
+        "meadow_lush_pebbles_03"
+      ]
+    },
+    {
+      "file": "meadow_nobg_swamp_r1.png",
+      "names": [
+        "meadow_swamp_shore_top",
+        "meadow_swamp_shore_ur",
+        "meadow_swamp_shore_right",
+        "meadow_swamp_shore_ul",
+        "meadow_swamp_open",
+        "meadow_swamp_shore_lr",
+        "meadow_swamp_shore_left",
+        "meadow_swamp_shore_ll",
+        "meadow_swamp_shore_bottom",
+        "meadow_swamp_lily",
+        "meadow_swamp_frog",
+        "meadow_swamp_reeds",
+        "meadow_swamp_lotus",
+        "meadow_swamp_algae",
+        "meadow_swamp_deep"
+      ]
+    },
+    {
+      "file": "meadow_nobg_objects_r4.png",
+      "names": [
+        "meadow_log_stream",
+        "meadow_forest_floor",
+        "meadow_wildflowers",
+        "meadow_tree_02",
+        "meadow_mushrooms",
+        "meadow_crystals"
+      ]
+    },
+    {
+      "file": "meadow_nobg_objects_r5.png",
+      "names": [
+        "meadow_bush_01",
+        "meadow_rose_bush_01",
+        "meadow_tall_grass_03",
+        "meadow_standing_stone",
+        "meadow_pebbles_01",
+        "meadow_sapling"
+      ]
+    },
+    {
+      "file": "meadow_nobg_objects_r6.png",
+      "names": [
+        "meadow_bush_02",
+        "meadow_rose_bush_02",
+        "meadow_tall_grass_04",
+        "meadow_boulder_01",
+        "meadow_pebbles_02",
+        "meadow_oak"
+      ]
+    }
+  ],
+  "slopes": {
+    "slope": [
+      "meadow_grass_plain_01",
+      "meadow_grass_plain_02",
+      "meadow_lush_01"
+    ],
+    "dirt_slope": [
+      "meadow_dirt_01",
+      "meadow_dirt_03"
+    ],
+    "flower_slope": [
+      "meadow_flowers_01",
+      "meadow_flowers_02"
+    ],
+    "path_slope": {
+      "x": [
+        "meadow_track_01"
+      ],
+      "y": [
+        "meadow_track_y_01"
+      ]
+    }
+  },
+  "filler": "meadow_dirt_02",
+  "block_levels": 2,
+  "terrain": {
+    "grass": [
+      "meadow_grass_plain_01",
+      "meadow_grass_plain_02",
+      "meadow_lush_01",
+      "meadow_lush_02",
+      "meadow_lush_03",
+      "meadow_lush_04",
+      "meadow_lush_05",
+      "meadow_lush_pebbles_01",
+      "meadow_lush_pebbles_02",
+      "meadow_lush_pebbles_03",
+      "meadow_forest_floor",
+      "meadow_pebbles_01",
+      "meadow_pebbles_02",
+      "meadow_sapling"
+    ],
+    "tall_grass": [
+      "meadow_tall_grass_01",
+      "meadow_tall_grass_02",
+      "meadow_tall_grass_03",
+      "meadow_tall_grass_04"
+    ],
+    "flowers": [
+      "meadow_flowers_01",
+      "meadow_flowers_02",
+      "meadow_wildflowers"
+    ],
+    "dirt": [
+      "meadow_dirt_01",
+      "meadow_dirt_03"
+    ],
+    "road": [
+      "meadow_dirt_03"
+    ],
+    "door": [
+      "meadow_doorstep"
+    ],
+    "swamp": {
+      "edge": [
+        "meadow_mud_01",
+        "meadow_mud_02",
+        "meadow_reeds_01",
+        "meadow_reeds_02"
+      ],
+      "inner": [
+        "meadow_swamp_open",
+        "meadow_swamp_open",
+        "meadow_swamp_open",
+        "meadow_swamp_open",
+        "meadow_swamp_open",
+        "meadow_swamp_lily",
+        "meadow_swamp_frog",
+        "meadow_swamp_reeds",
+        "meadow_swamp_lotus",
+        "meadow_swamp_algae",
+        "meadow_swamp_deep"
+      ],
+      "shore": {
+        "top": [
+          "meadow_swamp_shore_top"
+        ],
+        "ur": [
+          "meadow_swamp_shore_ur",
+          "meadow_swamp_shore_ul_m"
+        ],
+        "right": [
+          "meadow_swamp_shore_right"
+        ],
+        "ul": [
+          "meadow_swamp_shore_ul",
+          "meadow_swamp_shore_ur_m"
+        ],
+        "lr": [
+          "meadow_swamp_shore_lr",
+          "meadow_swamp_shore_ll_m"
+        ],
+        "left": [
+          "meadow_swamp_shore_left"
+        ],
+        "ll": [
+          "meadow_swamp_shore_ll",
+          "meadow_swamp_shore_lr_m"
+        ],
+        "bottom": [
+          "meadow_swamp_shore_bottom"
+        ]
+      }
+    },
+    "water": {
+      "edge": [
+        "meadow_deep_water"
+      ],
+      "inner": [
+        "meadow_deep_water"
+      ]
+    },
+    "bush": [
+      "meadow_bush_01",
+      "meadow_bush_02",
+      "meadow_bush_03",
+      "meadow_bush_04",
+      "meadow_rose_bush_01",
+      "meadow_rose_bush_02",
+      "meadow_rose_bush_03"
+    ],
+    "rock": [
+      "meadow_boulder_01",
+      "meadow_boulder_02",
+      "meadow_boulder_01",
+      "meadow_boulder_02",
+      "meadow_standing_stone"
+    ]
+  },
+  "node": {
+    "herb": [
+      "meadow_herb_02",
+      "meadow_mushrooms"
+    ],
+    "rock": [
+      "meadow_ore_01",
+      "meadow_ore_02",
+      "meadow_crystals"
+    ],
+    "tree": [
+      "meadow_tree_02",
+      "meadow_tree_03",
+      "meadow_oak",
+      "meadow_oak_m"
+    ]
+  },
+  "marker": [],
+  "marker_ground": "grass",
+  "slope": {
+    "default": "slope",
+    "dirt": "dirt_slope",
+    "road": "dirt_slope",
+    "flowers": "flower_slope"
+  },
+  "mirror": {
+    "meadow_track_y_01": "meadow_track_01",
+    "meadow_tree_03": "meadow_tree_02",
+    "meadow_swamp_shore_ur_m": "meadow_swamp_shore_ur",
+    "meadow_swamp_shore_ul_m": "meadow_swamp_shore_ul",
+    "meadow_swamp_shore_ll_m": "meadow_swamp_shore_ll",
+    "meadow_swamp_shore_lr_m": "meadow_swamp_shore_lr",
+    "meadow_bush_03": "meadow_bush_01",
+    "meadow_bush_04": "meadow_bush_02",
+    "meadow_rose_bush_03": "meadow_rose_bush_01",
+    "meadow_boulder_02": "meadow_boulder_01",
+    "meadow_oak_m": "meadow_oak"
+  }
+}

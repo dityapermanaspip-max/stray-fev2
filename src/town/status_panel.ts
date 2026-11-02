@@ -1,11 +1,14 @@
-import type { EatRequest, GearRequest, LoadoutRequest, StatusPanel } from '../../../stray-bev1/shared/town.ts';
+import type { EatRequest, FormationRequest, GearRequest, LoadoutRequest, StatusPanel } from '../../../stray-bev1/shared/town.ts';
 import './town.css';
 
 // The status window: body words, the move slots and known moves, and the bag. Text comes from the server.
 // In a town's square: pick a known move, then a slot, to place it (✕ empties a slot); ⇡ wears an item, ⇣ takes it off.
+// In town, the formation grid (back row left, front row right, facing the foes) picks your battle place.
 // Anywhere: 🍴 eats a food item.
 
-export type StatusActions = { loadout: (req: LoadoutRequest) => void; gear: (req: GearRequest) => void; eat: (req: EatRequest) => void };
+export type StatusActions = {
+  loadout: (req: LoadoutRequest) => void; gear: (req: GearRequest) => void; eat: (req: EatRequest) => void; formation: (req: FormationRequest) => void;
+};
 
 export class StatusWindow {
   private root = document.createElement('div');
@@ -56,7 +59,7 @@ export class StatusWindow {
       li.append(b);
       moves.append(li);
     }
-    this.root.append(slots, moves);
+    this.root.append(slots, moves, this.formation(s));
 
     if (s.bag) {
       this.root.append(el('p', s.bag.load.text ?? '', 'body'));
@@ -98,6 +101,24 @@ export class StatusWindow {
     if (!this.picked) return void (move && this.pick(move));
     this.picked = null;
     if (move) this.act.loadout({ slot, move });
+  }
+
+  // Two columns of slot buttons: the back row, then the front row nearer the foes. ● marks where you stand.
+  private formation(s: StatusPanel): HTMLElement {
+    const { slot: mine, front, back } = s.formation;
+    const grid = document.createElement('div');
+    grid.className = 'formation';
+    const column = (first: number, count: number) => {
+      const col = document.createElement('div');
+      for (let slot = first; slot < first + count; slot++) {
+        const b = this.button(slot === mine ? '●' : '·', () => this.act.formation({ slot }), slot === mine ? 'picked' : '');
+        b.disabled = !s.canSwap || slot === mine;
+        col.append(b);
+      }
+      return col;
+    };
+    grid.append(column(front + 1, back), column(1, front));
+    return grid;
   }
 
   private button(label: string, onClick: () => void, cls = ''): HTMLButtonElement {

@@ -1,0 +1,176 @@
+{
+  "about": "How the field uses this biome's sheets. Same fields as meadow/meadow.tiles.json (see its about).",
+  "sheets": [
+    {
+      "file": "snow_nobg_r1.png",
+      "names": [
+        "snow_plain_01",
+        "snow_frozen_stone",
+        "snow_patchy",
+        "snow_frost_grass_01",
+        "snow_frost_shrubs",
+        "snow_lichen",
+        "snow_flowers",
+        "snow_berries",
+        "snow_ice_01",
+        "snow_frozen_lake",
+        "snow_tracks",
+        "snow_ice_02",
+        "snow_drift",
+        "snow_ice_paving",
+        "snow_doorstep"
+      ]
+    },
+    {
+      "file": "snow_nobg_objects_r1.png",
+      "names": [
+        "snow_ore_ice",
+        "snow_rocks",
+        "snow_potted_herb",
+        "snow_ice_tree",
+        "snow_bush",
+        "snow_ore_crystal"
+      ]
+    },
+    {
+      "file": "snow_nobg_water_r1.png",
+      "names": [
+        "snow_lake_shore_top",
+        "snow_lake_shore_ur",
+        "snow_lake_shore_right",
+        "snow_lake_shore_ul",
+        "snow_lake_open",
+        "snow_lake_shore_lr",
+        "snow_lake_shore_left",
+        "snow_lake_shore_ll",
+        "snow_lake_shore_bottom",
+        "snow_lake_lily",
+        "snow_lake_frog",
+        "snow_lake_reeds",
+        "snow_lake_lotus",
+        "snow_lake_floes",
+        "snow_lake_deep"
+      ]
+    }
+  ],
+  "slopes": {
+    "slope": [
+      "snow_plain_01",
+      "snow_patchy"
+    ],
+    "frost_slope": [
+      "snow_frost_grass_01",
+      "snow_lichen"
+    ],
+    "ice_slope": [
+      "snow_ice_02"
+    ]
+  },
+  "filler": "snow_plain_01",
+  "block_levels": 2,
+  "terrain": {
+    "snow": [
+      "snow_plain_01",
+      "snow_plain_01",
+      "snow_patchy",
+      "snow_tracks",
+      "snow_flowers"
+    ],
+    "frost_grass": [
+      "snow_frost_grass_01",
+      "snow_frost_shrubs",
+      "snow_lichen"
+    ],
+    "ice": [
+      "snow_ice_01",
+      "snow_ice_02"
+    ],
+    "frozen_lake": {
+      "edge": [
+        "snow_frozen_lake"
+      ],
+      "inner": [
+        "snow_lake_open",
+        "snow_lake_open",
+        "snow_lake_open",
+        "snow_lake_open",
+        "snow_lake_open",
+        "snow_lake_lily",
+        "snow_lake_frog",
+        "snow_lake_reeds",
+        "snow_lake_lotus",
+        "snow_lake_floes",
+        "snow_lake_deep"
+      ],
+      "shore": {
+        "top": [
+          "snow_lake_shore_top"
+        ],
+        "ur": [
+          "snow_lake_shore_ur",
+          "snow_lake_shore_ul_m"
+        ],
+        "right": [
+          "snow_lake_shore_right"
+        ],
+        "ul": [
+          "snow_lake_shore_ul",
+          "snow_lake_shore_ur_m"
+        ],
+        "lr": [
+          "snow_lake_shore_lr",
+          "snow_lake_shore_ll_m"
+        ],
+        "left": [
+          "snow_lake_shore_left"
+        ],
+        "ll": [
+          "snow_lake_shore_ll",
+          "snow_lake_shore_lr_m"
+        ],
+        "bottom": [
+          "snow_lake_shore_bottom"
+        ]
+      }
+    },
+    "snow_drift": [
+      "snow_drift"
+    ],
+    "rock": [
+      "snow_rocks"
+    ],
+    "paving": [
+      "snow_ice_paving"
+    ],
+    "road": [
+      "snow_tracks"
+    ],
+    "door": [
+      "snow_doorstep"
+    ]
+  },
+  "node": {
+    "rock": [
+      "snow_ore_ice",
+      "snow_ore_crystal"
+    ],
+    "tree": [
+      "snow_ice_tree"
+    ]
+  },
+  "marker": [
+    "pine"
+  ],
+  "marker_ground": "snow",
+  "slope": {
+    "default": "slope",
+    "frost_grass": "frost_slope",
+    "ice": "ice_slope"
+  },
+  "mirror": {
+    "snow_lake_shore_ur_m": "snow_lake_shore_ur",
+    "snow_lake_shore_ul_m": "snow_lake_shore_ul",
+    "snow_lake_shore_ll_m": "snow_lake_shore_ll",
+    "snow_lake_shore_lr_m": "snow_lake_shore_lr"
+  }
+}

@@ -1,0 +1,302 @@
+{
+ "frames": {
+  "stone_01": {
+   "frame": {
+    "x": 657,
+    "y": 2,
+    "w": 313,
+    "h": 284
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 313,
+    "h": 284
+   },
+   "sourceSize": {
+    "w": 313,
+    "h": 284
+   },
+   "pivot": {
+    "x": 0.4984,
+    "y": 0.7148
+   }
+  },
+  "stone_02": {
+   "frame": {
+    "x": 2,
+    "y": 2,
+    "w": 333,
+    "h": 285
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 333,
+    "h": 285
+   },
+   "sourceSize": {
+    "w": 333,
+    "h": 285
+   },
+   "pivot": {
+    "x": 0.4976,
+    "y": 0.6993
+   }
+  },
+  "stone_03": {
+   "frame": {
+    "x": 337,
+    "y": 2,
+    "w": 318,
+    "h": 285
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 318,
+    "h": 285
+   },
+   "sourceSize": {
+    "w": 318,
+    "h": 285
+   },
+   "pivot": {
+    "x": 0.4978,
+    "y": 0.7122
+   }
+  },
+  "stone_04": {
+   "frame": {
+    "x": 972,
+    "y": 2,
+    "w": 318,
+    "h": 268
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 318,
+    "h": 268
+   },
+   "sourceSize": {
+    "w": 318,
+    "h": 268
+   },
+   "pivot": {
+    "x": 0.4978,
+    "y": 0.6937
+   }
+  },
+  "stone_05": {
+   "frame": {
+    "x": 660,
+    "y": 289,
+    "w": 343,
+    "h": 255
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 343,
+    "h": 255
+   },
+   "sourceSize": {
+    "w": 343,
+    "h": 255
+   },
+   "pivot": {
+    "x": 0.498,
+    "y": 0.6554
+   }
+  },
+  "stone_06": {
+   "frame": {
+    "x": 1338,
+    "y": 289,
+    "w": 323,
+    "h": 252
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 323,
+    "h": 252
+   },
+   "sourceSize": {
+    "w": 323,
+    "h": 252
+   },
+   "pivot": {
+    "x": 0.4989,
+    "y": 0.6688
+   }
+  },
+  "stone_07": {
+   "frame": {
+    "x": 1005,
+    "y": 289,
+    "w": 331,
+    "h": 254
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 331,
+    "h": 254
+   },
+   "sourceSize": {
+    "w": 331,
+    "h": 254
+   },
+   "pivot": {
+    "x": 0.4989,
+    "y": 0.6647
+   }
+  },
+  "stone_08": {
+   "frame": {
+    "x": 1630,
+    "y": 2,
+    "w": 319,
+    "h": 261
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 319,
+    "h": 261
+   },
+   "sourceSize": {
+    "w": 319,
+    "h": 261
+   },
+   "pivot": {
+    "x": 0.498,
+    "y": 0.685
+   }
+  },
+  "stone_11": {
+   "frame": {
+    "x": 2,
+    "y": 289,
+    "w": 325,
+    "h": 257
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 325,
+    "h": 257
+   },
+   "sourceSize": {
+    "w": 325,
+    "h": 257
+   },
+   "pivot": {
+    "x": 0.4976,
+    "y": 0.6768
+   }
+  },
+  "stone_12": {
+   "frame": {
+    "x": 1663,
+    "y": 289,
+    "w": 328,
+    "h": 247
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 328,
+    "h": 247
+   },
+   "sourceSize": {
+    "w": 328,
+    "h": 247
+   },
+   "pivot": {
+    "x": 0.4982,
+    "y": 0.6593
+   }
+  },
+  "stone_13": {
+   "frame": {
+    "x": 1292,
+    "y": 2,
+    "w": 336,
+    "h": 265
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 336,
+    "h": 265
+   },
+   "sourceSize": {
+    "w": 336,
+    "h": 265
+   },
+   "pivot": {
+    "x": 0.4982,
+    "y": 0.6758
+   }
+  },
+  "stone_14": {
+   "frame": {
+    "x": 329,
+    "y": 289,
+    "w": 329,
+    "h": 256
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 329,
+    "h": 256
+   },
+   "sourceSize": {
+    "w": 329,
+    "h": 256
+   },
+   "pivot": {
+    "x": 0.4984,
+    "y": 0.6706
+   }
+  }
+ },
+ "meta": {
+  "app": "stray-fev2 tools/buildings/slice.ts",
+  "image": "stone_atlas.png",
+  "size": {
+   "w": 1993,
+   "h": 548
+  },
+  "scale": "1",
+  "unitWidth": 320
+ }
+}

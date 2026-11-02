@@ -1,0 +1,113 @@
+{
+  "about": "Town building looks. styles: folder name -> sheets (3 x 5, one building per cell, reading order by the feet) and skip (1-based cells that are not buildings: walls, plazas). `npm run buildings:slice -- <style>...` makes <style>/<style>_atlas.png and <style>/<style>.json with frames <style>_NN. biomes: field biome -> styles its towns draw from (one building per footprint, picked by position); 'default' for the rest. Looks only: any building stands for any service. doors: frame number -> [face, t]: the art's door is on the L (down-left) or R (down-right) face, t from the face's left end (0) to its right end (1); frames left out have no door and suit door-less houses. A mirror moves an L door at t to R at 1 - t.",
+  "styles": {
+    "cottage": {
+      "sheets": ["cottage_nobg_buildings_r1.png"],
+      "skip": [],
+      "doors": {
+        "09": ["R", 0.75],
+        "10": ["R", 0.4],
+        "11": ["L", 0.55],
+        "12": ["L", 0.6],
+        "13": ["R", 0.25],
+        "14": ["L", 0.5],
+        "15": ["L", 0.6]
+      }
+    },
+    "stone": {
+      "sheets": ["stone_nobg_buildings_r1.png"],
+      "skip": [9, 10, 15],
+      "doors": {
+        "01": ["L", 0.8],
+        "02": ["L", 0.7],
+        "03": ["L", 0.4],
+        "04": ["L", 0.6],
+        "06": ["L", 0.9],
+        "07": ["L", 0.6],
+        "08": ["L", 0.7],
+        "11": ["L", 0.8],
+        "12": ["L", 0.6],
+        "13": ["R", 0.3],
+        "14": ["L", 0.7]
+      }
+    },
+    "forge": {
+      "sheets": ["forge_nobg_buildings_r1.png"],
+      "skip": [],
+      "doors": {
+        "01": ["R", 0.4],
+        "02": ["R", 0.5],
+        "03": ["R", 0.5],
+        "04": ["L", 0.6],
+        "05": ["L", 0.5],
+        "06": ["L", 0.5],
+        "08": ["L", 0.5],
+        "09": ["L", 0.5],
+        "10": ["R", 0.3],
+        "11": ["L", 0.6],
+        "12": ["L", 0.5],
+        "13": ["R", 0.3],
+        "14": ["L", 0.5],
+        "15": ["L", 0.9]
+      }
+    },
+    "sandstone": {
+      "sheets": ["sandstone_nobg_buildings_r1.png"],
+      "skip": [10, 15],
+      "doors": {
+        "01": ["L", 0.8],
+        "02": ["L", 0.6],
+        "03": ["L", 0.5],
+        "04": ["L", 0.6],
+        "06": ["L", 0.9],
+        "07": ["L", 0.6],
+        "08": ["L", 0.7],
+        "09": ["R", 0.4],
+        "11": ["L", 0.8],
+        "12": ["L", 0.6],
+        "13": ["L", 0.5],
+        "14": ["L", 0.7]
+      }
+    },
+    "camp": {
+      "sheets": ["camp_nobg_buildings_r1.png"],
+      "skip": [],
+      "doors": {
+        "02": ["R", 0.4],
+        "06": ["R", 0.6],
+        "07": ["L", 0.5],
+        "10": ["L", 0.6],
+        "12": ["L", 0.9],
+        "13": ["L", 0.6],
+        "15": ["L", 0.9]
+      }
+    },
+    "elven": {
+      "sheets": ["elven_nobg_buildings_r1.png"],
+      "skip": [],
+      "doors": {
+        "01": ["R", 0.3],
+        "02": ["R", 0.3],
+        "05": ["L", 0.7],
+        "06": ["R", 0.4],
+        "07": ["L", 0.8],
+        "08": ["L", 0.7],
+        "09": ["L", 0.6],
+        "10": ["R", 0.4],
+        "11": ["R", 0.3],
+        "12": ["L", 0.6],
+        "14": ["L", 0.6]
+      }
+    }
+  },
+  "biomes": {
+    "meadow": ["cottage"],
+    "grove": ["elven"],
+    "volcano": ["forge"],
+    "desert": ["sandstone", "camp"],
+    "snow": ["stone"],
+    "battlefield": ["stone"],
+    "seashore": ["camp"],
+    "default": ["cottage"]
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "about": "How the field uses this biome's sheets. Same fields as meadow/meadow.tiles.json (see its about).",
+  "sheets": [
+    {
+      "file": "volcano_nobg_r2.png",
+      "names": [
+        "volcano_basalt_plain",
+        "volcano_lava_cracks",
+        "volcano_cinders",
+        "volcano_ember_moss",
+        "volcano_obsidian_shards",
+        "volcano_sulfur_reeds",
+        "volcano_fire_flowers",
+        "volcano_ash_flowers",
+        "volcano_lava_deep",
+        "volcano_ash_plain",
+        "volcano_hot_spring",
+        "volcano_basalt_paving",
+        "volcano_ash_tracks",
+        "volcano_sulfur_stone",
+        "volcano_steps"
+      ]
+    },
+    {
+      "file": "volcano_nobg_objects_r1.png",
+      "names": [
+        "volcano_ore_lava",
+        "volcano_ore_vents",
+        "volcano_fire_herbs",
+        "volcano_dead_tree",
+        "volcano_obsidian_spikes",
+        "volcano_ore_sulfur"
+      ]
+    },
+    {
+      "file": "volcano_nobg_lava_r1.png",
+      "names": [
+        "volcano_magma_shore_top",
+        "volcano_magma_shore_ur",
+        "volcano_magma_shore_right",
+        "volcano_magma_shore_ul",
+        "volcano_magma_open",
+        "volcano_magma_shore_lr",
+        "volcano_magma_shore_left",
+        "volcano_magma_shore_ll",
+        "volcano_magma_shore_bottom",
+        "volcano_magma_lily",
+        "volcano_magma_frog",
+        "volcano_magma_reeds",
+        "volcano_magma_lotus",
+        "volcano_magma_drift",
+        "volcano_magma_deep"
+      ]
+    }
+  ],
+  "slopes": {
+    "slope": [
+      "volcano_ash_plain",
+      "volcano_cinders"
+    ],
+    "basalt_slope": [
+      "volcano_basalt_plain"
+    ],
+    "path_slope": [
+      "volcano_lava_cracks"
+    ]
+  },
+  "filler": "volcano_basalt_plain",
+  "block_levels": 2,
+  "terrain": {
+    "ash": [
+      "volcano_ash_plain",
+      "volcano_ash_plain",
+      "volcano_cinders",
+      "volcano_ash_tracks",
+      "volcano_ash_flowers"
+    ],
+    "basalt": [
+      "volcano_basalt_plain",
+      "volcano_basalt_plain",
+      "volcano_sulfur_reeds",
+      "volcano_sulfur_stone"
+    ],
+    "scorched": [
+      "volcano_lava_cracks",
+      "volcano_ember_moss",
+      "volcano_fire_flowers"
+    ],
+    "obsidian": [
+      "volcano_obsidian_spikes",
+      "volcano_obsidian_shards"
+    ],
+    "lava": {
+      "edge": [
+        "volcano_magma_open"
+      ],
+      "inner": [
+        "volcano_magma_open",
+        "volcano_magma_open",
+        "volcano_magma_open",
+        "volcano_magma_open",
+        "volcano_magma_open",
+        "volcano_magma_lily",
+        "volcano_magma_frog",
+        "volcano_magma_reeds",
+        "volcano_magma_lotus",
+        "volcano_magma_drift",
+        "volcano_magma_deep",
+        "volcano_lava_deep"
+      ],
+      "shore": {
+        "ul": [
+          "volcano_magma_shore_ul"
+        ],
+        "ur": [
+          "volcano_magma_shore_ul_m"
+        ],
+        "lr": [
+          "volcano_magma_shore_lr"
+        ],
+        "ll": [
+          "volcano_magma_shore_lr_m"
+        ],
+        "top": [
+          "volcano_magma_shore_bottom"
+        ],
+        "right": [
+          "volcano_magma_shore_right"
+        ],
+        "left": [
+          "volcano_magma_shore_left"
+        ]
+      }
+    },
+    "paving": [
+      "volcano_basalt_paving"
+    ],
+    "road": [
+      "volcano_ash_tracks"
+    ],
+    "door": [
+      "volcano_steps"
+    ],
+    "dead_tree": [
+      "volcano_dead_tree"
+    ]
+  },
+  "marker": [
+    "lava_rock"
+  ],
+  "marker_ground": "ash",
+  "slope": {
+    "default": "slope",
+    "basalt": "basalt_slope",
+    "scorched": "path_slope"
+  },
+  "node": {
+    "rock": [
+      "volcano_ore_lava",
+      "volcano_ore_vents",
+      "volcano_ore_sulfur"
+    ]
+  },
+  "mirror": {
+    "volcano_magma_shore_ul_m": "volcano_magma_shore_ul",
+    "volcano_magma_shore_lr_m": "volcano_magma_shore_lr"
+  }
+}

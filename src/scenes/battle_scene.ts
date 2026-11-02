@@ -3,13 +3,16 @@ import type { Room } from '@colyseus/sdk';
 import type {
   ActRequest, BattleEventView, BattleLine, BattleMoveView, BattleResultView, BattleView,
 } from '../../../stray-bev1/shared/battle.ts';
-import { dodge, floatNumber, jolt, layout, lunge, makeToken, refresh, setWord, type Token } from '../battle/fighters.ts';
+import { drawBoard, fitBoard } from '../battle/board.ts';
+import { cheer, counter, dodge, fall, floatNumber, jolt, layout, lunge, makeToken, moveTo, pose, setWord, type Token } from '../battle/fighters.ts';
+import { loadActors } from '../field/actor.ts';
 import { BattleOverlay } from '../battle/overlay.ts';
 import { SceneKeys } from '../keys.ts';
 import { joinBattle, type Seat } from '../net/game_net.ts';
 
-// The private battle. The server runs the gauges and every roll; this scene shows fighters, body words,
-// damage and heal numbers and sentences, and sends "use this move on that target".
+// The private battle on a flat 7 x 11 board (battle/board.ts). The server runs the gauges and every roll; this scene
+// shows fighters and their poses, damage and heal numbers, body words only when a tier changes, and sentences, and
+// sends "use this move on that target".
 
 type BattleData = { name: string; seat: Seat };
 
@@ -54,13 +57,15 @@ export class BattleScene extends Phaser.Scene {
 
   private async connect(seat: Seat): Promise<void> {
     try {
-      const { room, view } = await joinBattle(seat);
+      const [{ room, view }] = await Promise.all([joinBattle(seat), loadActors(this)]);
       if (!this.scene.isActive()) return void room.leave();
       this.room = room;
       this.view = view;
+      drawBoard(this);
       for (const f of view.fighters) this.addToken(f);
       this.relayout();
       this.overlay = new BattleOverlay(view.moves, view.slots, { pick: (m) => this.pick(m), done: () => this.toField() });
+      this.updateReach();
       this.ready = view.ready;
       this.mark();
       room.onMessage('events', (events: BattleEventView[]) => events.forEach((e) => this.onEvent(e)));
@@ -76,13 +81,21 @@ export class BattleScene extends Phaser.Scene {
   }
 
   private addToken(f: BattleView['fighters'][number]): void {
-    const t = makeToken(this, f);
-    t.disc.on(Phaser.Input.Events.POINTER_DOWN, () => this.target(t));
+    const t = makeToken(this, f, this.view!.formation);
+    t.hit.on(Phaser.Input.Events.POINTER_DOWN, () => this.target(t));
     this.tokens.set(f.id, t);
   }
 
+  // Front-row moves are greyed while you stand behind a living front row of your own side (same rule as the server).
+  private updateReach(): void {
+    const me = this.view && this.tokens.get(this.view.you)?.fighter;
+    const all = [...this.tokens.values()].map((t) => t.fighter);
+    this.overlay?.reach(!!me && me.row === 'back' && all.some((f) => f.side === me.side && f.row === 'front' && !f.downed));
+  }
+
   private relayout(): void {
-    layout(this, [...this.tokens.values()]);
+    fitBoard(this);
+    if (this.view) layout([...this.tokens.values()], this.view.formation);
   }
 
   // A move from the menu: moves with one target wait for a click on a fighter; the rest go at once.
@@ -101,8 +114,11 @@ export class BattleScene extends Phaser.Scene {
   private setChoosing(move: BattleMoveView | null): void {
     this.choosing = move;
     const allies = move?.target === 'one_ally';
+    // A front-row move reaches the foes' back row only once their front row is down (the server checks it too).
+    const frontUp = [...this.tokens.values()].some((t) => t.fighter.side === 'enemy' && t.fighter.row === 'front' && !t.fighter.downed);
     for (const t of this.tokens.values()) {
-      const pickable = !!move && !t.fighter.downed && (allies ? t.fighter.side === 'party' : t.fighter.side === 'enemy');
+      const reachable = allies || !move?.front || !frontUp || t.fighter.row === 'front';
+      const pickable = !!move && !t.fighter.downed && reachable && (allies ? t.fighter.side === 'party' : t.fighter.side === 'enemy');
       t.ring.setVisible(pickable).setStrokeStyle(3, 0xffffff, 0.9);
     }
     this.aim = this.pickable()[0]?.fighter.id ?? null;
@@ -178,16 +194,22 @@ export class BattleScene extends Phaser.Scene {
       case 'damage': { const t = at(e.target); if (t) floatNumber(this, t, e.amount, e.outcome); break; }
       case 'heal': { const t = at(e.target); if (t) floatNumber(this, t, e.amount, 'heal'); break; }
       case 'miss': { const t = at(e.target); if (t) dodge(this, t); break; }
-      case 'interrupt': case 'counter': { const t = at(e.entity); if (t) jolt(this, t, 8); break; }
+      case 'interrupt': { const t = at(e.entity); if (t) { jolt(this, t, 8); pose(t, 'stagger'); } break; }
+      case 'counter': { const t = at(e.entity); if (t) counter(this, t); break; }
       case 'line': this.overlay?.say(e.text, nameOf(e.entity)); break;
-      case 'tier': { const t = at(e.entity); if (t) setWord(t, e.resource, e.word); break; }
+      case 'tier': { const t = at(e.entity); if (t) setWord(this, t, e.resource, e.word); break; }
       case 'downed': {
         const t = at(e.entity);
         if (t) {
-          t.fighter.downed = true;
-          t.ring.setVisible(false);
-          refresh(t);
+          fall(t);
+          this.updateReach();
         }
+        break;
+      }
+      case 'moved': {
+        const t = at(e.entity);
+        if (t && this.view) moveTo(this, t, e.slot, e.row, this.view.formation);
+        this.updateReach();
         break;
       }
       case 'learned': this.overlay?.say(`✦ ${e.name}`, null); break;
@@ -201,6 +223,7 @@ export class BattleScene extends Phaser.Scene {
     this.ready = false;
     this.mark();
     this.cameras.main.flash(250, r.won ? 255 : 120, r.won ? 240 : 40, r.won ? 200 : 40);
+    if (r.won) cheer([...this.tokens.values()]);
     this.overlay?.result(r);
   }
 

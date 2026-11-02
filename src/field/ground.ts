@@ -1,10 +1,11 @@
 import Phaser from 'phaser';
 import type { FieldTileView, FieldView } from '../../../stray-bev1/shared/field.ts';
-import { drawOrder, LIFT, TILE_H, TILE_W, tileCenter } from './iso.ts';
+import { drawOrder, LIFT, surfaceHeight, TILE_H, TILE_W, tileCenter } from './iso.ts';
 
 // Placeholder ground art: colored diamonds with side walls for raised tiles, tilted tops on slopes,
 // flat water and swamp, a darker cone on other blocked tiles, a ring on exits. Town buildings are tall blocks
-// with a dark door tile in front. Resource nodes get a small mark (rock, tree, herb, fish). Real tiles replace this later.
+// with a dark door tile in front. Resource nodes get a small mark (rock, tree, herb, fish). Tiles drawn from a sheet
+// (ground_tiles.ts) only get their marks here: exit ring, door, node, and the obstacle cone for marker terrains.
 
 const COLORS: Record<string, number> = {
   grass: 0x7fb069, tall_grass: 0x5f9a4f, flowers: 0xc9a3d9, dirt: 0xb08a5a, moss: 0x4f7f4a, leaves: 0xa5793f,
@@ -24,6 +25,9 @@ const COLORS: Record<string, number> = {
 const BUILDING_LIFT = 2.5; // height levels a building block stands above its tile (drawing only)
 const FLAT_OBSTACLES = new Set(['water', 'swamp', 'building', 'frozen_lake', 'lava', 'sea']); // blocked, but no cone
 const FALLBACK = 0x999999;
+
+// Tiles already drawn from a tile sheet; marker = keep the obstacle mark on top, node = the sprite shows the node.
+export type SpriteGround = Map<number, { marker: boolean; node: boolean }>;
 const EXIT_COLOR = 0xf2e7c4;
 const SLOPE_DIRS = [[1, 0], [0, 1], [-1, 0], [0, -1]]; // matches the server's uphill directions
 // Corners of a tile's top face in grid offsets and screen offsets: top, right, bottom, left.
@@ -40,12 +44,12 @@ function shade(color: number, factor: number): number {
   return Phaser.Display.Color.GetColor(f(c.red), f(c.green), f(c.blue));
 }
 
-// Height of each top corner: flat tiles are level, slopes run one level below to one above.
+// Height of each top corner: flat tiles are level; a slope runs from its low edge h up one level in its direction.
 function cornerHeights(tile: FieldTileView): number[] {
   if (tile.t === 'building') return CORNERS.map(() => tile.h + BUILDING_LIFT);
   if (tile.s < 0) return CORNERS.map(() => tile.h);
   const [ux, uy] = SLOPE_DIRS[tile.s];
-  return CORNERS.map((c) => tile.h + 2 * (c.gx * ux + c.gy * uy));
+  return CORNERS.map((c) => tile.h + 0.5 + (c.gx * ux + c.gy * uy));
 }
 
 // A resource node's mark, standing on its tile: a boulder, a stump with a crown, a herb tuft, or ripples.
@@ -66,8 +70,12 @@ function drawNode(g: Phaser.GameObjects.Graphics, mid: { x: number; y: number },
   }
 }
 
-function drawTile(g: Phaser.GameObjects.Graphics, x: number, y: number, tile: FieldTileView, exit: boolean, node: string | null): void {
+function drawTile(
+  g: Phaser.GameObjects.Graphics, x: number, y: number, tile: FieldTileView, exit: boolean, node: string | null,
+  sprite?: { marker: boolean; node: boolean },
+): void {
   const color = COLORS[tile.t] ?? FALLBACK;
+  if (sprite) return drawMarks(g, tileCenter(x, y, surfaceHeight(tile)), tile, exit, sprite.node ? null : node, sprite.marker);
   const base = tileCenter(x, y, 0);
   const heights = cornerHeights(tile);
   const top = CORNERS.map((c, i) => new Phaser.Math.Vector2(base.x + c.sx, base.y + c.sy - heights[i] * LIFT));
@@ -83,9 +91,13 @@ function drawTile(g: Phaser.GameObjects.Graphics, x: number, y: number, tile: Fi
   g.fillPoints(top, true);
   g.lineStyle(1, shade(color, 0.7), 0.6);
   g.strokePoints(top, true);
-  const mid = tileCenter(x, y, tile.h);
-  if (!tile.w && !FLAT_OBSTACLES.has(tile.t)) {
-    g.fillStyle(shade(color, 0.6));
+  drawMarks(g, tileCenter(x, y, surfaceHeight(tile)), tile, exit, node, !tile.w && !node && !FLAT_OBSTACLES.has(tile.t)); // a node is its own obstacle
+}
+
+// What stands on a tile: the obstacle cone, a doorstep, the exit ring, a resource node.
+function drawMarks(g: Phaser.GameObjects.Graphics, mid: { x: number; y: number }, tile: FieldTileView, exit: boolean, node: string | null, cone: boolean): void {
+  if (cone) {
+    g.fillStyle(shade(COLORS[tile.t] ?? FALLBACK, 0.6));
     g.fillTriangle(mid.x - 12, mid.y + 4, mid.x + 12, mid.y + 4, mid.x, mid.y - 26);
   }
   if (tile.door) {
@@ -100,11 +112,13 @@ function drawTile(g: Phaser.GameObjects.Graphics, x: number, y: number, tile: Fi
 }
 
 // One Graphics per diagonal row, so players can stand between rows in depth.
-export function drawGround(scene: Phaser.Scene, view: FieldView): Phaser.GameObjects.Graphics[] {
+// `skip`: tiles something else draws (town buildings).
+export function drawGround(scene: Phaser.Scene, view: FieldView, sprited: SpriteGround = new Map(), skip = new Set<number>()): Phaser.GameObjects.Graphics[] {
   const rows = new Map<number, Phaser.GameObjects.Graphics>();
   const exits = new Set(view.exits.map((e) => e.y * view.width + e.x));
   const nodes = new Map(view.nodes.map((n) => [n.y * view.width + n.x, n.kind]));
   for (const i of drawOrder(view)) {
+    if (skip.has(i)) continue;
     const x = i % view.width;
     const y = Math.floor(i / view.width);
     let g = rows.get(x + y);
@@ -112,7 +126,7 @@ export function drawGround(scene: Phaser.Scene, view: FieldView): Phaser.GameObj
       g = scene.add.graphics().setDepth((x + y) * 10);
       rows.set(x + y, g);
     }
-    drawTile(g, x, y, view.tiles[i], exits.has(i), nodes.get(i) ?? null);
+    drawTile(g, x, y, view.tiles[i], exits.has(i), nodes.get(i) ?? null, sprited.get(i));
   }
   return [...rows.values()];
 }
