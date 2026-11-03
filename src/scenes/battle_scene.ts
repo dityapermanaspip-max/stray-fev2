@@ -1,7 +1,7 @@
 import Phaser from 'phaser';
 import type { Room } from '@colyseus/sdk';
 import type {
-  ActRequest, BattleEventView, BattleLine, BattleMoveView, BattleResultView, BattleView,
+  ActRequest, AutoRequest, BattleEventView, BattleLine, BattleMoveView, BattleResultView, BattleView,
 } from '../../../stray-bev1/shared/battle.ts';
 import { drawBoard, fitBoard } from '../battle/board.ts';
 import { cheer, counter, dodge, fall, floatNumber, jolt, layout, lunge, makeToken, moveTo, pose, setWord, type Token } from '../battle/fighters.ts';
@@ -61,10 +61,10 @@ export class BattleScene extends Phaser.Scene {
       if (!this.scene.isActive()) return void room.leave();
       this.room = room;
       this.view = view;
-      drawBoard(this);
+      await drawBoard(this, view.ground);
       for (const f of view.fighters) this.addToken(f);
       this.relayout();
-      this.overlay = new BattleOverlay(view.moves, view.slots, { pick: (m) => this.pick(m), done: () => this.toField() });
+      this.overlay = new BattleOverlay(view.moves, view.slots, { pick: (m) => this.pick(m), done: () => this.toField(), auto: (on) => this.setAuto(on) });
       this.updateReach();
       this.ready = view.ready;
       this.mark();
@@ -164,6 +164,12 @@ export class BattleScene extends Phaser.Scene {
     const move = this.choosing.move;
     this.setChoosing(null);
     this.act(move, t.fighter.id);
+  }
+
+  // The dice: the server fights for the party leader by the AI's rule while it is on.
+  private setAuto(on: boolean): void {
+    this.setChoosing(null);
+    this.room?.send('auto', { on } satisfies AutoRequest);
   }
 
   private act(move: string, target: string): void {

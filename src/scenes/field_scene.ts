@@ -6,14 +6,18 @@ import { FieldKeys, nextTile } from '../field/field_keys.ts';
 import { ActorBody, loadActors } from '../field/actor.ts';
 import { fadeBuildings } from '../field/buildings.ts';
 import { drawField } from '../field/ground_tiles.ts';
-import { depthAt, pickTile, surfaceHeight, tileCenter } from '../field/iso.ts';
+import { depthAt, pickTile, tileCenter } from '../field/iso.ts';
+import { heightAt, markTarget } from '../field/marks.ts';
+import { drawNpcs } from '../field/npcs.ts';
 import { SceneKeys } from '../keys.ts';
 import { joinField, whereIs, type Seat } from '../net/game_net.ts';
 import { AskPanel, gatheredText } from '../town/ask_panel.ts';
 import { ServicePanel } from '../town/service_panel.ts';
+import { TalkPanel } from '../town/talk_panel.ts';
 import { StatusWindow } from '../town/status_panel.ts';
 import { MAP_CLOSED } from './world_map_scene.ts';
-import type { EatRequest, FormationRequest, GearRequest, LoadoutRequest, ServiceRequest, ServiceView, StatusPanel } from '../../../stray-bev1/shared/town.ts';
+import type { TalkView } from '../../../stray-bev1/shared/talk.ts';
+import type { CompanionRequest, DropRequest, EatRequest, FormationRequest, GearRequest, LoadoutRequest, PartyView, ServiceRequest, ServiceView, StatusPanel } from '../../../stray-bev1/shared/town.ts';
 
 // The field: draws the tile grid the server sent, the players the server moves, and sends "walk to tile".
 // The client never decides where anyone is; it only animates between the tiles the server reports.
@@ -38,6 +42,7 @@ export class FieldScene extends Phaser.Scene {
   private travelling = false;
   private service?: ServicePanel;
   private askPanel?: AskPanel;
+  private talk?: TalkPanel;
   private status?: StatusWindow;
   private keys?: FieldKeys;
   private mapButton?: HTMLButtonElement;
@@ -70,12 +75,16 @@ export class FieldScene extends Phaser.Scene {
     this.input.on(Phaser.Input.Events.POINTER_DOWN, this.onPointer, this);
     this.input.on(Phaser.Input.Events.POINTER_WHEEL, this.onWheel, this);
     this.service = new ServicePanel((req) => void this.ask<ServiceView>('service', req).then((v) => v && this.service?.show(v)));
+    this.talk = new TalkPanel((req) => void this.ask<TalkView>('talk_act', req).then((v) => v && this.talk?.show(v)));
     this.askPanel = new AskPanel((yes) => this.room?.send('answer', { yes } satisfies AskAnswer));
     this.status = new StatusWindow(() => void this.refreshStatus('status'), {
       loadout: (req: LoadoutRequest) => void this.refreshStatus('loadout', req),
       gear: (req: GearRequest) => void this.refreshStatus('gear', req),
       formation: (req: FormationRequest) => void this.refreshStatus('formation', req),
       eat: (req: EatRequest) => void this.refreshStatus('eat', req),
+      drop: (req: DropRequest) => void this.refreshStatus('drop', req),
+      party: () => void this.ask<PartyView>('party').then((v) => v && this.status?.showParty(v)),
+      companion: (req: CompanionRequest) => void this.refreshStatus('companion', req),
     });
     this.keys = new FieldKeys({
       confirm: () => this.askPanel?.choose(true),
@@ -99,10 +108,13 @@ export class FieldScene extends Phaser.Scene {
       this.room = room;
       this.view = view;
       void drawField(this, view);
+      await loadActors(this, view.npcs.flatMap((n) => (n.look ? [n.look] : [])));
+      drawNpcs(this, view);
       room.onMessage('line', (line: FieldLine) => this.showLine(line));
       room.onMessage('travel', (order: TravelOrder) => this.travel(order));
       room.onMessage('encounter', (notice: EncounterNotice) => this.encounter(notice));
-      room.onMessage('service', (v: ServiceView) => this.service?.show(v));
+      room.onMessage('talk', (v: TalkView) => this.talk?.show(v));
+      room.onMessage('service', (v: ServiceView) => (this.talk?.hide(), this.service?.show(v)));
       room.onMessage('ask', (v: AskView) => this.askPanel?.show(v));
       room.onMessage('gathered', (n: GatherNotice) => this.showLine({ key: 'gathered', text: gatheredText(n) }));
       room.onLeave(() => {
@@ -125,7 +137,7 @@ export class FieldScene extends Phaser.Scene {
     }
   }
 
-  private async refreshStatus(type: string, payload?: LoadoutRequest | GearRequest | EatRequest | FormationRequest | ServiceRequest): Promise<void> {
+  private async refreshStatus(type: string, payload?: LoadoutRequest | GearRequest | EatRequest | FormationRequest | DropRequest | CompanionRequest | ServiceRequest): Promise<void> {
     const panel = await this.ask<StatusPanel>(type, payload);
     if (panel) this.status?.show(panel);
   }
@@ -162,6 +174,7 @@ export class FieldScene extends Phaser.Scene {
   private walkTo(tile: { x: number; y: number }): void {
     this.room?.send('walk', tile);
     this.service?.hide(); // walking away from a door closes it
+    this.talk?.hide(); // and ends a talk
     this.askPanel?.hide(); // and drops the question (the server drops it too)
   }
 
@@ -169,6 +182,7 @@ export class FieldScene extends Phaser.Scene {
   private cancel(): void {
     if (this.mapOpen) return this.closeMap();
     if (this.askPanel?.visible) return this.askPanel.choose(false);
+    if (this.talk?.visible) return this.talk.hide();
     if (this.service?.visible) return this.service.hide();
     if (this.status?.visible) this.status.hide();
   }
@@ -189,17 +203,12 @@ export class FieldScene extends Phaser.Scene {
     this.scene.stop(SceneKeys.WorldMap);
   }
 
-  private heightAt(x: number, y: number): number {
-    const t = this.view!.tiles[y * this.view!.width + x];
-    return t ? surfaceHeight(t) : 0;
-  }
-
   private syncPlayer(id: string, p: SyncedPlayer): void {
     let s = this.shown.get(id);
     if (!s) {
       const actor = new ActorBody(this, p.name, id === this.room!.sessionId);
       s = { actor, body: actor.root, x: p.x, y: p.y };
-      const at = tileCenter(p.x, p.y, this.heightAt(p.x, p.y));
+      const at = tileCenter(p.x, p.y, heightAt(this.view!, p.x, p.y));
       s.body.setPosition(at.x, at.y).setDepth(depthAt(p.x, p.y));
       this.shown.set(id, s);
       if (id === this.room!.sessionId) this.cameras.main.startFollow(s.body, true, 0.15, 0.15);
@@ -210,7 +219,7 @@ export class FieldScene extends Phaser.Scene {
     s.actor.face(p.x - s.x, p.y - s.y);
     s.x = p.x;
     s.y = p.y;
-    const to = tileCenter(p.x, p.y, this.heightAt(p.x, p.y));
+    const to = tileCenter(p.x, p.y, heightAt(this.view!, p.x, p.y));
     this.tweens.killTweensOf(s.body);
     s.body.setDepth(Math.max(s.body.depth, depthAt(p.x, p.y)));
     this.tweens.add({
@@ -224,13 +233,7 @@ export class FieldScene extends Phaser.Scene {
     const tile = pickTile(this.view, pointer.worldX, pointer.worldY);
     if (!tile) return;
     this.walkTo(tile);
-    this.markTarget(tile.x, tile.y);
-  }
-
-  private markTarget(x: number, y: number): void {
-    const at = tileCenter(x, y, this.heightAt(x, y));
-    const ring = this.add.ellipse(at.x, at.y, 40, 20).setStrokeStyle(2, 0xffffff, 0.9).setDepth(depthAt(x, y) - 1);
-    this.tweens.add({ targets: ring, alpha: 0, scale: 1.4, duration: 500, onComplete: () => ring.destroy() });
+    markTarget(this, this.view, tile.x, tile.y);
   }
 
   private onWheel(_p: Phaser.Input.Pointer, _o: unknown, _dx: number, dy: number): void {
@@ -283,6 +286,7 @@ export class FieldScene extends Phaser.Scene {
     this.tweens.killAll();
     this.service?.destroy();
     this.askPanel?.destroy();
+    this.talk?.destroy();
     this.status?.destroy();
     this.keys?.destroy();
     this.mapButton?.remove();

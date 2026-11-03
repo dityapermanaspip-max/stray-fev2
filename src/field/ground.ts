@@ -21,9 +21,18 @@ const COLORS: Record<string, number> = {
   trampled: 0x9aa063, mud: 0x6f5a3e, wreck: 0x5d4a3a, stakes: 0x7a5d3c,
   // seashore
   wet_sand: 0xbfa877, shingle: 0x9b958a, driftwood: 0x8f7a5e, dune_grass: 0x9fb06a, sea: 0x2f6c9e,
+  // rooms (shop, inn, training ground), camp and cave
+  floor_wood: 0x9a7048, floor_sand: 0xd2b98a, wall_wood: 0x6b4a32, shelf: 0x7a5538, counter: 0x8a5f3c, hearth: 0x5a4a44,
+  table: 0x8d6540, rack: 0x6e5a42, dummy: 0xb89b62, camp_ground: 0x7d8a52, camp_trees: 0x2a5a33, campfire: 0xe0762c, log: 0x74552f,
+  cave_floor: 0x59524e, cave_wall: 0x2e2a2c, stalagmite: 0x6d6560,
+};
+// Blocked terrains drawn as raised blocks (height levels above the floor): walls, furniture. No cone on top.
+const RAISED: Record<string, number> = {
+  wall_wood: 2.5, cave_wall: 2.5, camp_trees: 2, shelf: 1.6, hearth: 1.4, counter: 0.9, table: 0.8, rack: 1.4, dummy: 1.2,
+  campfire: 0.4, log: 0.5, stalagmite: 1.4,
 };
 const BUILDING_LIFT = 2.5; // height levels a building block stands above its tile (drawing only)
-const FLAT_OBSTACLES = new Set(['water', 'swamp', 'building', 'frozen_lake', 'lava', 'sea']); // blocked, but no cone
+const FLAT_OBSTACLES = new Set(['water', 'swamp', 'building', 'frozen_lake', 'lava', 'sea', ...Object.keys(RAISED)]); // blocked, but no cone
 const FALLBACK = 0x999999;
 
 // Tiles already drawn from a tile sheet; marker = keep the obstacle mark on top, node = the sprite shows the node.
@@ -46,7 +55,8 @@ function shade(color: number, factor: number): number {
 
 // Height of each top corner: flat tiles are level; a slope runs from its low edge h up one level in its direction.
 function cornerHeights(tile: FieldTileView): number[] {
-  if (tile.t === 'building') return CORNERS.map(() => tile.h + BUILDING_LIFT);
+  const lift = tile.t === 'building' ? BUILDING_LIFT : RAISED[tile.t];
+  if (lift) return CORNERS.map(() => tile.h + lift);
   if (tile.s < 0) return CORNERS.map(() => tile.h);
   const [ux, uy] = SLOPE_DIRS[tile.s];
   return CORNERS.map((c) => tile.h + 0.5 + (c.gx * ux + c.gy * uy));
@@ -65,6 +75,13 @@ function drawNode(g: Phaser.GameObjects.Graphics, mid: { x: number; y: number },
     g.fillStyle(0x4f9a45);
     for (const dx of [-6, 0, 6]) g.fillTriangle(mid.x + dx - 3, mid.y, mid.x + dx + 3, mid.y, mid.x + dx, mid.y - 12);
     g.fillStyle(0xd9a3e0).fillCircle(mid.x, mid.y - 12, 2.5);
+  } else if (kind === 'camp') {
+    g.fillStyle(0x7a5a3a).fillTriangle(mid.x - 14, mid.y, mid.x + 14, mid.y, mid.x, mid.y - 22);
+    g.fillStyle(0x2b2118).fillTriangle(mid.x - 4, mid.y, mid.x + 4, mid.y, mid.x, mid.y - 11);
+    g.fillStyle(0xe0762c).fillCircle(mid.x + 16, mid.y - 3, 4);
+  } else if (kind === 'cave') {
+    g.fillStyle(0x5b5550).fillEllipse(mid.x, mid.y - 8, 34, 24);
+    g.fillStyle(0x0d0b0c).fillEllipse(mid.x, mid.y - 5, 20, 16);
   } else {
     g.lineStyle(2, 0xdbeefa, 0.9).strokeEllipse(mid.x, mid.y, 18, 7).strokeEllipse(mid.x, mid.y, 30, 12);
   }

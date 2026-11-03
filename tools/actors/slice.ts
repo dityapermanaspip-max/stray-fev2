@@ -1,7 +1,7 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { findBlobs, joinSpecks, mergeOverlapping, readingOrder, type Box } from '../tiles/blobs.ts';
-import { crop, resize } from '../tiles/image.ts';
+import { crop, flipX, resize } from '../tiles/image.ts';
 import { pack } from '../tiles/pack.ts';
 import { alphaAt, readPng, writePng, type Rgba } from '../tiles/png.ts';
 import type { Frame } from '../tiles/skew.ts';
@@ -17,7 +17,8 @@ const ACTOR_PX = 192; // atlas height of a standing pose; the client scales it t
 const PAD = 2;
 const root = path.resolve(import.meta.dirname, '../../public/assets/actors');
 
-type Sheet = { file: string; names: (string | null)[] };
+// mirror: the sheet was drawn facing the other way (a sheet must face down-right when it shows the front, up-left from behind).
+type Sheet = { file: string; names: (string | null)[]; mirror?: boolean };
 // `sheets` (several, one scale across all) or the older single `sheet` + `names`. shadow: the art has its own shadow.
 type Table = { sheets?: Sheet[]; sheet?: string; names?: (string | null)[]; shadow?: boolean; anims?: Record<string, unknown> };
 
@@ -54,7 +55,8 @@ async function slice(name: string): Promise<void> {
       const x = Math.max(0, b.x0 - PAD), y = Math.max(0, b.y0 - PAD);
       const w = Math.min(img.width, b.x1 + PAD + 1) - x, h = Math.min(img.height, b.y1 + PAD + 1) - y;
       const small = resize(crop(img, x, y, w, h), Math.max(1, Math.round(w * scale)), Math.max(1, Math.round(h * scale)));
-      frames.set(frame, { img: small, pivot: { x: (bodyMid(img, b) - x) * scale, y: (b.y1 - y) * scale } });
+      const pivot = { x: (bodyMid(img, b) - x) * scale, y: (b.y1 - y) * scale };
+      frames.set(frame, sh.mirror ? { img: flipX(small), pivot: { x: small.width - pivot.x, y: pivot.y } } : { img: small, pivot });
     });
   }
 

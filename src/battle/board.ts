@@ -1,12 +1,15 @@
 import Phaser from 'phaser';
 import { depthAt, TILE_H, TILE_W, tileCenter, type Point } from '../field/iso.ts';
+import { drawBoardTiles } from './board_ground.ts';
 
-// The battle board: a flat 7 x 11 isometric field, same tile size as the field. The party stands at the near end
-// (bottom left on screen, high y) and faces up-right; the foes stand at the far end and face down-left. Front slots
+// The battle board: a flat 7 x 11 isometric field, same tile size and same ground tiles as the field the fight started
+// on. The party stands at the near end (bottom left on screen, high y) and faces up-right; the foes stand at the far end
+// (top right) and face down-left. Front slots
 // sit on every other column (0, 2, 4, 6) and back slots between them (1, 3, 5), so the back row shows through.
 
 export const BOARD = { cols: 7, rows: 11 };
 const ROW_Y = { party: { front: 7, back: 9 }, enemy: { front: 3, back: 1 } };
+const SIDE_SHIFT = { party: -1, enemy: 1 }; // columns: the party leans to the left corner, the foes to the right one
 const LIGHT = 0x5d6b45;
 const DARK = 0x52603d;
 const EDGE = 0x2c3322;
@@ -21,7 +24,7 @@ export function slotTile(side: Side, slot: number, formation: { front: number; b
   const i = back ? slot - formation.front - 1 : slot - 1;
   const count = back ? formation.back : formation.front;
   const step = count > 1 ? Math.min(2, (BOARD.cols - 1) / (count - 1)) : 0;
-  const x = Math.round((BOARD.cols - 1) / 2 + (i - (count - 1) / 2) * step);
+  const x = Math.round((BOARD.cols - 1) / 2 + SIDE_SHIFT[side] + (i - (count - 1) / 2) * step);
   return { x: Math.max(0, Math.min(BOARD.cols - 1, x)), y: ROW_Y[side][back ? 'back' : 'front'] };
 }
 
@@ -30,8 +33,10 @@ export const slotPoint = (side: Side, slot: number, formation: { front: number; 
   return { ...tileCenter(t.x, t.y, 0), depth: depthAt(t.x, t.y) };
 };
 
-// The flat ground: a two-tone checkerboard of diamonds under everything.
-export function drawBoard(scene: Phaser.Scene): void {
+// The flat ground: the field tile's biome tiles under everything; a two-tone checkerboard when that biome has no sheet.
+export async function drawBoard(scene: Phaser.Scene, ground: { biome: string; terrain: string }): Promise<void> {
+  if (await drawBoardTiles(scene, ground, BOARD.cols, BOARD.rows)) return;
+  if (!scene.sys.isActive()) return;
   const g = scene.add.graphics().setDepth(-10);
   for (let y = 0; y < BOARD.rows; y++) {
     for (let x = 0; x < BOARD.cols; x++) {

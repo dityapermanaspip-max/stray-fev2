@@ -44,7 +44,8 @@ export function joinSpecks(blobs: Box[]): Box[] {
   for (const s of blobs.filter((b) => b.area < biggest * SPECK_SHARE)) {
     const overlap = (t: Box) => Math.min(t.x1, s.x1) - Math.max(t.x0, s.x0);
     const gap = (t: Box) => Math.max(0, t.y0 - s.y1, s.y0 - t.y1);
-    const host = tiles.reduce((best, t) => (overlap(t) > overlap(best) || (overlap(t) === overlap(best) && gap(t) < gap(best)) ? t : best));
+    const beside = tiles.filter((t) => gap(t) === 0 && overlap(t) > 0); // a puff beside a figure belongs to the figure whose rows it sits in
+    const host = (beside.length > 0 ? beside : tiles).reduce((best, t) => (overlap(t) > overlap(best) || (overlap(t) === overlap(best) && gap(t) < gap(best)) ? t : best));
     Object.assign(host, { x0: Math.min(host.x0, s.x0), y0: Math.min(host.y0, s.y0), x1: Math.max(host.x1, s.x1), y1: Math.max(host.y1, s.y1), area: host.area + s.area });
   }
   return tiles;
@@ -85,14 +86,15 @@ function rebox(img: Rgba, b: Box, y0: number, y1: number): Box {
 
 // A tile whose bottom tip touches something in the row below (a plant's leaf) comes out as one tall blob. Cut it
 // where a narrow row sits under a widening diamond tip (about 4 px wider per row going up). Trees have no such tip.
-export function splitTouching(img: Rgba, tiles: Box[]): Box[] {
+// narrow: the widest a cut row may be (20 px; a pole or banner stand on the tile below may need more).
+export function splitTouching(img: Rgba, tiles: Box[], narrow = 20): Box[] {
   const tall = median(tiles.map((b) => b.y1 - b.y0));
   return tiles.flatMap((b) => {
     if (b.y1 - b.y0 < tall * 1.5) return [b];
     let cut = -1, best = Infinity;
     for (let y = Math.round(b.y0 + tall * 0.6); y <= b.y1 - tall * 0.25; y++) {
       const w = opaqueRow(img, b, y);
-      if (w <= 20 && w < best && opaqueRow(img, b, y - 10) - w >= 25 && opaqueRow(img, b, y - 20) - w >= 55) { cut = y; best = w; }
+      if (w <= narrow && w < best && opaqueRow(img, b, y - 10) - w >= 25 && opaqueRow(img, b, y - 20) - w >= 55) { cut = y; best = w; }
     }
     return cut < 0 ? [b] : [rebox(img, b, b.y0, cut), rebox(img, b, cut + 1, b.y1)];
   });

@@ -15,6 +15,14 @@ export const tileAssets = (biome: string) => ({
 
 export const hasTiles = (biome: string) => (TILE_BIOMES as readonly string[]).includes(biome);
 
+// The tile catalog (world.tiles): its rows as a file and three atlases, made by tools/tiles/catalog.ts.
+export const CATALOG_ATLASES = ['walk', 'block', 'obstacle'] as const;
+export const catalogAssets = () => ({
+  rowsKey: 'tile_catalog',
+  rows: `${TILE_DIR}/catalog/catalog.json`,
+  atlas: (name: string) => ({ key: `catalog_${name}`, image: `${TILE_DIR}/catalog/catalog_${name}_atlas.png`, json: `${TILE_DIR}/catalog/catalog_${name}.json` }),
+});
+
 const ACTOR_DIR = 'assets/actors';
 
 // An actor sheet sliced by `npm run actors:slice -- <path>` (path under public/assets/actors, without extension).

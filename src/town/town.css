@@ -48,3 +48,24 @@
 .formation { display: flex; gap: 6px; justify-content: center; align-items: center; margin: 8px 0; }
 .formation > div { display: flex; flex-direction: column; gap: 4px; }
 .formation button { width: 36px; height: 30px; }
+
+/* The talk box: a visual novel strip along the bottom. */
+.talk-panel {
+  position: fixed; left: 50%; bottom: 16px; transform: translateX(-50%); z-index: 12;
+  width: min(720px, calc(100% - 32px)); box-sizing: border-box; padding: 12px 16px 14px;
+  background: #0d1014f2; border: 1px solid #5a5240; border-radius: 12px; color: #f2ead8; font: 16px Georgia, serif;
+}
+.talk-panel header { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+.talk-panel header b { font-size: 18px; font-weight: normal; color: #f5d06f; }
+.talk-panel header i { flex: 1; font-size: 13px; color: #c9c1ad; }
+.talk-panel .face {
+  width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; font-size: 20px;
+  background: #3a3220; border: 1px solid #f5d06f;
+}
+.talk-panel .words { min-height: 3.2em; margin: 4px 0 10px; line-height: 1.5; cursor: pointer; }
+.talk-panel .choices { display: flex; flex-wrap: wrap; gap: 8px; }
+.talk-panel button {
+  font: 15px Georgia, serif; color: #f2ead8; background: #15181c; border: 1px solid #4a4a4a; border-radius: 6px;
+  padding: 6px 12px; min-height: 40px; cursor: pointer;
+}
+.talk-panel .choices button:hover { border-color: #f5d06f; }

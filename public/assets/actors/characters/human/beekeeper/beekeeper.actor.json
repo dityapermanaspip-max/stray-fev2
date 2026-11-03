@@ -1,0 +1,16 @@
+{
+  "about": "Beekeeper, field sheets only (battle sheets not made yet). The front sheet was drawn facing down-left, so it is mirrored to face down-right like the tourist's. The idle is the walk passing pose (the drawn idle poses face the camera, not the diagonal). Slice: npm run actors:slice -- characters/human/beekeeper/beekeeper",
+  "shadow": true,
+  "sheets": [
+    { "file": "beekeeper_field_nobg.png", "mirror": true,
+      "names": ["idle_1", "idle_2", "idle_3", "walk_1", "walk_2", "walk_3", "stand", "jump", "land", "crouch", "pick_up", "gather", "hands_on_hips", "tired", "sit"] },
+    { "file": "beekeeper_fieldback_nobg.png",
+      "names": ["back_idle_1", "back_idle_2", "back_idle_3", "back_walk_1", "back_walk_2", "back_walk_3", "back_stand", "back_jump", "back_land", "back_crouch", "back_pick_up", "back_gather", "back_hands_on_hips", "back_tired", "back_sit"] }
+  ],
+  "anims": {
+    "idle_front": { "frames": ["walk_2"], "fps": 1, "repeat": -1 },
+    "idle_back": { "frames": ["back_walk_2"], "fps": 1, "repeat": -1 },
+    "walk_front": { "frames": ["walk_1", "walk_2", "walk_3", "walk_2"], "fps": 7, "repeat": -1 },
+    "walk_back": { "frames": ["back_walk_1", "back_walk_2", "back_walk_3", "back_walk_2"], "fps": 7, "repeat": -1 }
+  }
+}

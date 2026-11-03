@@ -5,7 +5,7 @@ import type { FieldView } from '../../../stray-bev1/shared/field.ts';
 
 // Sides of a tile in grid terms, named by where they face on screen: ul = -x, ur = -y, lr = +x, ll = +y; the corners
 // top, right, bottom, left are two neighbouring sides (top = -x and -y).
-type Side = 'ul' | 'ur' | 'lr' | 'll' | 'top' | 'right' | 'bottom' | 'left';
+export type Side = 'ul' | 'ur' | 'lr' | 'll' | 'top' | 'right' | 'bottom' | 'left';
 type Sided = Partial<Record<Side, string[]>>;
 // shore: water-like tiles bordering other terrain pick a piece by where that terrain is (one side or a corner).
 type Pick = string[] | { edge: string[]; inner: string[]; shore?: Sided };
@@ -59,7 +59,7 @@ function inner(view: FieldView, x: number, y: number, terrain: string): boolean 
 }
 
 // Sides of tile (x, y) whose neighbour passes `test` (the field edge never does), as one side, a corner, or null.
-function sideWhere(view: FieldView, x: number, y: number, test: (t: string) => boolean): Side | null {
+export function sideWhere(view: FieldView, x: number, y: number, test: (t: string) => boolean): Side | null {
   const sides: Side[] = [];
   for (const [dx, dy] of NEIGHBOURS) {
     const nx = x + dx, ny = y + dy;

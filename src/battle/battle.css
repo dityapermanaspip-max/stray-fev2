@@ -34,3 +34,7 @@
   padding: 6px 18px; cursor: pointer; float: right;
 }
 @media (max-width: 520px) { .battle-menu { grid-template-columns: repeat(2, 1fr); } .battle-box { bottom: 236px; } }
+/* The dice button: fight on its own. While it is on, the move slots stand back. */
+.battle-menu .auto-button { grid-column: 1 / -1; text-align: center; min-height: 34px; }
+.battle-menu .auto-button.on { border-color: #f5d06f; background: #3a3220; }
+.battle-menu.auto button:not(.auto-button) { opacity: 0.35; pointer-events: none; }

@@ -12,6 +12,8 @@
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "tiles:slice": "node tools/tiles/slice.ts",
+    "tiles:catalog": "node tools/tiles/catalog.ts",
+    "lora:tiles": "node tools/lora/export.ts",
     "actors:slice": "node tools/actors/slice.ts",
     "buildings:slice": "node tools/buildings/slice.ts"
   },

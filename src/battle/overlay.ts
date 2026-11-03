@@ -7,7 +7,7 @@ import './battle.css';
 const LINE_MS = 3200;
 const MAX_LINES = 3;
 
-export type OverlayHandlers = { pick: (move: BattleMoveView) => void; done: () => void };
+export type OverlayHandlers = { pick: (move: BattleMoveView) => void; done: () => void; auto: (on: boolean) => void };
 
 export class BattleOverlay {
   private root = document.createElement('div');
@@ -15,6 +15,8 @@ export class BattleOverlay {
   private box = document.createElement('div');
   private buttons = new Map<string, HTMLButtonElement>();
   private front: string[] = []; // moves only usable from the front row
+  private dice?: HTMLButtonElement;
+  private auto = false;
 
   constructor(moves: BattleMoveView[], slots: number, private handlers: OverlayHandlers) {
     this.root.className = 'battle-ui';
@@ -34,16 +36,33 @@ export class BattleOverlay {
       }
       this.menu.append(b);
     }
+    // The dice: fight on its own, by the AI's rule (a random usable equipped move). Tap again, or press R, to take over.
+    const dice = document.createElement('button');
+    dice.type = 'button';
+    dice.className = 'auto-button';
+    dice.textContent = '🎲';
+    dice.addEventListener('click', () => this.toggleAuto());
+    this.menu.append(dice);
+    this.dice = dice;
     this.root.append(this.box, this.menu);
     document.body.append(this.root);
     window.addEventListener('keydown', this.onKey);
   }
 
   private onKey = (e: KeyboardEvent) => {
+    if (e.key === 'r' || e.key === 'R') return this.toggleAuto();
     const slot = Number(e.key);
     if (!Number.isInteger(slot) || slot < 1) return;
     this.menu.children[slot - 1]?.dispatchEvent(new MouseEvent('click'));
   };
+
+  private toggleAuto(): void {
+    if (this.menu.classList.contains('locked')) return;
+    this.auto = !this.auto;
+    this.menu.classList.toggle('auto', this.auto);
+    this.dice?.classList.toggle('on', this.auto);
+    this.handlers.auto(this.auto);
+  }
 
   // ready: the gauge is full and nothing is queued. choosing: picking a target for this move. queued: waits for the gauge.
   mark(state: { ready: boolean; choosing: string | null; queued: string | null }): void {

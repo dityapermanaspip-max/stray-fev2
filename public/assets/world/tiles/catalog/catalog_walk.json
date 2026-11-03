@@ -1,0 +1,1934 @@
+{
+ "frames": {
+  "bank_island": {
+   "frame": {
+    "x": 152,
+    "y": 2,
+    "w": 148,
+    "h": 121
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 121
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 121
+   },
+   "pivot": {
+    "x": 0.4953,
+    "y": 0.493
+   }
+  },
+  "bank_notch": {
+   "frame": {
+    "x": 302,
+    "y": 2,
+    "w": 148,
+    "h": 121
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 121
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 121
+   },
+   "pivot": {
+    "x": 0.4988,
+    "y": 0.4844
+   }
+  },
+  "bank_straight": {
+   "frame": {
+    "x": 1200,
+    "y": 2,
+    "w": 147,
+    "h": 114
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 114
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 114
+   },
+   "pivot": {
+    "x": 0.4986,
+    "y": 0.4594
+   }
+  },
+  "bank_straight_flip": {
+   "frame": {
+    "x": 1349,
+    "y": 2,
+    "w": 147,
+    "h": 114
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 114
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 114
+   },
+   "pivot": {
+    "x": 0.5014,
+    "y": 0.4594
+   }
+  },
+  "boardwalk_sand": {
+   "frame": {
+    "x": 1647,
+    "y": 2,
+    "w": 148,
+    "h": 113
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 113
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 113
+   },
+   "pivot": {
+    "x": 0.4995,
+    "y": 0.4187
+   }
+  },
+  "bridge_planks": {
+   "frame": {
+    "x": 152,
+    "y": 241,
+    "w": 147,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4076
+   }
+  },
+  "camp_ground_dirt": {
+   "frame": {
+    "x": 1196,
+    "y": 470,
+    "w": 147,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4993,
+    "y": 0.427
+   }
+  },
+  "camp_ground_grass": {
+   "frame": {
+    "x": 301,
+    "y": 241,
+    "w": 147,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4955,
+    "y": 0.4331
+   }
+  },
+  "camp_ground_snow": {
+   "frame": {
+    "x": 1345,
+    "y": 470,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4996,
+    "y": 0.427
+   }
+  },
+  "carpet_beige": {
+   "frame": {
+    "x": 1797,
+    "y": 2,
+    "w": 150,
+    "h": 113
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 150,
+    "h": 113
+   },
+   "sourceSize": {
+    "w": 150,
+    "h": 113
+   },
+   "pivot": {
+    "x": 0.4966,
+    "y": 0.4089
+   }
+  },
+  "carpet_burgundy": {
+   "frame": {
+    "x": 450,
+    "y": 241,
+    "w": 148,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4995,
+    "y": 0.4175
+   }
+  },
+  "carpet_desert": {
+   "frame": {
+    "x": 2,
+    "y": 126,
+    "w": 147,
+    "h": 113
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 113
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 113
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4138
+   }
+  },
+  "carpet_green": {
+   "frame": {
+    "x": 600,
+    "y": 241,
+    "w": 147,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4175
+   }
+  },
+  "carpet_grey": {
+   "frame": {
+    "x": 1495,
+    "y": 470,
+    "w": 147,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4163
+   }
+  },
+  "carpet_red_ornate": {
+   "frame": {
+    "x": 1060,
+    "y": 584,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.405
+   }
+  },
+  "cave_bones": {
+   "frame": {
+    "x": 151,
+    "y": 126,
+    "w": 147,
+    "h": 113
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 113
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 113
+   },
+   "pivot": {
+    "x": 0.5031,
+    "y": 0.4202
+   }
+  },
+  "cave_floor_cracked": {
+   "frame": {
+    "x": 300,
+    "y": 126,
+    "w": 148,
+    "h": 113
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 113
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 113
+   },
+   "pivot": {
+    "x": 0.4997,
+    "y": 0.4252
+   }
+  },
+  "cave_floor_pebbles": {
+   "frame": {
+    "x": 450,
+    "y": 126,
+    "w": 147,
+    "h": 113
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 113
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 113
+   },
+   "pivot": {
+    "x": 0.5031,
+    "y": 0.4252
+   }
+  },
+  "cave_floor_wet": {
+   "frame": {
+    "x": 599,
+    "y": 126,
+    "w": 147,
+    "h": 113
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 113
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 113
+   },
+   "pivot": {
+    "x": 0.4993,
+    "y": 0.4252
+   }
+  },
+  "cave_moss": {
+   "frame": {
+    "x": 748,
+    "y": 126,
+    "w": 148,
+    "h": 113
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 113
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 113
+   },
+   "pivot": {
+    "x": 0.4997,
+    "y": 0.4252
+   }
+  },
+  "cracked_earth": {
+   "frame": {
+    "x": 1644,
+    "y": 470,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4995,
+    "y": 0.4063
+   }
+  },
+  "craft_pelts": {
+   "frame": {
+    "x": 749,
+    "y": 241,
+    "w": 147,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4993,
+    "y": 0.4232
+   }
+  },
+  "dirt_ruts": {
+   "frame": {
+    "x": 898,
+    "y": 241,
+    "w": 148,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4995,
+    "y": 0.4126
+   }
+  },
+  "field_crops": {
+   "frame": {
+    "x": 1794,
+    "y": 470,
+    "w": 147,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4063
+   }
+  },
+  "field_furrow": {
+   "frame": {
+    "x": 2,
+    "y": 584,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4995,
+    "y": 0.4113
+   }
+  },
+  "floor_black_granite": {
+   "frame": {
+    "x": 898,
+    "y": 126,
+    "w": 147,
+    "h": 113
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 113
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 113
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4138
+   }
+  },
+  "floor_brick_red_a": {
+   "frame": {
+    "x": 1048,
+    "y": 241,
+    "w": 148,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4995,
+    "y": 0.4126
+   }
+  },
+  "floor_brick_red_b": {
+   "frame": {
+    "x": 1198,
+    "y": 241,
+    "w": 148,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4995,
+    "y": 0.4076
+   }
+  },
+  "floor_cobble_dark": {
+   "frame": {
+    "x": 1348,
+    "y": 241,
+    "w": 147,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4126
+   }
+  },
+  "floor_cobble_grey": {
+   "frame": {
+    "x": 1497,
+    "y": 241,
+    "w": 147,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4126
+   }
+  },
+  "floor_door_mat": {
+   "frame": {
+    "x": 751,
+    "y": 2,
+    "w": 149,
+    "h": 118
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 149,
+    "h": 118
+   },
+   "sourceSize": {
+    "w": 149,
+    "h": 118
+   },
+   "pivot": {
+    "x": 0.4973,
+    "y": 0.4038
+   }
+  },
+  "floor_granite_grey": {
+   "frame": {
+    "x": 1646,
+    "y": 241,
+    "w": 148,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4995,
+    "y": 0.4126
+   }
+  },
+  "floor_granite_light": {
+   "frame": {
+    "x": 1796,
+    "y": 241,
+    "w": 148,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4995,
+    "y": 0.4175
+   }
+  },
+  "floor_granite_tan": {
+   "frame": {
+    "x": 1047,
+    "y": 126,
+    "w": 147,
+    "h": 113
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 113
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 113
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4236
+   }
+  },
+  "floor_hex_terracotta": {
+   "frame": {
+    "x": 1196,
+    "y": 126,
+    "w": 148,
+    "h": 113
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 113
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 113
+   },
+   "pivot": {
+    "x": 0.4995,
+    "y": 0.4089
+   }
+  },
+  "floor_marble_ornate": {
+   "frame": {
+    "x": 2,
+    "y": 356,
+    "w": 147,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4076
+   }
+  },
+  "floor_marble_tan": {
+   "frame": {
+    "x": 151,
+    "y": 356,
+    "w": 148,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4995,
+    "y": 0.4126
+   }
+  },
+  "floor_marble_white": {
+   "frame": {
+    "x": 152,
+    "y": 584,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4995,
+    "y": 0.4113
+   }
+  },
+  "floor_mosaic": {
+   "frame": {
+    "x": 301,
+    "y": 356,
+    "w": 148,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4995,
+    "y": 0.4126
+   }
+  },
+  "floor_parquet_brown": {
+   "frame": {
+    "x": 451,
+    "y": 356,
+    "w": 147,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4126
+   }
+  },
+  "floor_parquet_light": {
+   "frame": {
+    "x": 600,
+    "y": 356,
+    "w": 147,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4126
+   }
+  },
+  "floor_planks_beams": {
+   "frame": {
+    "x": 1209,
+    "y": 584,
+    "w": 149,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 149,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 149,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.2732
+   }
+  },
+  "floor_planks_corner": {
+   "frame": {
+    "x": 601,
+    "y": 2,
+    "w": 148,
+    "h": 119
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 119
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 119
+   },
+   "pivot": {
+    "x": 0.4995,
+    "y": 0.4393
+   }
+  },
+  "floor_planks_dark_a": {
+   "frame": {
+    "x": 1346,
+    "y": 126,
+    "w": 148,
+    "h": 113
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 113
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 113
+   },
+   "pivot": {
+    "x": 0.4995,
+    "y": 0.4138
+   }
+  },
+  "floor_planks_dark_b": {
+   "frame": {
+    "x": 1496,
+    "y": 126,
+    "w": 147,
+    "h": 113
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 113
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 113
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4138
+   }
+  },
+  "floor_planks_grey_a": {
+   "frame": {
+    "x": 749,
+    "y": 356,
+    "w": 148,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4995,
+    "y": 0.4027
+   }
+  },
+  "floor_planks_pale": {
+   "frame": {
+    "x": 899,
+    "y": 356,
+    "w": 148,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4995,
+    "y": 0.4175
+   }
+  },
+  "floor_planks_rough": {
+   "frame": {
+    "x": 1049,
+    "y": 356,
+    "w": 148,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4995,
+    "y": 0.4126
+   }
+  },
+  "floor_planks_white": {
+   "frame": {
+    "x": 1199,
+    "y": 356,
+    "w": 147,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4175
+   }
+  },
+  "floor_plaster": {
+   "frame": {
+    "x": 1348,
+    "y": 356,
+    "w": 148,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4995,
+    "y": 0.4126
+   }
+  },
+  "floor_sigil": {
+   "frame": {
+    "x": 1360,
+    "y": 584,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.5012,
+    "y": 0.4237
+   }
+  },
+  "floor_slate": {
+   "frame": {
+    "x": 1498,
+    "y": 356,
+    "w": 148,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4995,
+    "y": 0.4175
+   }
+  },
+  "floor_soot": {
+   "frame": {
+    "x": 302,
+    "y": 584,
+    "w": 147,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4993,
+    "y": 0.417
+   }
+  },
+  "floor_stone_dark": {
+   "frame": {
+    "x": 1648,
+    "y": 356,
+    "w": 147,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4175
+   }
+  },
+  "floor_straw_pile": {
+   "frame": {
+    "x": 451,
+    "y": 584,
+    "w": 147,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4993,
+    "y": 0.417
+   }
+  },
+  "floor_woven_mat": {
+   "frame": {
+    "x": 1509,
+    "y": 584,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.405
+   }
+  },
+  "floor_woven_straw": {
+   "frame": {
+    "x": 1645,
+    "y": 126,
+    "w": 149,
+    "h": 113
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 149,
+    "h": 113
+   },
+   "sourceSize": {
+    "w": 149,
+    "h": 113
+   },
+   "pivot": {
+    "x": 0.4999,
+    "y": 0.4089
+   }
+  },
+  "grass_glow_flowers": {
+   "frame": {
+    "x": 2,
+    "y": 2,
+    "w": 148,
+    "h": 122
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 122
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 122
+   },
+   "pivot": {
+    "x": 0.4958,
+    "y": 0.4647
+   }
+  },
+  "grass_lush": {
+   "frame": {
+    "x": 600,
+    "y": 584,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4995,
+    "y": 0.4113
+   }
+  },
+  "ground_cobble_round": {
+   "frame": {
+    "x": 1797,
+    "y": 356,
+    "w": 148,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4995,
+    "y": 0.4126
+   }
+  },
+  "ground_gravel": {
+   "frame": {
+    "x": 2,
+    "y": 470,
+    "w": 147,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4126
+   }
+  },
+  "mushrooms_a": {
+   "frame": {
+    "x": 902,
+    "y": 2,
+    "w": 147,
+    "h": 116
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 116
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 116
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4364
+   }
+  },
+  "mushrooms_b": {
+   "frame": {
+    "x": 452,
+    "y": 2,
+    "w": 147,
+    "h": 120
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 120
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 120
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4494
+   }
+  },
+  "path_stone_ramp": {
+   "frame": {
+    "x": 750,
+    "y": 584,
+    "w": 159,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 159,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 159,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4962,
+    "y": 0.3715
+   }
+  },
+  "paving_gutter": {
+   "frame": {
+    "x": 911,
+    "y": 584,
+    "w": 147,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4113
+   }
+  },
+  "paving_hay": {
+   "frame": {
+    "x": 1796,
+    "y": 126,
+    "w": 147,
+    "h": 113
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 113
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 113
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4089
+   }
+  },
+  "pier_end": {
+   "frame": {
+    "x": 1498,
+    "y": 2,
+    "w": 147,
+    "h": 114
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 114
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 114
+   },
+   "pivot": {
+    "x": 0.4986,
+    "y": 0.464
+   }
+  },
+  "pier_straight": {
+   "frame": {
+    "x": 2,
+    "y": 241,
+    "w": 148,
+    "h": 113
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 113
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 113
+   },
+   "pivot": {
+    "x": 0.5023,
+    "y": 0.4543
+   }
+  },
+  "road_cross_dirt": {
+   "frame": {
+    "x": 151,
+    "y": 470,
+    "w": 148,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4995,
+    "y": 0.4126
+   }
+  },
+  "road_cross_grass": {
+   "frame": {
+    "x": 1658,
+    "y": 584,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.5009,
+    "y": 0.4215
+   }
+  },
+  "road_dirt": {
+   "frame": {
+    "x": 301,
+    "y": 470,
+    "w": 147,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4126
+   }
+  },
+  "road_grass": {
+   "frame": {
+    "x": 1807,
+    "y": 584,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.4972,
+    "y": 0.4215
+   }
+  },
+  "roots_runes": {
+   "frame": {
+    "x": 2,
+    "y": 697,
+    "w": 148,
+    "h": 109
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 109
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 109
+   },
+   "pivot": {
+    "x": 0.4995,
+    "y": 0.4037
+   }
+  },
+  "rug_runner": {
+   "frame": {
+    "x": 1051,
+    "y": 2,
+    "w": 147,
+    "h": 115
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 115
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 115
+   },
+   "pivot": {
+    "x": 0.4959,
+    "y": 0.3832
+   }
+  },
+  "sand_dune": {
+   "frame": {
+    "x": 450,
+    "y": 470,
+    "w": 148,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4995,
+    "y": 0.4126
+   }
+  },
+  "sand_floor_prints": {
+   "frame": {
+    "x": 600,
+    "y": 470,
+    "w": 147,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4974,
+    "y": 0.4161
+   }
+  },
+  "sand_floor_raked": {
+   "frame": {
+    "x": 749,
+    "y": 470,
+    "w": 147,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.5012,
+    "y": 0.4111
+   }
+  },
+  "sand_floor_straw": {
+   "frame": {
+    "x": 898,
+    "y": 470,
+    "w": 147,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.5012,
+    "y": 0.4111
+   }
+  },
+  "sand_pebbles": {
+   "frame": {
+    "x": 1047,
+    "y": 470,
+    "w": 147,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4992,
+    "y": 0.4126
+   }
+  },
+  "stepping_stones": {
+   "frame": {
+    "x": 152,
+    "y": 697,
+    "w": 148,
+    "h": 105
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 105
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 105
+   },
+   "pivot": {
+    "x": 0.4988,
+    "y": 0.4097
+   }
+  }
+ },
+ "meta": {
+  "app": "stray-fev2 tools/tiles/catalog.ts",
+  "image": "catalog_walk_atlas.png",
+  "size": {
+   "w": 1956,
+   "h": 808
+  },
+  "scale": "1",
+  "tileWidth": 144
+ }
+}

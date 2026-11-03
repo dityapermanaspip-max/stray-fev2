@@ -1,11 +1,10 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { LIFT, TILE_W } from '../../src/field/iso.ts';
-import { findBlobs, flatPivot, joinSpecks, measure, median, mergeOverlapping, readingOrder, splitTouching } from './blobs.ts';
-import { crop, flipX, resize } from './image.ts';
 import { pack } from './pack.ts';
-import { readPng, writePng } from './png.ts';
-import { slopeFrom, type Frame } from './skew.ts';
+import { writePng } from './png.ts';
+import { makeMirrors, readSheet, TILE_PX, type Sheet, type Source } from './sheet.ts';
+import { slopeFrom } from './skew.ts';
 
 // npm run tiles:slice -- <biome> [more biomes]
 // Reads the sheets listed in public/assets/world/tiles/<biome>/<biome>.tiles.json. Each sheet is a PNG of isometric
@@ -19,18 +18,13 @@ import { slopeFrom, type Frame } from './skew.ts';
 // made before slopes, so a mirror can feed a slope.
 // Then it checks the use table: every frame it names must exist; frames it never uses are listed.
 
-const TILE_PX = 144; // atlas tile width; the client scales it to TILE_W
 const LEVEL_PX = (TILE_PX * LIFT) / TILE_W; // one height level in atlas pixels
-const PAD = 2;
-const LAYOUTS = [15, 6]; // tiles per sheet: 3 x 5 ground, 3 x 2 objects
 const SIDES = ['dr', 'dl', 'ul', 'ur'];
 const LIGHT = [0.88, 0.88, 1.1, 1.1]; // the face's light by uphill direction, as the plain-colour ground does
 const root = path.resolve(import.meta.dirname, '../../public/assets/world/tiles');
 
-type Sheet = { file: string; names: (string | null)[] };
 type Slopes = Record<string, string[] | { x: string[]; y: string[] }>;
 type Table = { sheets: Sheet[]; slopes?: Slopes; mirror?: Record<string, string>; [key: string]: unknown };
-type Source = Frame & { wall: number }; // wall: side wall height in atlas pixels
 
 const num = (n: number) => String(n).padStart(2, '0');
 
@@ -40,40 +34,6 @@ function namedFrames(biome: string, table: unknown): string[] {
   if (Array.isArray(table)) return table.flatMap((v) => namedFrames(biome, v));
   if (table && typeof table === 'object') return Object.values(table).flatMap((v) => namedFrames(biome, v));
   return [];
-}
-
-async function readSheet(dir: string, sheet: Sheet, frames: Map<string, Source>): Promise<string> {
-  if (!LAYOUTS.includes(sheet.names.length)) throw new Error(`${sheet.file}: name 15 tiles (3 x 5) or 6 (3 x 2), not ${sheet.names.length}`);
-  const img = readPng(new Uint8Array(await readFile(path.join(dir, sheet.file))));
-  const tiles = readingOrder(splitTouching(img, mergeOverlapping(joinSpecks(findBlobs(img)))));
-  if (tiles.length !== sheet.names.length) {
-    throw new Error(`${sheet.file}: found ${tiles.length} tiles, the table names ${sheet.names.length}`);
-  }
-  const measures = tiles.map((b) => measure(img, b));
-  const width = median(measures.map((m) => m.width));
-  const wall = median(measures.map((m) => m.wall));
-  const scale = TILE_PX / width;
-  tiles.forEach((b, i) => {
-    const name = sheet.names[i];
-    if (!name) return;
-    if (frames.has(name)) throw new Error(`${sheet.file}: frame ${name} named twice`);
-    const x = Math.max(0, b.x0 - PAD), y = Math.max(0, b.y0 - PAD);
-    const w = Math.min(img.width, b.x1 + PAD + 1) - x, h = Math.min(img.height, b.y1 + PAD + 1) - y;
-    const pivot = flatPivot(measures[i], wall, width);
-    const small = resize(crop(img, x, y, w, h), Math.max(1, Math.round(w * scale)), Math.max(1, Math.round(h * scale)));
-    frames.set(name, { img: small, pivot: { x: (pivot.x - x) * scale, y: (pivot.y - y) * scale }, wall: wall * scale });
-  });
-  return `${sheet.file}: ${tiles.length} tiles, width ${width}px, wall ${wall}px`;
-}
-
-function makeMirrors(mirror: Record<string, string>, frames: Map<string, Source>): number {
-  for (const [name, from] of Object.entries(mirror)) {
-    const src = frames.get(from);
-    if (!src) throw new Error(`mirror.${name}: no frame ${from}`);
-    if (frames.has(name)) throw new Error(`mirror.${name}: frame already exists`);
-    frames.set(name, { img: flipX(src.img), pivot: { x: src.img.width - src.pivot.x, y: src.pivot.y }, wall: src.wall });
-  }
-  return Object.keys(mirror).length;
 }
 
 function makeSlopes(biome: string, slopes: Slopes, frames: Map<string, Source>): number {

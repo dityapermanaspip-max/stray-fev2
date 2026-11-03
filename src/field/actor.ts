@@ -18,13 +18,19 @@ export const metaOf = (scene: Phaser.Scene, key: string) => (scene.textures.get(
 
 export const animKey = (atlasKey: string, anim: string) => `${atlasKey}:${anim}`;
 
-// Loads the player sheet once and makes its animations (from meta.anims). Resolves false when it cannot be loaded.
-export function loadActors(scene: Phaser.Scene): Promise<boolean> {
-  const a = actorAssets(PLAYER_ACTOR);
+// Loads the sheets of the given looks (default: the player's) once each and makes their animations (from meta.anims).
+// Resolves false when one cannot be loaded; a body whose look has no animations draws as a round token.
+export async function loadActors(scene: Phaser.Scene, looks: string[] = [PLAYER_ACTOR]): Promise<boolean> {
+  const all = await Promise.all([...new Set(looks)].map((look) => loadLook(scene, look)));
+  return all.every(Boolean);
+}
+
+function loadLook(scene: Phaser.Scene, look: string): Promise<boolean> {
+  const a = actorAssets(look);
   if (scene.textures.exists(a.atlasKey)) return Promise.resolve(true);
   return new Promise((done) => {
-    const failed = () => done(false);
-    scene.load.once(Phaser.Loader.Events.FILE_LOAD_ERROR, failed);
+    const failed = (file: Phaser.Loader.File) => file.key === a.atlasKey && done(false);
+    scene.load.on(Phaser.Loader.Events.FILE_LOAD_ERROR, failed);
     scene.load.once(Phaser.Loader.Events.COMPLETE, () => {
       scene.load.off(Phaser.Loader.Events.FILE_LOAD_ERROR, failed);
       if (!scene.textures.exists(a.atlasKey)) return done(false);
@@ -43,14 +49,15 @@ export function loadActors(scene: Phaser.Scene): Promise<boolean> {
 export class ActorBody {
   readonly root: Phaser.GameObjects.Container;
   private sprite?: Phaser.GameObjects.Sprite;
-  private atlasKey = actorAssets(PLAYER_ACTOR).atlasKey;
+  private atlasKey: string;
   private front = true;
   private flip = false;
   private heading = { x: 0, y: 1 }; // screen direction, decaying sum of recent steps
   private walking = false;
   private playing = '';
 
-  constructor(scene: Phaser.Scene, name: string, self: boolean) {
+  constructor(scene: Phaser.Scene, name: string, self: boolean, look = PLAYER_ACTOR) {
+    this.atlasKey = actorAssets(look).atlasKey;
     const parts: Phaser.GameObjects.GameObject[] = [];
     const sheet = scene.anims.exists(animKey(this.atlasKey, 'idle_front'));
     if (!sheet || !metaOf(scene, this.atlasKey).shadow) parts.push(scene.add.ellipse(0, 0, 30, 12, 0x000000, 0.35));

@@ -1,0 +1,65 @@
+/* Status window, medieval: dark oak panel, double gilt frame, corner studs, ribbon tabs. Words come from the server. */
+.status-panel {
+  --gold: #c8a04f; --gold-dim: #8c6a32; --ink: #1a130c; --parchment: #e9dcb8; --wood: #2a2016;
+  width: min(540px, calc(100% - 32px)); box-sizing: border-box; padding: 26px 28px 24px;
+  font: 15px Georgia, 'Palatino Linotype', serif; color: var(--parchment);
+  background: radial-gradient(ellipse at 50% 0%, #3a2d1e 0%, var(--wood) 55%, #17110b 100%);
+  border: 3px solid var(--gold); border-radius: 3px;
+  box-shadow: inset 0 0 0 3px var(--ink), inset 0 0 0 5px var(--gold-dim), inset 0 0 0 9px var(--ink), inset 0 0 46px #000b, 0 0 0 2px #0b0805, 0 10px 28px #000d;
+}
+.status-panel .corner {
+  position: absolute; width: 22px; height: 22px; pointer-events: none;
+  background: radial-gradient(circle at 50% 50%, #f0d98c 0 18%, var(--gold) 19% 42%, var(--ink) 43% 52%, transparent 53%);
+}
+.status-panel .corner.tl { top: -9px; left: -9px; } .status-panel .corner.tr { top: -9px; right: -9px; }
+.status-panel .corner.bl { bottom: -9px; left: -9px; } .status-panel .corner.br { bottom: -9px; right: -9px; }
+.status-panel header { display: flex; align-items: center; gap: 8px; margin: 0 0 10px; }
+.status-panel header h2 { flex: 1; margin: 0; font-size: 19px; letter-spacing: 0.06em; color: var(--gold); text-shadow: 0 1px 0 #000; }
+.status-panel .rule { height: 9px; margin: 6px 0 10px; background: linear-gradient(90deg, transparent, var(--gold-dim) 20%, var(--gold-dim) 80%, transparent) center / 100% 1px no-repeat; position: relative; }
+.status-panel .rule::after { content: '◆'; position: absolute; left: 50%; top: -6px; transform: translateX(-50%); font-size: 11px; color: var(--gold); background: var(--wood); padding: 0 8px; }
+.status-panel .tabs { display: flex; gap: 4px; margin: 0 0 8px; border-bottom: 2px solid var(--gold-dim); }
+.status-panel .tabs button {
+  flex: 1; font-size: 20px; padding: 4px 0 2px; min-height: 40px; background: #1d1610; color: #a89664; border: 1px solid var(--gold-dim); border-bottom: 0;
+  border-radius: 8px 8px 0 0; cursor: pointer;
+}
+.status-panel .tabs button.on { background: linear-gradient(#4a3920, #2f2415); color: #f5d06f; border-color: var(--gold); box-shadow: inset 0 1px 0 #f5d06f55; }
+.status-panel button {
+  font: 14px Georgia, 'Palatino Linotype', serif; color: var(--parchment); background: linear-gradient(#3a2d1d, #231a10);
+  border: 1px solid var(--gold-dim); border-radius: 3px; box-shadow: inset 0 0 0 1px #0008, inset 0 1px 0 #ffffff14;
+}
+.status-panel button:hover:not(:disabled) { border-color: var(--gold); color: #fff3cf; }
+.status-panel button.picked, .status-panel .hot { border-color: #f5d06f; background: linear-gradient(#5a4524, #3a2b14); box-shadow: 0 0 8px #f5d06f66; }
+.status-panel .remark { color: #f5d06f; font-style: italic; }
+.status-panel .tray, .status-panel .rows, .status-panel .items { gap: 4px; }
+.status-panel .row, .status-panel .tray li, .status-panel .items li {
+  background: #1a130b99; border: 1px solid #4a3a22; border-radius: 3px; padding: 4px 8px; min-height: 30px; user-select: none;
+}
+.status-panel .drag { cursor: grab; } .status-panel .lifted { opacity: 0.4; }
+.status-panel .drop.hot { border-color: #f5d06f; }
+.status-panel .shake { animation: shake 0.25s; }
+@keyframes shake { 25% { transform: translateX(-3px); } 75% { transform: translateX(3px); } }
+.drag-ghost { position: fixed; left: 0; top: 0; z-index: 40; pointer-events: none; padding: 4px 10px; border: 1px solid #f5d06f; background: #2f2415ee; color: #f2ead8; font: 14px Georgia, serif; }
+/* body tab: words on the left, figure in the middle, gear rows on the right, arrows between */
+.status-panel .bodybox { position: relative; display: grid; grid-template-columns: 1fr auto 1fr; gap: 26px; align-items: center; min-height: 200px; }
+.status-panel .diegetic { display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-style: italic; text-align: center; color: #cdbf98; }
+.status-panel .diegetic p { margin: 0; }
+.status-panel .figure { image-rendering: auto; min-width: 70px; filter: drop-shadow(0 4px 4px #000a); }
+.status-panel .rows { display: flex; flex-direction: column; margin: 0; padding: 0; list-style: none; position: relative; z-index: 1; }
+.status-panel .rows.left .row { flex-direction: row-reverse; text-align: right; }
+.status-panel .row { display: flex; gap: 6px; justify-content: space-between; align-items: baseline; font-size: 13px; }
+.status-panel .row { min-height: 26px; padding: 3px 8px; }
+.status-panel .row b { font-weight: normal; color: var(--gold); font-size: 12px; }
+.status-panel .row.empty span { color: #7d6f4d; }
+.status-panel .arrows { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
+.status-panel .arrows line { stroke: var(--gold); stroke-width: 2.6; stroke-linecap: round; }
+.status-panel .arrows circle { fill: #f0d98c; stroke: var(--ink); stroke-width: 1.5; }
+/* drop dialog */
+.status-panel .dialog { position: absolute; inset: 0; z-index: 5; display: grid; place-items: center; background: #000a; }
+.status-panel .dialog > div { width: min(300px, 86%); padding: 16px; text-align: center; background: var(--wood); border: 2px solid var(--gold); box-shadow: inset 0 0 0 3px var(--ink), 0 6px 20px #000; }
+.status-panel .dialog input[type=range] { width: 100%; accent-color: var(--gold); margin: 10px 0; }
+.status-panel .dialog .count { font-size: 22px; color: #f5d06f; }
+.status-panel .dialog .buttons { display: flex; gap: 10px; justify-content: center; margin-top: 8px; }
+.status-panel .pips { color: var(--gold); letter-spacing: 1px; font-size: 12px; margin-left: 6px; }
+@media (max-width: 480px) { .status-panel { padding: 22px 18px 20px; } .status-panel .bodybox { gap: 18px; } .status-panel .row { font-size: 12px; } }
+.status-panel { overflow: visible; max-height: none; }
+.status-panel .inner { max-height: calc(100vh - 170px); overflow-y: auto; padding: 2px 4px 2px 2px; scrollbar-width: thin; scrollbar-color: var(--gold-dim) transparent; }

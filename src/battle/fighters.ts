@@ -31,7 +31,7 @@ export type Token = {
 type Formation = { front: number; back: number };
 const atlasKey = actorAssets(PLAYER_ACTOR).atlasKey;
 const hasSheet = (scene: Phaser.Scene) => scene.anims.exists(animKey(atlasKey, 'stance_back'));
-// Party members face up-right: back poses (made facing up-left) mirrored. Foes face down-left: front poses mirrored.
+// Party members face up-right (back poses, as drawn). Foes face down-left (front poses).
 const view = (f: BattleFighter) => (f.side === 'party' ? 'back' : 'front');
 
 export function makeToken(scene: Phaser.Scene, f: BattleFighter, formation: Formation): Token {
@@ -40,7 +40,7 @@ export function makeToken(scene: Phaser.Scene, f: BattleFighter, formation: Form
   let figure: Token['figure'];
   let top = RADIUS * 2;
   if (f.side === 'party' && hasSheet(scene)) {
-    const sprite = scene.add.sprite(0, 0, atlasKey).setFlipX(true);
+    const sprite = scene.add.sprite(0, 0, atlasKey); // the back sheet already faces up-right
     sprite.setScale(FIGURE_H / (metaOf(scene, atlasKey).actorHeight ?? 192));
     if (!metaOf(scene, atlasKey).shadow) parts.push(scene.add.ellipse(0, 0, 40, 14, 0x000000, 0.35));
     sprite.setInteractive({ pixelPerfect: false, useHandCursor: true });
