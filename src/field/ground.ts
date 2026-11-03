@@ -2,8 +2,7 @@ import Phaser from 'phaser';
 import type { FieldTileView, FieldView } from '../../../stray-bev1/shared/field.ts';
 import { drawOrder, LIFT, surfaceHeight, TILE_H, TILE_W, tileCenter } from './iso.ts';
 
-// Placeholder ground art: colored diamonds with side walls for raised tiles, tilted tops on slopes,
-// flat water and swamp, a darker cone on other blocked tiles, a ring on exits. Town buildings are tall blocks
+// Placeholder ground art: colored diamonds with side walls for raised tiles, flat water and swamp, a darker cone on other blocked tiles, a ring on exits. Town buildings are tall blocks
 // with a dark door tile in front. Resource nodes get a small mark (rock, tree, herb, fish). Tiles drawn from a sheet
 // (ground_tiles.ts) only get their marks here: exit ring, door, node, and the obstacle cone for marker terrains.
 
@@ -38,7 +37,6 @@ const FALLBACK = 0x999999;
 // Tiles already drawn from a tile sheet; marker = keep the obstacle mark on top, node = the sprite shows the node.
 export type SpriteGround = Map<number, { marker: boolean; node: boolean }>;
 const EXIT_COLOR = 0xf2e7c4;
-const SLOPE_DIRS = [[1, 0], [0, 1], [-1, 0], [0, -1]]; // matches the server's uphill directions
 // Corners of a tile's top face in grid offsets and screen offsets: top, right, bottom, left.
 const CORNERS = [
   { gx: -0.5, gy: -0.5, sx: 0, sy: -TILE_H / 2 },
@@ -53,13 +51,11 @@ function shade(color: number, factor: number): number {
   return Phaser.Display.Color.GetColor(f(c.red), f(c.green), f(c.blue));
 }
 
-// Height of each top corner: flat tiles are level; a slope runs from its low edge h up one level in its direction.
+// Height of each top corner: every tile is a flat block (a raised terrain adds its lift).
 function cornerHeights(tile: FieldTileView): number[] {
   const lift = tile.t === 'building' ? BUILDING_LIFT : RAISED[tile.t];
   if (lift) return CORNERS.map(() => tile.h + lift);
-  if (tile.s < 0) return CORNERS.map(() => tile.h);
-  const [ux, uy] = SLOPE_DIRS[tile.s];
-  return CORNERS.map((c) => tile.h + 0.5 + (c.gx * ux + c.gy * uy));
+  return CORNERS.map(() => tile.h);
 }
 
 // A resource node's mark, standing on its tile: a boulder, a stump with a crown, a herb tuft, or ripples.
@@ -103,8 +99,7 @@ function drawTile(
     g.fillStyle(shade(color, 0.65));
     g.fillPoints([top[2], top[1], foot(1), foot(2)], true); // right face
   }
-  const lit = tile.s < 0 ? 1 : tile.s < 2 ? 0.88 : 1.1; // slopes catch the light by facing
-  g.fillStyle(shade(tile.w || FLAT_OBSTACLES.has(tile.t) ? color : shade(color, 0.8), lit));
+  g.fillStyle(tile.w || FLAT_OBSTACLES.has(tile.t) ? color : shade(color, 0.8));
   g.fillPoints(top, true);
   g.lineStyle(1, shade(color, 0.7), 0.6);
   g.strokePoints(top, true);

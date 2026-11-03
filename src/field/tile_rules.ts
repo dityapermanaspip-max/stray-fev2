@@ -15,15 +15,13 @@ export type UseTable = {
   terrain: Record<string, Pick>;
   marker: string[]; // obstacles drawn as markerGround with the placeholder mark on top
   markerGround: string;
-  slope: Record<string, string>; // terrain -> frame group; 'default' for the rest
   node: Record<string, string[]>; // resource node kind -> frames with the node standing on its ground
   bank: Record<string, Sided>; // water terrain -> pieces for a land tile beside it, by the side the water is on
+  connect: string[]; // ground terrains of this biome that may wear a connector piece toward a harsher neighbour biome
 };
 
 export type TileLook = { frame: string; marker: boolean; node: boolean }; // node: the frame shows the node
 
-// Uphill direction (server slope 0-3: +x, +y, -x, -y) -> the slope frames' side (the slicer makes all four).
-const SLOPE_SIDE = ['dr', 'dl', 'ul', 'ur'];
 const NEIGHBOURS = [[1, 0], [-1, 0], [0, 1], [0, -1]];
 const SIDE_OF: Record<string, Side> = { '-1,0': 'ul', '0,-1': 'ur', '1,0': 'lr', '0,1': 'll' };
 const STRAIGHT: Side[] = ['ul', 'ur', 'lr', 'll'];
@@ -36,9 +34,9 @@ export function parseUseTable(raw: Record<string, unknown>): UseTable {
     terrain: (raw.terrain as Record<string, Pick>) ?? {},
     marker: Array.isArray(raw.marker) ? raw.marker.map(String) : [],
     markerGround: String(raw.marker_ground ?? ''),
-    slope: (raw.slope as Record<string, string>) ?? {},
     node: (raw.node as Record<string, string[]>) ?? {},
     bank: (raw.bank as Record<string, Sided>) ?? {},
+    connect: Array.isArray(raw.connect) ? raw.connect.map(String) : [],
   };
 }
 
@@ -66,8 +64,13 @@ export function sideWhere(view: FieldView, x: number, y: number, test: (t: strin
     if (nx < 0 || ny < 0 || nx >= view.width || ny >= view.height) continue;
     if (test(view.tiles[ny * view.width + nx].t)) sides.push(SIDE_OF[`${dx},${dy}`]);
   }
+  return sideFor(sides);
+}
+
+// One side, or a corner for two adjacent sides; null for none, opposite sides, or three and more.
+export function sideFor(sides: Side[]): Side | null {
   if (sides.length === 1) return sides[0];
-  return sides.length === 2 ? (CORNER[sides.sort().join(',')] ?? null) : null;
+  return sides.length === 2 ? (CORNER[[...sides].sort().join(',')] ?? null) : null;
 }
 
 const pickFrom = (list: string[] | undefined, frames: readonly string[], x: number, y: number) =>
@@ -93,17 +96,9 @@ export function tileLook(
 ): TileLook | null {
   const tile = view.tiles[i];
   const x = i % view.width, y = Math.floor(i / view.width);
-  if (node && tile.s < 0) {
+  if (node) {
     const frame = variant((table.node[node] ?? []).filter((f) => frames.includes(f)), x, y);
     if (frame) return { frame, marker: false, node: true };
-  }
-  if (tile.s >= 0) {
-    const side = SLOPE_SIDE[tile.s];
-    if (!side) return null;
-    const group = table.slope[tile.t] ?? table.slope.default;
-    const prefix = `${biome}_${group}_${side}_`;
-    const frame = group ? variant(frames.filter((f) => f.startsWith(prefix)), x, y) : null;
-    return frame ? { frame, marker: false, node: false } : null;
   }
   const marker = table.marker.includes(tile.t);
   const terrain = marker ? table.markerGround : tile.t;

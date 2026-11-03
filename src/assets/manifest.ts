@@ -3,7 +3,7 @@
 const TILE_DIR = 'assets/world/tiles';
 
 // Biomes with a ground tile sheet (sliced by `npm run tiles:slice -- <biome>`). Other biomes keep the plain-colour ground.
-export const TILE_BIOMES = ['meadow', 'volcano', 'snow', 'seashore'] as const;
+export const TILE_BIOMES = ['meadow', 'grove', 'desert', 'volcano', 'snow', 'seashore'] as const;
 
 export const tileAssets = (biome: string) => ({
   atlasKey: `tiles_${biome}`, // the sheet with its frames (<biome>.json, made by the slicer)
@@ -12,6 +12,10 @@ export const tileAssets = (biome: string) => ({
   atlas: `${TILE_DIR}/${biome}/${biome}.json`,
   use: `${TILE_DIR}/${biome}/${biome}.tiles.json`,
 });
+
+// Biome connector sheets: `connect_<gentler>_<harsher>`, a tileAssets() name like a biome (sliced by tiles:slice).
+const CONNECTORS = ['meadow_grove', 'meadow_desert', 'grove_desert'];
+export const connectName = (low: string, high: string) => (CONNECTORS.includes(`${low}_${high}`) ? `connect_${low}_${high}` : null);
 
 export const hasTiles = (biome: string) => (TILE_BIOMES as readonly string[]).includes(biome);
 

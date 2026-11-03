@@ -4,6 +4,7 @@ import { hasTiles, tileAssets } from '../assets/manifest.ts';
 import { drawBuildings } from './buildings.ts';
 import { pickNode, pickRow } from './catalog_pick.ts';
 import { loadCatalog } from './catalog_tiles.ts';
+import { connectorFor, type Connector } from './connect.ts';
 import { drawGround, type SpriteGround } from './ground.ts';
 import { drawOrder, surfaceHeight, TILE_W, tileCenter } from './iso.ts';
 import { fillerLevels, parseUseTable, tileLook, type UseTable } from './tile_rules.ts';
@@ -57,6 +58,15 @@ export async function drawField(scene: Phaser.Scene, view: FieldView): Promise<v
   const [built, catalog] = await Promise.all([drawBuildings(scene, view), loadCatalog(scene)]);
   if (!scene.sys.isActive()) return;
   const sheets = new Map(biomes.map((b) => [b, sheetOf(scene, b)] as const));
+  const worn = new Map<number, Connector>(); // tiles wearing a connector piece toward a harsher biome
+  view.tiles.forEach((t, i) => {
+    const c = connectorFor(view, i, sheets.get(t.b)?.table.connect ?? []);
+    if (c) worn.set(i, c);
+  });
+  const pairs = [...new Set([...worn.values()].map((c) => c.sheet))];
+  await loadSheets(scene, pairs);
+  if (!scene.sys.isActive()) return;
+  for (const p of pairs) sheets.set(p, sheetOf(scene, p));
   const sprited: SpriteGround = new Map();
   const nodes = new Map(view.nodes.map((n) => [n.y * view.width + n.x, n.kind]));
   for (const i of drawOrder(view)) {
@@ -67,13 +77,13 @@ export async function drawField(scene: Phaser.Scene, view: FieldView): Promise<v
     const x = i % view.width, y = Math.floor(i / view.width);
     const row = (x + y) * 10; // the row's plain-colour ground and marks draw at row depth, over these
     const kind = nodes.get(i);
-    const landmark = kind && catalog && tile.h === 0 && tile.s < 0 ? pickNode(catalog.rows, tile.b, kind, x, y) : null; // a big obstacle stands for the node
+    const landmark = kind && catalog && tile.h === 0 ? pickNode(catalog.rows, tile.b, kind, x, y) : null; // a big obstacle stands for the node
     if (landmark) {
       place(scene, catalog!.sheets.obstacle, landmark.key, x, y, 0, row - 1);
       sprited.set(i, { marker: false, node: true });
       continue;
     }
-    const drawn = !sheet || !look ? catalog && tile.h === 0 && tile.s < 0 ? pickRow(catalog.rows, view, i) : null : null; // no biome sheet: the catalog
+    const drawn = !sheet || !look ? catalog && tile.h === 0 ? pickRow(catalog.rows, view, i) : null : null; // no biome sheet: the catalog
     if (drawn) {
       place(scene, catalog!.sheets[drawn.atlas], drawn.key, x, y, 0, row - 1);
       sprited.set(i, { marker: false, node: drawn.atlas === 'obstacle' });
@@ -83,7 +93,9 @@ export async function drawField(scene: Phaser.Scene, view: FieldView): Promise<v
     if (sheet.frames.includes(sheet.table.filler)) {
       for (const k of fillerLevels(tile.h, sheet.table.blockLevels)) place(scene, sheet, sheet.table.filler, x, y, k, row - 2);
     }
-    place(scene, sheet, look.frame, x, y, surfaceHeight(tile), row - 1); // a slope's pivot sits at its middle
+    const piece = worn.get(i), pairSheet = piece && sheets.get(piece.sheet);
+    if (piece && pairSheet?.frames.includes(piece.frame)) place(scene, pairSheet, piece.frame, x, y, surfaceHeight(tile), row - 1);
+    else place(scene, sheet, look.frame, x, y, surfaceHeight(tile), row - 1);
     sprited.set(i, { marker: look.marker, node: look.node });
   }
   drawGround(scene, view, sprited, built);

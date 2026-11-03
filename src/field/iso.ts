@@ -8,8 +8,8 @@ export const LIFT = 10; // pixels per height step
 
 export type Point = { x: number; y: number };
 
-// Height of the middle of a tile's top face: a slope (s >= 0) rises one level from its low edge h, so half a level up.
-export const surfaceHeight = (t: { h: number; s: number }) => t.h + (t.s >= 0 ? 0.5 : 0);
+// Height of the middle of a tile's top face: its height level (every tile is a flat block).
+export const surfaceHeight = (t: { h: number }) => t.h;
 
 // Center of the tile's top face, in world pixels.
 export function tileCenter(x: number, y: number, height: number): Point {

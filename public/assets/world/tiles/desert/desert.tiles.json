@@ -31,10 +31,78 @@
         "desert_oasis_fish",
         "desert_oasis_deep"
       ]
+    },
+    {
+      "file": "desert_nobg_gen_r1.png",
+      "names": [
+        "desert_gen_sand_a",
+        "desert_gen_sand_b",
+        "desert_gen_sand_c",
+        "desert_gen_sand_d",
+        "desert_gen_sand_fine",
+        "desert_gen_sand_ripples",
+        "desert_gen_sand_red",
+        "desert_gen_sand_pale",
+        "desert_gen_sand_pebbles",
+        "desert_gen_sand_rocks",
+        "desert_gen_sand_prints",
+        "desert_gen_sand_bones",
+        "desert_gen_sand_scrub",
+        "desert_gen_sand_streaks",
+        "desert_gen_sand_dark",
+        "desert_gen_sand_shells",
+        "desert_gen_cracked_a",
+        "desert_gen_cracked_b",
+        "desert_gen_salt_crust",
+        "desert_gen_hardpan_red",
+        "desert_gen_hardpan_pebbles",
+        "desert_gen_gravel",
+        "desert_gen_clay_orange",
+        "desert_gen_salt_flat",
+        "desert_gen_slab_sandstone",
+        "desert_gen_slab_cracked",
+        "desert_gen_rocky_ground",
+        "desert_gen_rock_red",
+        "desert_gen_basalt_gravel",
+        "desert_gen_sandstone_stripes",
+        "desert_gen_cobbles_scattered",
+        "desert_gen_ruin_paving",
+        "desert_gen_se_edge_bl",
+        "desert_gen_se_edge_br",
+        "desert_gen_se_edge_tl",
+        "desert_gen_se_edge_tr",
+        "desert_gen_se_corner_b",
+        "desert_gen_se_corner_t",
+        "desert_gen_se_corner_l",
+        "desert_gen_se_corner_r",
+        "desert_gen_tp_straight_x",
+        "desert_gen_tp_straight_y",
+        "desert_gen_tp_corner_t",
+        "desert_gen_tp_corner_r",
+        "desert_gen_tp_corner_b",
+        "desert_gen_tp_corner_l",
+        "desert_gen_tp_cross",
+        "desert_gen_tp_end",
+        "desert_gen_fp_straight_x",
+        "desert_gen_fp_straight_y",
+        "desert_gen_fp_corner_t",
+        "desert_gen_fp_corner_r",
+        "desert_gen_fp_corner_b",
+        "desert_gen_fp_corner_l",
+        "desert_gen_fp_cross",
+        "desert_gen_fp_end",
+        "desert_gen_oasis_grass",
+        "desert_gen_damp_sand",
+        "desert_gen_dune_crest",
+        "desert_gen_dry_grass",
+        "desert_gen_palm_litter",
+        "desert_gen_sand_clay_mix",
+        "desert_gen_wet_ripples",
+        "desert_gen_stones_stepping"
+      ]
     }
   ],
-  "slopes": {},
-  "filler": "desert_rocks",
+  "filler": "desert_gen_slab_sandstone",
   "block_levels": 2,
   "terrain": {
     "rock": [
@@ -58,7 +126,33 @@
         "desert_oasis_fish",
         "desert_oasis_deep"
       ]
-    }
+    },
+    "sand": [
+      "desert_gen_sand_a",
+      "desert_gen_sand_a",
+      "desert_gen_sand_b",
+      "desert_gen_sand_b",
+      "desert_gen_sand_c",
+      "desert_gen_sand_c",
+      "desert_gen_sand_d",
+      "desert_gen_sand_fine",
+      "desert_gen_sand_pale",
+      "desert_gen_sand_pebbles",
+      "desert_gen_sand_prints",
+      "desert_gen_sand_scrub",
+      "desert_gen_sand_streaks"
+    ],
+    "dune": [
+      "desert_gen_sand_ripples",
+      "desert_gen_dune_crest",
+      "desert_gen_sand_d"
+    ],
+    "cracked_earth": [
+      "desert_gen_cracked_a",
+      "desert_gen_cracked_b",
+      "desert_gen_hardpan_red",
+      "desert_gen_clay_orange"
+    ]
   },
   "node": {
     "rock": [
@@ -73,7 +167,6 @@
     "cactus"
   ],
   "marker_ground": "sand",
-  "slope": {},
   "mirror": {
     "desert_oasis_shore_ul_m": "desert_oasis_shore_ul",
     "desert_oasis_shore_ur_m": "desert_oasis_shore_ur",
@@ -99,5 +192,10 @@
         "desert_oasis_shore_lr_m"
       ]
     }
-  }
+  },
+  "connect": [
+    "sand",
+    "dune",
+    "cracked_earth"
+  ]
 }

@@ -2,6 +2,8 @@ import type { Rgba } from './png.ts';
 
 // Small RGBA helpers for the tile tools: blank images, crops, copies and a box-filter resize. No libraries.
 
+export type Frame = { img: Rgba; pivot: { x: number; y: number } }; // pivot: top-face centre in frame pixels
+
 export const newImage = (width: number, height: number): Rgba => ({ width, height, data: new Uint8Array(width * height * 4) });
 
 export function crop(img: Rgba, x: number, y: number, w: number, h: number): Rgba {

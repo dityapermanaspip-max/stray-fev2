@@ -1,0 +1,7 @@
+{
+  "about": "Biome connector pieces: the lower-ranked biome wears these toward the harsher one (one-sided rule). Edges ul/ur/lr/ll, corners top/right/bottom/left. 5 generated, 3 mirrors.",
+  "sheets": [
+    { "file": "connect_meadow_grove_nobg_r1.png", "names": ["connect_meadow_grove_edge_bl", "connect_meadow_grove_edge_tl", "connect_meadow_grove_corner_t", "connect_meadow_grove_corner_b", "connect_meadow_grove_corner_l"] }
+  ],
+  "mirror": { "connect_meadow_grove_edge_br": "connect_meadow_grove_edge_bl", "connect_meadow_grove_edge_tr": "connect_meadow_grove_edge_tl", "connect_meadow_grove_corner_r": "connect_meadow_grove_corner_l" }
+}

@@ -53,19 +53,6 @@
       ]
     }
   ],
-  "slopes": {
-    "slope": [
-      "snow_plain_01",
-      "snow_patchy"
-    ],
-    "frost_slope": [
-      "snow_frost_grass_01",
-      "snow_lichen"
-    ],
-    "ice_slope": [
-      "snow_ice_02"
-    ]
-  },
   "filler": "snow_plain_01",
   "block_levels": 2,
   "terrain": {
@@ -162,11 +149,6 @@
     "pine"
   ],
   "marker_ground": "snow",
-  "slope": {
-    "default": "slope",
-    "frost_grass": "frost_slope",
-    "ice": "ice_slope"
-  },
   "mirror": {
     "snow_lake_shore_ur_m": "snow_lake_shore_ur",
     "snow_lake_shore_ul_m": "snow_lake_shore_ul",

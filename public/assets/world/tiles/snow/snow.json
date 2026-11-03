@@ -2,8 +2,8 @@
  "frames": {
   "snow_berries": {
    "frame": {
-    "x": 151,
-    "y": 358,
+    "x": 1060,
+    "y": 2,
     "w": 147,
     "h": 117
    },
@@ -26,8 +26,8 @@
   },
   "snow_bush": {
    "frame": {
-    "x": 1507,
-    "y": 225,
+    "x": 460,
+    "y": 2,
     "w": 147,
     "h": 127
    },
@@ -50,8 +50,8 @@
   },
   "snow_doorstep": {
    "frame": {
-    "x": 450,
-    "y": 358,
+    "x": 1359,
+    "y": 2,
     "w": 150,
     "h": 116
    },
@@ -74,8 +74,8 @@
   },
   "snow_drift": {
    "frame": {
-    "x": 902,
-    "y": 358,
+    "x": 1811,
+    "y": 2,
     "w": 150,
     "h": 112
    },
@@ -98,8 +98,8 @@
   },
   "snow_flowers": {
    "frame": {
-    "x": 602,
-    "y": 358,
+    "x": 1511,
+    "y": 2,
     "w": 148,
     "h": 114
    },
@@ -122,8 +122,8 @@
   },
   "snow_frost_grass_01": {
    "frame": {
-    "x": 2,
-    "y": 481,
+    "x": 896,
+    "y": 225,
     "w": 148,
     "h": 111
    },
@@ -146,8 +146,8 @@
   },
   "snow_frost_shrubs": {
    "frame": {
-    "x": 1809,
-    "y": 225,
+    "x": 762,
+    "y": 2,
     "w": 147,
     "h": 121
    },
@@ -168,202 +168,10 @@
     "y": 0.4577
    }
   },
-  "snow_frost_slope_dl_01": {
-   "frame": {
-    "x": 896,
-    "y": 2,
-    "w": 148,
-    "h": 131
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 148,
-    "h": 131
-   },
-   "sourceSize": {
-    "w": 148,
-    "h": 131
-   },
-   "pivot": {
-    "x": 0.4977,
-    "y": 0.4188
-   }
-  },
-  "snow_frost_slope_dl_02": {
-   "frame": {
-    "x": 300,
-    "y": 2,
-    "w": 147,
-    "h": 132
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 147,
-    "h": 132
-   },
-   "sourceSize": {
-    "w": 147,
-    "h": 132
-   },
-   "pivot": {
-    "x": 0.5011,
-    "y": 0.424
-   }
-  },
-  "snow_frost_slope_dr_01": {
-   "frame": {
-    "x": 1046,
-    "y": 2,
-    "w": 148,
-    "h": 131
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 148,
-    "h": 131
-   },
-   "sourceSize": {
-    "w": 148,
-    "h": 131
-   },
-   "pivot": {
-    "x": 0.4977,
-    "y": 0.4188
-   }
-  },
-  "snow_frost_slope_dr_02": {
-   "frame": {
-    "x": 449,
-    "y": 2,
-    "w": 147,
-    "h": 132
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 147,
-    "h": 132
-   },
-   "sourceSize": {
-    "w": 147,
-    "h": 132
-   },
-   "pivot": {
-    "x": 0.5011,
-    "y": 0.424
-   }
-  },
-  "snow_frost_slope_ul_01": {
-   "frame": {
-    "x": 1196,
-    "y": 2,
-    "w": 148,
-    "h": 131
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 148,
-    "h": 131
-   },
-   "sourceSize": {
-    "w": 148,
-    "h": 131
-   },
-   "pivot": {
-    "x": 0.4977,
-    "y": 0.4188
-   }
-  },
-  "snow_frost_slope_ul_02": {
-   "frame": {
-    "x": 598,
-    "y": 2,
-    "w": 147,
-    "h": 132
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 147,
-    "h": 132
-   },
-   "sourceSize": {
-    "w": 147,
-    "h": 132
-   },
-   "pivot": {
-    "x": 0.5011,
-    "y": 0.424
-   }
-  },
-  "snow_frost_slope_ur_01": {
-   "frame": {
-    "x": 1346,
-    "y": 2,
-    "w": 148,
-    "h": 131
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 148,
-    "h": 131
-   },
-   "sourceSize": {
-    "w": 148,
-    "h": 131
-   },
-   "pivot": {
-    "x": 0.4977,
-    "y": 0.4188
-   }
-  },
-  "snow_frost_slope_ur_02": {
-   "frame": {
-    "x": 747,
-    "y": 2,
-    "w": 147,
-    "h": 132
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 147,
-    "h": 132
-   },
-   "sourceSize": {
-    "w": 147,
-    "h": 132
-   },
-   "pivot": {
-    "x": 0.5011,
-    "y": 0.424
-   }
-  },
   "snow_frozen_lake": {
    "frame": {
-    "x": 300,
-    "y": 358,
+    "x": 1209,
+    "y": 2,
     "w": 148,
     "h": 117
    },
@@ -386,8 +194,8 @@
   },
   "snow_frozen_stone": {
    "frame": {
-    "x": 152,
-    "y": 481,
+    "x": 1046,
+    "y": 225,
     "w": 147,
     "h": 111
    },
@@ -410,8 +218,8 @@
   },
   "snow_ice_01": {
    "frame": {
-    "x": 1054,
-    "y": 358,
+    "x": 2,
+    "y": 225,
     "w": 147,
     "h": 112
    },
@@ -434,8 +242,8 @@
   },
   "snow_ice_02": {
    "frame": {
-    "x": 301,
-    "y": 481,
+    "x": 1195,
+    "y": 225,
     "w": 147,
     "h": 111
    },
@@ -458,8 +266,8 @@
   },
   "snow_ice_paving": {
    "frame": {
-    "x": 450,
-    "y": 481,
+    "x": 1344,
+    "y": 225,
     "w": 147,
     "h": 111
    },
@@ -478,102 +286,6 @@
    "pivot": {
     "x": 0.4973,
     "y": 0.4042
-   }
-  },
-  "snow_ice_slope_dl_01": {
-   "frame": {
-    "x": 1496,
-    "y": 2,
-    "w": 147,
-    "h": 131
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 147,
-    "h": 131
-   },
-   "sourceSize": {
-    "w": 147,
-    "h": 131
-   },
-   "pivot": {
-    "x": 0.5011,
-    "y": 0.423
-   }
-  },
-  "snow_ice_slope_dr_01": {
-   "frame": {
-    "x": 1645,
-    "y": 2,
-    "w": 147,
-    "h": 131
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 147,
-    "h": 131
-   },
-   "sourceSize": {
-    "w": 147,
-    "h": 131
-   },
-   "pivot": {
-    "x": 0.5011,
-    "y": 0.423
-   }
-  },
-  "snow_ice_slope_ul_01": {
-   "frame": {
-    "x": 1794,
-    "y": 2,
-    "w": 147,
-    "h": 131
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 147,
-    "h": 131
-   },
-   "sourceSize": {
-    "w": 147,
-    "h": 131
-   },
-   "pivot": {
-    "x": 0.5011,
-    "y": 0.423
-   }
-  },
-  "snow_ice_slope_ur_01": {
-   "frame": {
-    "x": 2,
-    "y": 225,
-    "w": 147,
-    "h": 131
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 147,
-    "h": 131
-   },
-   "sourceSize": {
-    "w": 147,
-    "h": 131
-   },
-   "pivot": {
-    "x": 0.5011,
-    "y": 0.423
    }
   },
   "snow_ice_tree": {
@@ -602,8 +314,8 @@
   },
   "snow_lake_deep": {
    "frame": {
-    "x": 1345,
-    "y": 481,
+    "x": 301,
+    "y": 339,
     "w": 146,
     "h": 110
    },
@@ -626,8 +338,8 @@
   },
   "snow_lake_floes": {
    "frame": {
-    "x": 1493,
-    "y": 481,
+    "x": 449,
+    "y": 339,
     "w": 147,
     "h": 110
    },
@@ -650,8 +362,8 @@
   },
   "snow_lake_frog": {
    "frame": {
-    "x": 1642,
-    "y": 481,
+    "x": 598,
+    "y": 339,
     "w": 147,
     "h": 110
    },
@@ -674,8 +386,8 @@
   },
   "snow_lake_lily": {
    "frame": {
-    "x": 1791,
-    "y": 481,
+    "x": 747,
+    "y": 339,
     "w": 147,
     "h": 110
    },
@@ -698,8 +410,8 @@
   },
   "snow_lake_lotus": {
    "frame": {
-    "x": 2,
-    "y": 594,
+    "x": 896,
+    "y": 339,
     "w": 147,
     "h": 110
    },
@@ -722,8 +434,8 @@
   },
   "snow_lake_open": {
    "frame": {
-    "x": 151,
-    "y": 594,
+    "x": 1045,
+    "y": 339,
     "w": 147,
     "h": 110
    },
@@ -746,8 +458,8 @@
   },
   "snow_lake_reeds": {
    "frame": {
-    "x": 2,
-    "y": 358,
+    "x": 911,
+    "y": 2,
     "w": 147,
     "h": 121
    },
@@ -770,8 +482,8 @@
   },
   "snow_lake_shore_bottom": {
    "frame": {
-    "x": 300,
-    "y": 594,
+    "x": 1194,
+    "y": 339,
     "w": 148,
     "h": 110
    },
@@ -794,8 +506,8 @@
   },
   "snow_lake_shore_left": {
    "frame": {
-    "x": 752,
-    "y": 358,
+    "x": 1661,
+    "y": 2,
     "w": 148,
     "h": 113
    },
@@ -818,8 +530,8 @@
   },
   "snow_lake_shore_ll": {
    "frame": {
-    "x": 450,
-    "y": 594,
+    "x": 1344,
+    "y": 339,
     "w": 148,
     "h": 110
    },
@@ -842,8 +554,8 @@
   },
   "snow_lake_shore_ll_m": {
    "frame": {
-    "x": 600,
-    "y": 594,
+    "x": 1494,
+    "y": 339,
     "w": 148,
     "h": 110
    },
@@ -866,8 +578,8 @@
   },
   "snow_lake_shore_lr": {
    "frame": {
-    "x": 899,
-    "y": 594,
+    "x": 1793,
+    "y": 339,
     "w": 148,
     "h": 109
    },
@@ -890,8 +602,8 @@
   },
   "snow_lake_shore_lr_m": {
    "frame": {
-    "x": 1049,
-    "y": 594,
+    "x": 2,
+    "y": 452,
     "w": 148,
     "h": 109
    },
@@ -914,8 +626,8 @@
   },
   "snow_lake_shore_right": {
    "frame": {
-    "x": 1203,
-    "y": 358,
+    "x": 151,
+    "y": 225,
     "w": 147,
     "h": 112
    },
@@ -938,8 +650,8 @@
   },
   "snow_lake_shore_top": {
    "frame": {
-    "x": 750,
-    "y": 594,
+    "x": 1644,
+    "y": 339,
     "w": 147,
     "h": 110
    },
@@ -962,8 +674,8 @@
   },
   "snow_lake_shore_ul": {
    "frame": {
-    "x": 599,
-    "y": 481,
+    "x": 1493,
+    "y": 225,
     "w": 147,
     "h": 111
    },
@@ -986,8 +698,8 @@
   },
   "snow_lake_shore_ul_m": {
    "frame": {
-    "x": 748,
-    "y": 481,
+    "x": 1642,
+    "y": 225,
     "w": 147,
     "h": 111
    },
@@ -1010,8 +722,8 @@
   },
   "snow_lake_shore_ur": {
    "frame": {
-    "x": 1352,
-    "y": 358,
+    "x": 300,
+    "y": 225,
     "w": 147,
     "h": 112
    },
@@ -1034,8 +746,8 @@
   },
   "snow_lake_shore_ur_m": {
    "frame": {
-    "x": 1501,
-    "y": 358,
+    "x": 449,
+    "y": 225,
     "w": 147,
     "h": 112
    },
@@ -1058,8 +770,8 @@
   },
   "snow_lichen": {
    "frame": {
-    "x": 1650,
-    "y": 358,
+    "x": 598,
+    "y": 225,
     "w": 147,
     "h": 112
    },
@@ -1106,8 +818,8 @@
   },
   "snow_ore_ice": {
    "frame": {
-    "x": 1656,
-    "y": 225,
+    "x": 609,
+    "y": 2,
     "w": 151,
     "h": 124
    },
@@ -1130,8 +842,8 @@
   },
   "snow_patchy": {
    "frame": {
-    "x": 897,
-    "y": 481,
+    "x": 1791,
+    "y": 225,
     "w": 147,
     "h": 111
    },
@@ -1154,8 +866,8 @@
   },
   "snow_plain_01": {
    "frame": {
-    "x": 1046,
-    "y": 481,
+    "x": 2,
+    "y": 339,
     "w": 148,
     "h": 111
    },
@@ -1178,8 +890,8 @@
   },
   "snow_potted_herb": {
    "frame": {
-    "x": 1347,
-    "y": 225,
+    "x": 300,
+    "y": 2,
     "w": 158,
     "h": 128
    },
@@ -1202,8 +914,8 @@
   },
   "snow_rocks": {
    "frame": {
-    "x": 1196,
-    "y": 481,
+    "x": 152,
+    "y": 339,
     "w": 147,
     "h": 111
    },
@@ -1224,202 +936,10 @@
     "y": 0.417
    }
   },
-  "snow_slope_dl_01": {
-   "frame": {
-    "x": 151,
-    "y": 225,
-    "w": 148,
-    "h": 131
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 148,
-    "h": 131
-   },
-   "sourceSize": {
-    "w": 148,
-    "h": 131
-   },
-   "pivot": {
-    "x": 0.4977,
-    "y": 0.4272
-   }
-  },
-  "snow_slope_dl_02": {
-   "frame": {
-    "x": 301,
-    "y": 225,
-    "w": 147,
-    "h": 131
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 147,
-    "h": 131
-   },
-   "sourceSize": {
-    "w": 147,
-    "h": 131
-   },
-   "pivot": {
-    "x": 0.5011,
-    "y": 0.423
-   }
-  },
-  "snow_slope_dr_01": {
-   "frame": {
-    "x": 450,
-    "y": 225,
-    "w": 148,
-    "h": 131
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 148,
-    "h": 131
-   },
-   "sourceSize": {
-    "w": 148,
-    "h": 131
-   },
-   "pivot": {
-    "x": 0.4977,
-    "y": 0.4272
-   }
-  },
-  "snow_slope_dr_02": {
-   "frame": {
-    "x": 600,
-    "y": 225,
-    "w": 147,
-    "h": 131
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 147,
-    "h": 131
-   },
-   "sourceSize": {
-    "w": 147,
-    "h": 131
-   },
-   "pivot": {
-    "x": 0.5011,
-    "y": 0.423
-   }
-  },
-  "snow_slope_ul_01": {
-   "frame": {
-    "x": 749,
-    "y": 225,
-    "w": 148,
-    "h": 131
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 148,
-    "h": 131
-   },
-   "sourceSize": {
-    "w": 148,
-    "h": 131
-   },
-   "pivot": {
-    "x": 0.4977,
-    "y": 0.4272
-   }
-  },
-  "snow_slope_ul_02": {
-   "frame": {
-    "x": 899,
-    "y": 225,
-    "w": 147,
-    "h": 131
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 147,
-    "h": 131
-   },
-   "sourceSize": {
-    "w": 147,
-    "h": 131
-   },
-   "pivot": {
-    "x": 0.5011,
-    "y": 0.423
-   }
-  },
-  "snow_slope_ur_01": {
-   "frame": {
-    "x": 1048,
-    "y": 225,
-    "w": 148,
-    "h": 131
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 148,
-    "h": 131
-   },
-   "sourceSize": {
-    "w": 148,
-    "h": 131
-   },
-   "pivot": {
-    "x": 0.4977,
-    "y": 0.4272
-   }
-  },
-  "snow_slope_ur_02": {
-   "frame": {
-    "x": 1198,
-    "y": 225,
-    "w": 147,
-    "h": 131
-   },
-   "rotated": false,
-   "trimmed": false,
-   "spriteSourceSize": {
-    "x": 0,
-    "y": 0,
-    "w": 147,
-    "h": 131
-   },
-   "sourceSize": {
-    "w": 147,
-    "h": 131
-   },
-   "pivot": {
-    "x": 0.5011,
-    "y": 0.423
-   }
-  },
   "snow_tracks": {
    "frame": {
-    "x": 1799,
-    "y": 358,
+    "x": 747,
+    "y": 225,
     "w": 147,
     "h": 112
    },
@@ -1445,8 +965,8 @@
   "app": "stray-fev2 tools/tiles/slice.ts",
   "image": "snow_atlas.png",
   "size": {
-   "w": 1958,
-   "h": 706
+   "w": 1963,
+   "h": 563
   },
   "scale": "1",
   "tileWidth": 144

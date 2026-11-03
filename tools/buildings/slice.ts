@@ -4,7 +4,7 @@ import { findBlobs, joinSpecks, median, mergeOverlapping, readingOrder } from '.
 import { crop, resize } from '../tiles/image.ts';
 import { pack } from '../tiles/pack.ts';
 import { readPng, writePng } from '../tiles/png.ts';
-import type { Frame } from '../tiles/skew.ts';
+import type { Frame } from '../tiles/image.ts';
 
 // npm run buildings:slice -- <style> [more styles]
 // Reads public/assets/world/town/buildings/buildings.json: each style's sheets are 3 x 5 buildings standing on their

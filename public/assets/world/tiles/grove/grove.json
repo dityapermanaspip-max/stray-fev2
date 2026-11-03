@@ -2,7 +2,7 @@
  "frames": {
   "grove_crystals": {
    "frame": {
-    "x": 151,
+    "x": 301,
     "y": 2,
     "w": 147,
     "h": 142
@@ -50,7 +50,7 @@
   },
   "grove_forest_floor": {
    "frame": {
-    "x": 448,
+    "x": 598,
     "y": 2,
     "w": 147,
     "h": 129
@@ -72,9 +72,1545 @@
     "y": 0.4991
    }
   },
+  "grove_gen_acorns": {
+   "frame": {
+    "x": 1192,
+    "y": 545,
+    "w": 148,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.499,
+    "y": 0.3888
+   }
+  },
+  "grove_gen_bark_bits": {
+   "frame": {
+    "x": 1342,
+    "y": 2,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.499,
+    "y": 0.3909
+   }
+  },
+  "grove_gen_bw_cross": {
+   "frame": {
+    "x": 1492,
+    "y": 2,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4948,
+    "y": 0.3909
+   }
+  },
+  "grove_gen_bw_end": {
+   "frame": {
+    "x": 1642,
+    "y": 2,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4948,
+    "y": 0.3909
+   }
+  },
+  "grove_gen_bw_straight_x": {
+   "frame": {
+    "x": 1792,
+    "y": 2,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4948,
+    "y": 0.3909
+   }
+  },
+  "grove_gen_bw_straight_y": {
+   "frame": {
+    "x": 2,
+    "y": 206,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4948,
+    "y": 0.3909
+   }
+  },
+  "grove_gen_clay_brown": {
+   "frame": {
+    "x": 152,
+    "y": 206,
+    "w": 147,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.5024,
+    "y": 0.3909
+   }
+  },
+  "grove_gen_clover_shade": {
+   "frame": {
+    "x": 1342,
+    "y": 545,
+    "w": 146,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.5016,
+    "y": 0.3944
+   }
+  },
+  "grove_gen_cobble_mossy": {
+   "frame": {
+    "x": 1490,
+    "y": 545,
+    "w": 148,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.4948,
+    "y": 0.3832
+   }
+  },
+  "grove_gen_fern_ground": {
+   "frame": {
+    "x": 301,
+    "y": 206,
+    "w": 147,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4982,
+    "y": 0.3909
+   }
+  },
+  "grove_gen_flag_mossy": {
+   "frame": {
+    "x": 450,
+    "y": 206,
+    "w": 147,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.494,
+    "y": 0.3909
+   }
+  },
+  "grove_gen_forest_grass": {
+   "frame": {
+    "x": 1043,
+    "y": 2,
+    "w": 148,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.499,
+    "y": 0.3984
+   }
+  },
+  "grove_gen_ft_corner_b": {
+   "frame": {
+    "x": 599,
+    "y": 206,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4948,
+    "y": 0.3909
+   }
+  },
+  "grove_gen_ft_corner_l": {
+   "frame": {
+    "x": 749,
+    "y": 206,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4948,
+    "y": 0.3909
+   }
+  },
+  "grove_gen_ft_corner_r": {
+   "frame": {
+    "x": 899,
+    "y": 206,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4948,
+    "y": 0.3909
+   }
+  },
+  "grove_gen_ft_corner_t": {
+   "frame": {
+    "x": 1049,
+    "y": 206,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4948,
+    "y": 0.3909
+   }
+  },
+  "grove_gen_ft_cross": {
+   "frame": {
+    "x": 1199,
+    "y": 206,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4948,
+    "y": 0.3909
+   }
+  },
+  "grove_gen_ft_end": {
+   "frame": {
+    "x": 1349,
+    "y": 206,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4948,
+    "y": 0.3909
+   }
+  },
+  "grove_gen_ft_straight_x": {
+   "frame": {
+    "x": 1499,
+    "y": 206,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4948,
+    "y": 0.3909
+   }
+  },
+  "grove_gen_ft_straight_y": {
+   "frame": {
+    "x": 1649,
+    "y": 206,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4948,
+    "y": 0.3909
+   }
+  },
+  "grove_gen_gs_corner_b": {
+   "frame": {
+    "x": 1799,
+    "y": 206,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4948,
+    "y": 0.3909
+   }
+  },
+  "grove_gen_gs_corner_l": {
+   "frame": {
+    "x": 2,
+    "y": 319,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4948,
+    "y": 0.3909
+   }
+  },
+  "grove_gen_gs_corner_r": {
+   "frame": {
+    "x": 152,
+    "y": 319,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4948,
+    "y": 0.3909
+   }
+  },
+  "grove_gen_gs_corner_t": {
+   "frame": {
+    "x": 302,
+    "y": 319,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4948,
+    "y": 0.3909
+   }
+  },
+  "grove_gen_gs_edge_bl": {
+   "frame": {
+    "x": 452,
+    "y": 319,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4948,
+    "y": 0.3909
+   }
+  },
+  "grove_gen_gs_edge_br": {
+   "frame": {
+    "x": 602,
+    "y": 319,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4948,
+    "y": 0.3909
+   }
+  },
+  "grove_gen_gs_edge_tl": {
+   "frame": {
+    "x": 752,
+    "y": 319,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4948,
+    "y": 0.3909
+   }
+  },
+  "grove_gen_gs_edge_tr": {
+   "frame": {
+    "x": 902,
+    "y": 319,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4948,
+    "y": 0.3909
+   }
+  },
+  "grove_gen_leaves_a": {
+   "frame": {
+    "x": 1052,
+    "y": 319,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4948,
+    "y": 0.3909
+   }
+  },
+  "grove_gen_leaves_b": {
+   "frame": {
+    "x": 1202,
+    "y": 319,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.499,
+    "y": 0.3964
+   }
+  },
+  "grove_gen_leaves_c": {
+   "frame": {
+    "x": 1352,
+    "y": 319,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4948,
+    "y": 0.3909
+   }
+  },
+  "grove_gen_leaves_d": {
+   "frame": {
+    "x": 1640,
+    "y": 545,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.4982,
+    "y": 0.3888
+   }
+  },
+  "grove_gen_lily_mud": {
+   "frame": {
+    "x": 1789,
+    "y": 545,
+    "w": 146,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.5016,
+    "y": 0.3888
+   }
+  },
+  "grove_gen_moss_a": {
+   "frame": {
+    "x": 1502,
+    "y": 319,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.499,
+    "y": 0.3909
+   }
+  },
+  "grove_gen_moss_b": {
+   "frame": {
+    "x": 1652,
+    "y": 319,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4948,
+    "y": 0.3964
+   }
+  },
+  "grove_gen_mp_corner_b": {
+   "frame": {
+    "x": 1802,
+    "y": 319,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4948,
+    "y": 0.3909
+   }
+  },
+  "grove_gen_mp_corner_l": {
+   "frame": {
+    "x": 2,
+    "y": 432,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4948,
+    "y": 0.3909
+   }
+  },
+  "grove_gen_mp_corner_r": {
+   "frame": {
+    "x": 152,
+    "y": 432,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4948,
+    "y": 0.3909
+   }
+  },
+  "grove_gen_mp_corner_t": {
+   "frame": {
+    "x": 302,
+    "y": 432,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4948,
+    "y": 0.3909
+   }
+  },
+  "grove_gen_mp_cross": {
+   "frame": {
+    "x": 452,
+    "y": 432,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4948,
+    "y": 0.3909
+   }
+  },
+  "grove_gen_mp_end": {
+   "frame": {
+    "x": 602,
+    "y": 432,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4948,
+    "y": 0.3909
+   }
+  },
+  "grove_gen_mp_straight_x": {
+   "frame": {
+    "x": 752,
+    "y": 432,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4948,
+    "y": 0.3909
+   }
+  },
+  "grove_gen_mp_straight_y": {
+   "frame": {
+    "x": 902,
+    "y": 432,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4948,
+    "y": 0.3909
+   }
+  },
+  "grove_gen_mud_a": {
+   "frame": {
+    "x": 1052,
+    "y": 432,
+    "w": 147,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4982,
+    "y": 0.3964
+   }
+  },
+  "grove_gen_mud_b": {
+   "frame": {
+    "x": 1201,
+    "y": 432,
+    "w": 147,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.5024,
+    "y": 0.3964
+   }
+  },
+  "grove_gen_mud_reeds": {
+   "frame": {
+    "x": 1350,
+    "y": 432,
+    "w": 147,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4982,
+    "y": 0.4019
+   }
+  },
+  "grove_gen_mushrooms_small": {
+   "frame": {
+    "x": 1499,
+    "y": 432,
+    "w": 147,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4982,
+    "y": 0.3909
+   }
+  },
+  "grove_gen_needles": {
+   "frame": {
+    "x": 1648,
+    "y": 432,
+    "w": 147,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.494,
+    "y": 0.3909
+   }
+  },
+  "grove_gen_paving_roots": {
+   "frame": {
+    "x": 1797,
+    "y": 432,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.499,
+    "y": 0.3853
+   }
+  },
+  "grove_gen_peat": {
+   "frame": {
+    "x": 1193,
+    "y": 2,
+    "w": 147,
+    "h": 112
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 112
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 112
+   },
+   "pivot": {
+    "x": 0.4982,
+    "y": 0.3984
+   }
+  },
+  "grove_gen_puddle_forest": {
+   "frame": {
+    "x": 2,
+    "y": 545,
+    "w": 147,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4982,
+    "y": 0.4019
+   }
+  },
+  "grove_gen_rock_flat_moss": {
+   "frame": {
+    "x": 600,
+    "y": 658,
+    "w": 147,
+    "h": 103
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 103
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 103
+   },
+   "pivot": {
+    "x": 0.4982,
+    "y": 0.2957
+   }
+  },
+  "grove_gen_roots_flat": {
+   "frame": {
+    "x": 151,
+    "y": 545,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.499,
+    "y": 0.3964
+   }
+  },
+  "grove_gen_rubble_moss": {
+   "frame": {
+    "x": 301,
+    "y": 545,
+    "w": 147,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4982,
+    "y": 0.3964
+   }
+  },
+  "grove_gen_shallows": {
+   "frame": {
+    "x": 450,
+    "y": 545,
+    "w": 146,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.5016,
+    "y": 0.3909
+   }
+  },
+  "grove_gen_slab_moss": {
+   "frame": {
+    "x": 2,
+    "y": 658,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.4982,
+    "y": 0.3944
+   }
+  },
+  "grove_gen_soil_dark": {
+   "frame": {
+    "x": 598,
+    "y": 545,
+    "w": 147,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4982,
+    "y": 0.3964
+   }
+  },
+  "grove_gen_soil_rich": {
+   "frame": {
+    "x": 747,
+    "y": 545,
+    "w": 146,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.5016,
+    "y": 0.4019
+   }
+  },
+  "grove_gen_stones_mossy": {
+   "frame": {
+    "x": 151,
+    "y": 658,
+    "w": 148,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.499,
+    "y": 0.3944
+   }
+  },
+  "grove_gen_streambed": {
+   "frame": {
+    "x": 301,
+    "y": 658,
+    "w": 148,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.4948,
+    "y": 0.3944
+   }
+  },
+  "grove_gen_tiles_ancient": {
+   "frame": {
+    "x": 451,
+    "y": 658,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.4982,
+    "y": 0.3888
+   }
+  },
+  "grove_gen_violets": {
+   "frame": {
+    "x": 151,
+    "y": 2,
+    "w": 148,
+    "h": 159
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 159
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 159
+   },
+   "pivot": {
+    "x": 0.4948,
+    "y": 0.5786
+   }
+  },
+  "grove_gen_wet_leaves": {
+   "frame": {
+    "x": 895,
+    "y": 545,
+    "w": 147,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4982,
+    "y": 0.3964
+   }
+  },
+  "grove_gen_wet_moss": {
+   "frame": {
+    "x": 1044,
+    "y": 545,
+    "w": 146,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4974,
+    "y": 0.3964
+   }
+  },
   "grove_grass": {
    "frame": {
-    "x": 597,
+    "x": 747,
     "y": 2,
     "w": 146,
     "h": 129
@@ -98,7 +1634,7 @@
   },
   "grove_log_stream": {
    "frame": {
-    "x": 745,
+    "x": 895,
     "y": 2,
     "w": 146,
     "h": 119
@@ -122,7 +1658,7 @@
   },
   "grove_mushrooms": {
    "frame": {
-    "x": 300,
+    "x": 450,
     "y": 2,
     "w": 146,
     "h": 132
@@ -149,8 +1685,8 @@
   "app": "stray-fev2 tools/tiles/slice.ts",
   "image": "grove_atlas.png",
   "size": {
-   "w": 893,
-   "h": 206
+   "w": 1952,
+   "h": 770
   },
   "scale": "1",
   "tileWidth": 144

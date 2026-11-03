@@ -33,15 +33,6 @@
       ]
     }
   ],
-  "slopes": {
-    "slope": [
-      "seashore_sand_01",
-      "seashore_sand_02"
-    ],
-    "wet_slope": [
-      "seashore_wet_sand_01"
-    ]
-  },
   "filler": "seashore_sand_01",
   "block_levels": 2,
   "terrain": {
@@ -95,9 +86,5 @@
     ]
   },
   "marker": [],
-  "marker_ground": "sand",
-  "slope": {
-    "default": "slope",
-    "wet_sand": "wet_slope"
-  }
+  "marker_ground": "sand"
 }

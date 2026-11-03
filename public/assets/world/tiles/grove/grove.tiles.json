@@ -11,18 +11,132 @@
         "grove_mushrooms",
         "grove_crystals"
       ]
+    },
+    {
+      "file": "grove_nobg_gen_r1.png",
+      "names": [
+        "grove_gen_leaves_a",
+        "grove_gen_leaves_b",
+        "grove_gen_leaves_c",
+        "grove_gen_leaves_d",
+        "grove_gen_moss_a",
+        "grove_gen_moss_b",
+        "grove_gen_needles",
+        "grove_gen_forest_grass",
+        "grove_gen_roots_flat",
+        "grove_gen_fern_ground",
+        "grove_gen_mushrooms_small",
+        "grove_gen_acorns",
+        "grove_gen_stones_mossy",
+        "grove_gen_bark_bits",
+        "grove_gen_violets",
+        "grove_gen_clover_shade",
+        "grove_gen_soil_dark",
+        "grove_gen_soil_rich",
+        "grove_gen_mud_a",
+        "grove_gen_mud_b",
+        "grove_gen_puddle_forest",
+        "grove_gen_clay_brown",
+        "grove_gen_peat",
+        "grove_gen_wet_leaves",
+        "grove_gen_flag_mossy",
+        "grove_gen_cobble_mossy",
+        "grove_gen_paving_roots",
+        "grove_gen_slab_moss",
+        "grove_gen_rubble_moss",
+        "grove_gen_tiles_ancient",
+        "grove_gen_streambed",
+        "grove_gen_rock_flat_moss",
+        "grove_gen_gs_edge_bl",
+        "grove_gen_gs_edge_br",
+        "grove_gen_gs_edge_tl",
+        "grove_gen_gs_edge_tr",
+        "grove_gen_gs_corner_b",
+        "grove_gen_gs_corner_t",
+        "grove_gen_gs_corner_l",
+        "grove_gen_gs_corner_r",
+        "grove_gen_ft_straight_x",
+        "grove_gen_ft_straight_y",
+        "grove_gen_ft_corner_t",
+        "grove_gen_ft_corner_r",
+        "grove_gen_ft_corner_b",
+        "grove_gen_ft_corner_l",
+        "grove_gen_ft_cross",
+        "grove_gen_ft_end",
+        "grove_gen_mp_straight_x",
+        "grove_gen_mp_straight_y",
+        "grove_gen_mp_corner_t",
+        "grove_gen_mp_corner_r",
+        "grove_gen_mp_corner_b",
+        "grove_gen_mp_corner_l",
+        "grove_gen_mp_cross",
+        "grove_gen_mp_end",
+        "grove_gen_bw_straight_x",
+        "grove_gen_bw_straight_y",
+        "grove_gen_bw_cross",
+        "grove_gen_bw_end",
+        "grove_gen_mud_reeds",
+        "grove_gen_shallows",
+        "grove_gen_lily_mud",
+        "grove_gen_wet_moss"
+      ]
     }
   ],
-  "slopes": {},
-  "filler": "grove_grass",
+  "filler": "grove_gen_soil_dark",
   "block_levels": 2,
   "terrain": {
     "leaves": [
-      "grove_forest_floor"
+      "grove_gen_leaves_a",
+      "grove_gen_leaves_a",
+      "grove_gen_leaves_b",
+      "grove_gen_leaves_c",
+      "grove_gen_leaves_d",
+      "grove_gen_needles",
+      "grove_gen_acorns"
     ],
     "grass": [
-      "grove_grass"
-    ]
+      "grove_gen_forest_grass",
+      "grove_gen_moss_a",
+      "grove_gen_clover_shade",
+      "grove_gen_moss_b"
+    ],
+    "moss": [
+      "grove_gen_moss_a",
+      "grove_gen_moss_b",
+      "grove_gen_moss_b",
+      "grove_gen_violets",
+      "grove_gen_mushrooms_small"
+    ],
+    "dirt": [
+      "grove_gen_soil_dark",
+      "grove_gen_soil_rich",
+      "grove_gen_clay_brown",
+      "grove_gen_roots_flat"
+    ],
+    "swamp": {
+      "edge": [
+        "grove_gen_mud_a",
+        "grove_gen_mud_b",
+        "grove_gen_wet_leaves",
+        "grove_gen_mud_reeds"
+      ],
+      "inner": [
+        "grove_gen_puddle_forest",
+        "grove_gen_wet_moss",
+        "grove_gen_lily_mud",
+        "grove_gen_shallows",
+        "grove_gen_peat"
+      ]
+    },
+    "water": {
+      "edge": [
+        "grove_gen_shallows"
+      ],
+      "inner": [
+        "grove_gen_shallows",
+        "grove_gen_lily_mud"
+      ]
+    }
   },
   "node": {
     "herb": [
@@ -37,6 +151,11 @@
     "rock",
     "bush"
   ],
-  "marker_ground": "grass",
-  "slope": {}
+  "marker_ground": "leaves",
+  "connect": [
+    "grass",
+    "moss",
+    "leaves",
+    "dirt"
+  ]
 }

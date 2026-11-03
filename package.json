@@ -11,9 +11,11 @@
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
+    "test": "node --test tests/*.test.ts",
     "tiles:slice": "node tools/tiles/slice.ts",
     "tiles:catalog": "node tools/tiles/catalog.ts",
     "lora:tiles": "node tools/lora/export.ts",
+    "comfy:tiles": "node tools/comfy/tileset.ts",
     "actors:slice": "node tools/actors/slice.ts",
     "buildings:slice": "node tools/buildings/slice.ts"
   },

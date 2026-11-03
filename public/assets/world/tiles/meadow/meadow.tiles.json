@@ -1,5 +1,5 @@
 {
-  "about": "How the field uses the meadow sheets. sheets: PNG files in one of two layouts, 3 x 5 (ground) or 3 x 2 (objects), and a frame name per tile in reading order (rows by the tiles' feet, left to right; null skips). mirror: new frame -> frame mirrored left-right (swaps the grid axes). slopes: group -> flat frames the slicer skews into one-level slopes for all four directions (a list), or { x, y } frames for slopes along each axis (paths). terrain: frames per server terrain, one picked per tile by position (repeat a name to weight it); water and the like may split into edge and inner (inner = all four neighbours the same terrain) and add shore: pieces by where the other terrain is (ul = -x, ur = -y, lr = +x, ll = +y; corners top, right, bottom, left). bank: water terrain -> pieces for a land tile beside it, by the side the water is on. node: frames that replace the ground of a flat tile holding that resource node. marker: obstacles drawn as marker_ground with the placeholder mark on top. slope: frame group per terrain (default for the rest). filler: the block stacked under raised tiles; block_levels: height levels one block covers.",
+  "about": "How the field uses the meadow sheets. sheets: PNG files in one of two layouts, 3 x 5 (ground) or 3 x 2 (objects), and a frame name per tile in reading order (rows by the tiles' feet, left to right; null skips). mirror: new frame -> frame mirrored left-right (swaps the grid axes). terrain: frames per server terrain, one picked per tile by position (repeat a name to weight it); water and the like may split into edge and inner (inner = all four neighbours the same terrain) and add shore: pieces by where the other terrain is (ul = -x, ur = -y, lr = +x, ll = +y; corners top, right, bottom, left). bank: water terrain -> pieces for a land tile beside it, by the side the water is on. node: frames that replace the ground of a flat tile holding that resource node. marker: obstacles drawn as marker_ground with the placeholder mark on top. filler: the block stacked under raised tiles; block_levels: height levels one block covers.",
   "sheets": [
     {
       "file": "meadow_nobg_ground_r3.png",
@@ -104,67 +104,125 @@
         "meadow_pebbles_02",
         "meadow_oak"
       ]
-    }
-  ],
-  "slopes": {
-    "slope": [
-      "meadow_grass_plain_01",
-      "meadow_grass_plain_02",
-      "meadow_lush_01"
-    ],
-    "dirt_slope": [
-      "meadow_dirt_01",
-      "meadow_dirt_03"
-    ],
-    "flower_slope": [
-      "meadow_flowers_01",
-      "meadow_flowers_02"
-    ],
-    "path_slope": {
-      "x": [
-        "meadow_track_01"
-      ],
-      "y": [
-        "meadow_track_y_01"
+    },
+    {
+      "file": "meadow_nobg_gen_r1.png",
+      "names": [
+        "meadow_gen_grass_a",
+        "meadow_gen_grass_b",
+        "meadow_gen_grass_c",
+        "meadow_gen_grass_d",
+        "meadow_gen_grass_short",
+        "meadow_gen_grass_tall",
+        "meadow_gen_grass_clover",
+        "meadow_gen_grass_dry",
+        "meadow_gen_flowers_white",
+        "meadow_gen_flowers_yellow",
+        "meadow_gen_flowers_blue",
+        "meadow_gen_flowers_red",
+        "meadow_gen_flowers_mixed",
+        "meadow_gen_flowers_daisy",
+        "meadow_gen_flowers_dandelion",
+        "meadow_gen_flowers_buttercup",
+        "meadow_gen_grass_pebbles",
+        "meadow_gen_grass_rocks",
+        "meadow_gen_grass_leaves",
+        "meadow_gen_grass_twigs",
+        "meadow_gen_grass_molehill",
+        "meadow_gen_grass_burrow",
+        "meadow_gen_grass_trampled",
+        "meadow_gen_grass_wet",
+        "meadow_gen_dirt_a",
+        "meadow_gen_dirt_b",
+        "meadow_gen_dirt_c",
+        "meadow_gen_dirt_pebbles",
+        "meadow_gen_dirt_cracked",
+        "meadow_gen_dirt_mud",
+        "meadow_gen_dirt_puddle",
+        "meadow_gen_dirt_hoof",
+        "meadow_gen_gd_edge_bl",
+        "meadow_gen_gd_edge_br",
+        "meadow_gen_gd_edge_tl",
+        "meadow_gen_gd_edge_tr",
+        "meadow_gen_gd_corner_b",
+        "meadow_gen_gd_corner_t",
+        "meadow_gen_gd_corner_l",
+        "meadow_gen_gd_corner_r",
+        "meadow_gen_dp_straight_x",
+        "meadow_gen_dp_straight_y",
+        "meadow_gen_dp_corner_t",
+        "meadow_gen_dp_corner_r",
+        "meadow_gen_dp_corner_b",
+        "meadow_gen_dp_corner_l",
+        "meadow_gen_dp_cross",
+        "meadow_gen_dp_end",
+        "meadow_gen_cp_straight_x",
+        "meadow_gen_cp_straight_y",
+        "meadow_gen_cp_corner_t",
+        "meadow_gen_cp_corner_r",
+        "meadow_gen_cp_corner_b",
+        "meadow_gen_cp_corner_l",
+        "meadow_gen_cp_cross",
+        "meadow_gen_cp_end",
+        "meadow_gen_stones_stepping",
+        "meadow_gen_wear_a",
+        "meadow_gen_wear_b",
+        "meadow_gen_wear_c",
+        "meadow_gen_patch_dirt_a",
+        "meadow_gen_patch_dirt_b",
+        "meadow_gen_patch_dirt_c",
+        "meadow_gen_patch_dirt_d"
       ]
     }
-  },
+  ],
   "filler": "meadow_dirt_02",
   "block_levels": 2,
   "terrain": {
     "grass": [
-      "meadow_grass_plain_01",
-      "meadow_grass_plain_02",
-      "meadow_lush_01",
-      "meadow_lush_02",
-      "meadow_lush_03",
-      "meadow_lush_04",
-      "meadow_lush_05",
-      "meadow_lush_pebbles_01",
-      "meadow_lush_pebbles_02",
-      "meadow_lush_pebbles_03",
-      "meadow_forest_floor",
-      "meadow_pebbles_01",
-      "meadow_pebbles_02",
-      "meadow_sapling"
+      "meadow_gen_grass_a",
+      "meadow_gen_grass_a",
+      "meadow_gen_grass_b",
+      "meadow_gen_grass_b",
+      "meadow_gen_grass_c",
+      "meadow_gen_grass_c",
+      "meadow_gen_grass_d",
+      "meadow_gen_grass_d",
+      "meadow_gen_grass_short",
+      "meadow_gen_grass_clover",
+      "meadow_gen_grass_pebbles",
+      "meadow_gen_grass_leaves",
+      "meadow_gen_grass_twigs",
+      "meadow_gen_grass_trampled",
+      "meadow_gen_wear_a"
     ],
     "tall_grass": [
+      "meadow_gen_grass_tall",
+      "meadow_gen_grass_dry",
       "meadow_tall_grass_01",
-      "meadow_tall_grass_02",
-      "meadow_tall_grass_03",
-      "meadow_tall_grass_04"
+      "meadow_tall_grass_02"
     ],
     "flowers": [
-      "meadow_flowers_01",
-      "meadow_flowers_02",
-      "meadow_wildflowers"
+      "meadow_gen_flowers_white",
+      "meadow_gen_flowers_yellow",
+      "meadow_gen_flowers_blue",
+      "meadow_gen_flowers_red",
+      "meadow_gen_flowers_mixed",
+      "meadow_gen_flowers_daisy",
+      "meadow_gen_flowers_dandelion",
+      "meadow_gen_flowers_buttercup"
     ],
     "dirt": [
-      "meadow_dirt_01",
-      "meadow_dirt_03"
+      "meadow_gen_dirt_a",
+      "meadow_gen_dirt_b",
+      "meadow_gen_dirt_c",
+      "meadow_gen_dirt_pebbles",
+      "meadow_gen_dirt_cracked",
+      "meadow_gen_dirt_hoof"
     ],
     "road": [
-      "meadow_dirt_03"
+      "meadow_gen_dirt_b",
+      "meadow_gen_dirt_hoof",
+      "meadow_gen_dirt_a"
     ],
     "door": [
       "meadow_doorstep"
@@ -264,12 +322,6 @@
   },
   "marker": [],
   "marker_ground": "grass",
-  "slope": {
-    "default": "slope",
-    "dirt": "dirt_slope",
-    "road": "dirt_slope",
-    "flowers": "flower_slope"
-  },
   "mirror": {
     "meadow_track_y_01": "meadow_track_01",
     "meadow_tree_03": "meadow_tree_02",
@@ -282,5 +334,11 @@
     "meadow_rose_bush_03": "meadow_rose_bush_01",
     "meadow_boulder_02": "meadow_boulder_01",
     "meadow_oak_m": "meadow_oak"
-  }
+  },
+  "connect": [
+    "grass",
+    "tall_grass",
+    "flowers",
+    "dirt"
+  ]
 }

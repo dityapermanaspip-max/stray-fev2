@@ -4,7 +4,7 @@ import { findBlobs, joinSpecks, mergeOverlapping, readingOrder, type Box } from 
 import { crop, flipX, resize } from '../tiles/image.ts';
 import { pack } from '../tiles/pack.ts';
 import { alphaAt, readPng, writePng, type Rgba } from '../tiles/png.ts';
-import type { Frame } from '../tiles/skew.ts';
+import type { Frame } from '../tiles/image.ts';
 
 // npm run actors:slice -- <path under public/assets/actors without extension> [more]
 // e.g. characters/human/human_suit reads human_suit.actor.json beside the sheets. Sheets are poses on a transparent

@@ -13,7 +13,7 @@ export async function drawBoardTiles(scene: Phaser.Scene, ground: { biome: strin
   const sheet = sheetOf(scene, ground.biome);
   if (!sheet || !scene.sys.isActive()) return false;
   const tile = { t: ground.terrain, b: ground.biome, h: 0, w: true, s: -1, safe: false, door: null };
-  const view: FieldView = { ref: 'battle', kind: 'open', width: cols, height: rows, tiles: Array.from({ length: cols * rows }, () => tile), exits: [], nodes: [], npcs: [] };
+  const view: FieldView = { ref: 'battle', rank: [], kind: 'open', width: cols, height: rows, tiles: Array.from({ length: cols * rows }, () => tile), exits: [], nodes: [], npcs: [] };
   let drawn = false;
   for (let y = 0; y < rows; y++) {
     for (let x = 0; x < cols; x++) {

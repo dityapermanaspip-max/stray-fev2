@@ -19,7 +19,7 @@ function paeth(a: number, b: number, c: number): number {
 export function readPng(file: Uint8Array): Rgba {
   if (!SIGNATURE.every((b, i) => file[i] === b)) throw new Error('not a PNG file');
   const view = new DataView(file.buffer, file.byteOffset, file.byteLength);
-  let width = 0, height = 0;
+  let width = 0, height = 0, color = 6;
   const idat: Uint8Array[] = [];
   for (let at = 8; at < file.length;) {
     const length = view.getUint32(at);
@@ -28,29 +28,36 @@ export function readPng(file: Uint8Array): Rgba {
     if (type === 'IHDR') {
       width = view.getUint32(at + 8);
       height = view.getUint32(at + 12);
-      const [depth, color, , , interlace] = body.subarray(8, 13);
-      if (depth !== 8 || color !== 6 || interlace !== 0) {
-        throw new Error(`need 8-bit RGBA without interlace (got depth ${depth}, color type ${color}, interlace ${interlace})`);
+      const [depth, colorType, , , interlace] = body.subarray(8, 13);
+      color = colorType;
+      if (depth !== 8 || (color !== 6 && color !== 2) || interlace !== 0) {
+        throw new Error(`need 8-bit RGBA or RGB without interlace (got depth ${depth}, color type ${color}, interlace ${interlace})`);
       }
     } else if (type === 'IDAT') idat.push(body);
     else if (type === 'IEND') break;
     at += 12 + length;
   }
   const raw = inflateSync(Buffer.concat(idat));
-  const stride = width * BYTES_PER_PIXEL;
+  const bpp = color === 2 ? 3 : BYTES_PER_PIXEL; // RGB (ComfyUI saves it) is widened to RGBA below
+  const stride = width * bpp;
   const data = new Uint8Array(stride * height);
   for (let y = 0; y < height; y++) {
     const filter = raw[y * (stride + 1)];
     const src = raw.subarray(y * (stride + 1) + 1, (y + 1) * (stride + 1));
     const row = y * stride;
     for (let i = 0; i < stride; i++) {
-      const a = i >= BYTES_PER_PIXEL ? data[row + i - BYTES_PER_PIXEL] : 0;
+      const a = i >= bpp ? data[row + i - bpp] : 0;
       const b = y > 0 ? data[row - stride + i] : 0;
-      const c = i >= BYTES_PER_PIXEL && y > 0 ? data[row - stride + i - BYTES_PER_PIXEL] : 0;
+      const c = i >= bpp && y > 0 ? data[row - stride + i - bpp] : 0;
       const pred = filter === 0 ? 0 : filter === 1 ? a : filter === 2 ? b : filter === 3 ? (a + b) >> 1 : filter === 4 ? paeth(a, b, c) : NaN;
       if (Number.isNaN(pred)) throw new Error(`bad PNG filter ${filter} on row ${y}`);
       data[row + i] = (src[i] + pred) & 0xff;
     }
+  }
+  if (bpp === 3) {
+    const rgba = new Uint8Array(width * height * BYTES_PER_PIXEL).fill(255);
+    for (let p = 0; p < width * height; p++) rgba.set(data.subarray(p * 3, p * 3 + 3), p * 4);
+    return { width, height, data: rgba };
   }
   return { width, height, data };
 }

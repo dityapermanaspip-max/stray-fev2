@@ -1,0 +1,206 @@
+{
+ "frames": {
+  "connect_meadow_desert_corner_b": {
+   "frame": {
+    "x": 2,
+    "y": 2,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.4961,
+    "y": 0.4087
+   }
+  },
+  "connect_meadow_desert_corner_l": {
+   "frame": {
+    "x": 151,
+    "y": 2,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.4961,
+    "y": 0.4087
+   }
+  },
+  "connect_meadow_desert_corner_r": {
+   "frame": {
+    "x": 300,
+    "y": 2,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.5039,
+    "y": 0.4087
+   }
+  },
+  "connect_meadow_desert_corner_t": {
+   "frame": {
+    "x": 449,
+    "y": 2,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.4961,
+    "y": 0.4087
+   }
+  },
+  "connect_meadow_desert_edge_bl": {
+   "frame": {
+    "x": 598,
+    "y": 2,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.4961,
+    "y": 0.4087
+   }
+  },
+  "connect_meadow_desert_edge_br": {
+   "frame": {
+    "x": 747,
+    "y": 2,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.5039,
+    "y": 0.4087
+   }
+  },
+  "connect_meadow_desert_edge_tl": {
+   "frame": {
+    "x": 896,
+    "y": 2,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.4961,
+    "y": 0.4087
+   }
+  },
+  "connect_meadow_desert_edge_tr": {
+   "frame": {
+    "x": 1045,
+    "y": 2,
+    "w": 147,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.5039,
+    "y": 0.4087
+   }
+  }
+ },
+ "meta": {
+  "app": "stray-fev2 tools/tiles/slice.ts",
+  "image": "connect_meadow_desert_atlas.png",
+  "size": {
+   "w": 1194,
+   "h": 114
+  },
+  "scale": "1",
+  "tileWidth": 144
+ }
+}

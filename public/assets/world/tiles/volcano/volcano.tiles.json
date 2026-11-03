@@ -53,18 +53,6 @@
       ]
     }
   ],
-  "slopes": {
-    "slope": [
-      "volcano_ash_plain",
-      "volcano_cinders"
-    ],
-    "basalt_slope": [
-      "volcano_basalt_plain"
-    ],
-    "path_slope": [
-      "volcano_lava_cracks"
-    ]
-  },
   "filler": "volcano_basalt_plain",
   "block_levels": 2,
   "terrain": {
@@ -149,11 +137,6 @@
     "lava_rock"
   ],
   "marker_ground": "ash",
-  "slope": {
-    "default": "slope",
-    "basalt": "basalt_slope",
-    "scorched": "path_slope"
-  },
   "node": {
     "rock": [
       "volcano_ore_lava",

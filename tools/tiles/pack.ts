@@ -1,6 +1,6 @@
 import { blit, newImage } from './image.ts';
 import type { Rgba } from './png.ts';
-import type { Frame } from './skew.ts';
+import type { Frame } from './image.ts';
 
 // Packs frames into one atlas image on shelves (tallest first) and makes the Phaser JSON-hash frames with pivots.
 

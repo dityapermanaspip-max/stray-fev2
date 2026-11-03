@@ -1,9 +1,8 @@
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { findBlobs, flatPivot, joinSpecks, measure, median, mergeOverlapping, readingOrder, splitTouching } from './blobs.ts';
-import { crop, flipX, resize } from './image.ts';
+import { crop, flipX, resize, type Frame } from './image.ts';
 import { readPng } from './png.ts';
-import type { Frame } from './skew.ts';
 
 // Reading tile sheets (shared by slice.ts, the per-biome slicer, and catalog.ts, the catalog slicer): a PNG of
 // isometric tiles on a transparent background, 3 x 5 (ground) or 3 x 2 (objects), a frame name per tile in reading
@@ -12,13 +11,13 @@ import type { Frame } from './skew.ts';
 
 export const TILE_PX = 144; // atlas tile width; the client scales it to TILE_W
 const PAD = 2;
-const LAYOUTS = [15, 12, 9, 6]; // tiles per sheet: 3 x 5 ground, 3 x 4 scenes, 3 x 3 big obstacles, 3 x 2 objects
+const LAYOUTS = [64, 15, 12, 9, 6, 5]; // tiles per sheet: 8 x 8 generated set, 3 x 5 ground, 3 x 4 scenes, 3 x 3 big obstacles, 3 x 2 objects
 
 export type Sheet = { file: string; names: (string | null)[] };
 export type Source = Frame & { wall: number }; // wall: side wall height in atlas pixels
 
 export async function readSheet(dir: string, sheet: Sheet, frames: Map<string, Source>): Promise<string> {
-  if (!LAYOUTS.includes(sheet.names.length)) throw new Error(`${sheet.file}: name 15, 12, 9 or 6 tiles, not ${sheet.names.length}`);
+  if (!LAYOUTS.includes(sheet.names.length)) throw new Error(`${sheet.file}: name 64, 15, 12, 9, 6 or 5 tiles, not ${sheet.names.length}`);
   const img = readPng(new Uint8Array(await readFile(path.join(dir, sheet.file))));
   const joined = mergeOverlapping(joinSpecks(findBlobs(img)));
   let tiles = readingOrder(splitTouching(img, joined));

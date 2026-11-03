@@ -2,7 +2,7 @@
  "frames": {
   "desert_dead_tree": {
    "frame": {
-    "x": 2,
+    "x": 150,
     "y": 2,
     "w": 147,
     "h": 203
@@ -24,10 +24,1546 @@
     "y": 0.684
    }
   },
+  "desert_gen_basalt_gravel": {
+   "frame": {
+    "x": 151,
+    "y": 208,
+    "w": 146,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4974,
+    "y": 0.4075
+   }
+  },
+  "desert_gen_clay_orange": {
+   "frame": {
+    "x": 299,
+    "y": 208,
+    "w": 146,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.5016,
+    "y": 0.413
+   }
+  },
+  "desert_gen_cobbles_scattered": {
+   "frame": {
+    "x": 1648,
+    "y": 548,
+    "w": 146,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.5016,
+    "y": 0.4056
+   }
+  },
+  "desert_gen_cracked_a": {
+   "frame": {
+    "x": 1796,
+    "y": 548,
+    "w": 146,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.4974,
+    "y": 0.4056
+   }
+  },
+  "desert_gen_cracked_b": {
+   "frame": {
+    "x": 447,
+    "y": 208,
+    "w": 146,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4974,
+    "y": 0.4075
+   }
+  },
+  "desert_gen_damp_sand": {
+   "frame": {
+    "x": 2,
+    "y": 661,
+    "w": 146,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.5016,
+    "y": 0.4
+   }
+  },
+  "desert_gen_dry_grass": {
+   "frame": {
+    "x": 150,
+    "y": 661,
+    "w": 146,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.4974,
+    "y": 0.4
+   }
+  },
+  "desert_gen_dune_crest": {
+   "frame": {
+    "x": 298,
+    "y": 661,
+    "w": 146,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.4974,
+    "y": 0.4
+   }
+  },
+  "desert_gen_fp_corner_b": {
+   "frame": {
+    "x": 595,
+    "y": 208,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.499,
+    "y": 0.4075
+   }
+  },
+  "desert_gen_fp_corner_l": {
+   "frame": {
+    "x": 745,
+    "y": 208,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.499,
+    "y": 0.4075
+   }
+  },
+  "desert_gen_fp_corner_r": {
+   "frame": {
+    "x": 895,
+    "y": 208,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.499,
+    "y": 0.4075
+   }
+  },
+  "desert_gen_fp_corner_t": {
+   "frame": {
+    "x": 1045,
+    "y": 208,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.499,
+    "y": 0.4075
+   }
+  },
+  "desert_gen_fp_cross": {
+   "frame": {
+    "x": 1195,
+    "y": 208,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.499,
+    "y": 0.4075
+   }
+  },
+  "desert_gen_fp_end": {
+   "frame": {
+    "x": 1345,
+    "y": 208,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.499,
+    "y": 0.4075
+   }
+  },
+  "desert_gen_fp_straight_x": {
+   "frame": {
+    "x": 1495,
+    "y": 208,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.499,
+    "y": 0.4075
+   }
+  },
+  "desert_gen_fp_straight_y": {
+   "frame": {
+    "x": 1645,
+    "y": 208,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.499,
+    "y": 0.4075
+   }
+  },
+  "desert_gen_gravel": {
+   "frame": {
+    "x": 1795,
+    "y": 208,
+    "w": 146,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4974,
+    "y": 0.4075
+   }
+  },
+  "desert_gen_hardpan_pebbles": {
+   "frame": {
+    "x": 2,
+    "y": 322,
+    "w": 146,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4974,
+    "y": 0.4075
+   }
+  },
+  "desert_gen_hardpan_red": {
+   "frame": {
+    "x": 150,
+    "y": 322,
+    "w": 146,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4974,
+    "y": 0.413
+   }
+  },
+  "desert_gen_oasis_grass": {
+   "frame": {
+    "x": 446,
+    "y": 661,
+    "w": 146,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.5016,
+    "y": 0.4
+   }
+  },
+  "desert_gen_palm_litter": {
+   "frame": {
+    "x": 594,
+    "y": 661,
+    "w": 146,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.5016,
+    "y": 0.4056
+   }
+  },
+  "desert_gen_rock_red": {
+   "frame": {
+    "x": 298,
+    "y": 322,
+    "w": 146,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4974,
+    "y": 0.4019
+   }
+  },
+  "desert_gen_rocky_ground": {
+   "frame": {
+    "x": 742,
+    "y": 661,
+    "w": 146,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.5016,
+    "y": 0.3944
+   }
+  },
+  "desert_gen_ruin_paving": {
+   "frame": {
+    "x": 446,
+    "y": 322,
+    "w": 146,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.5016,
+    "y": 0.4075
+   }
+  },
+  "desert_gen_salt_crust": {
+   "frame": {
+    "x": 594,
+    "y": 322,
+    "w": 146,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.5016,
+    "y": 0.4075
+   }
+  },
+  "desert_gen_salt_flat": {
+   "frame": {
+    "x": 742,
+    "y": 322,
+    "w": 146,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4974,
+    "y": 0.4075
+   }
+  },
+  "desert_gen_sand_a": {
+   "frame": {
+    "x": 890,
+    "y": 322,
+    "w": 146,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.5016,
+    "y": 0.4075
+   }
+  },
+  "desert_gen_sand_b": {
+   "frame": {
+    "x": 1038,
+    "y": 322,
+    "w": 146,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.5016,
+    "y": 0.4019
+   }
+  },
+  "desert_gen_sand_bones": {
+   "frame": {
+    "x": 1186,
+    "y": 322,
+    "w": 146,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.5016,
+    "y": 0.4075
+   }
+  },
+  "desert_gen_sand_c": {
+   "frame": {
+    "x": 1334,
+    "y": 322,
+    "w": 146,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.5016,
+    "y": 0.4075
+   }
+  },
+  "desert_gen_sand_clay_mix": {
+   "frame": {
+    "x": 890,
+    "y": 661,
+    "w": 146,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.5016,
+    "y": 0.4056
+   }
+  },
+  "desert_gen_sand_d": {
+   "frame": {
+    "x": 1482,
+    "y": 322,
+    "w": 146,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.5058,
+    "y": 0.4019
+   }
+  },
+  "desert_gen_sand_dark": {
+   "frame": {
+    "x": 1630,
+    "y": 322,
+    "w": 146,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.5016,
+    "y": 0.4019
+   }
+  },
+  "desert_gen_sand_fine": {
+   "frame": {
+    "x": 1038,
+    "y": 661,
+    "w": 146,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.5016,
+    "y": 0.4056
+   }
+  },
+  "desert_gen_sand_pale": {
+   "frame": {
+    "x": 1186,
+    "y": 661,
+    "w": 146,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.5016,
+    "y": 0.4056
+   }
+  },
+  "desert_gen_sand_pebbles": {
+   "frame": {
+    "x": 1778,
+    "y": 322,
+    "w": 146,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.5016,
+    "y": 0.4075
+   }
+  },
+  "desert_gen_sand_prints": {
+   "frame": {
+    "x": 1334,
+    "y": 661,
+    "w": 146,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.5016,
+    "y": 0.4
+   }
+  },
+  "desert_gen_sand_red": {
+   "frame": {
+    "x": 2,
+    "y": 435,
+    "w": 147,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 147,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 147,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.4982,
+    "y": 0.4019
+   }
+  },
+  "desert_gen_sand_ripples": {
+   "frame": {
+    "x": 151,
+    "y": 435,
+    "w": 146,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.5016,
+    "y": 0.4075
+   }
+  },
+  "desert_gen_sand_rocks": {
+   "frame": {
+    "x": 299,
+    "y": 435,
+    "w": 146,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.5016,
+    "y": 0.4075
+   }
+  },
+  "desert_gen_sand_scrub": {
+   "frame": {
+    "x": 299,
+    "y": 2,
+    "w": 146,
+    "h": 202
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 202
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 202
+   },
+   "pivot": {
+    "x": 0.5016,
+    "y": 0.6748
+   }
+  },
+  "desert_gen_sand_shells": {
+   "frame": {
+    "x": 2,
+    "y": 2,
+    "w": 146,
+    "h": 204
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 204
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 204
+   },
+   "pivot": {
+    "x": 0.5016,
+    "y": 0.6772
+   }
+  },
+  "desert_gen_sand_streaks": {
+   "frame": {
+    "x": 447,
+    "y": 435,
+    "w": 146,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.5058,
+    "y": 0.4019
+   }
+  },
+  "desert_gen_sandstone_stripes": {
+   "frame": {
+    "x": 1482,
+    "y": 661,
+    "w": 146,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.4974,
+    "y": 0.4056
+   }
+  },
+  "desert_gen_se_corner_b": {
+   "frame": {
+    "x": 595,
+    "y": 435,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.499,
+    "y": 0.4075
+   }
+  },
+  "desert_gen_se_corner_l": {
+   "frame": {
+    "x": 745,
+    "y": 435,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.499,
+    "y": 0.4075
+   }
+  },
+  "desert_gen_se_corner_r": {
+   "frame": {
+    "x": 895,
+    "y": 435,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.499,
+    "y": 0.4075
+   }
+  },
+  "desert_gen_se_corner_t": {
+   "frame": {
+    "x": 1045,
+    "y": 435,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.499,
+    "y": 0.4075
+   }
+  },
+  "desert_gen_se_edge_bl": {
+   "frame": {
+    "x": 1195,
+    "y": 435,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.499,
+    "y": 0.4075
+   }
+  },
+  "desert_gen_se_edge_br": {
+   "frame": {
+    "x": 1345,
+    "y": 435,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.499,
+    "y": 0.4075
+   }
+  },
+  "desert_gen_se_edge_tl": {
+   "frame": {
+    "x": 1495,
+    "y": 435,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.499,
+    "y": 0.4075
+   }
+  },
+  "desert_gen_se_edge_tr": {
+   "frame": {
+    "x": 1645,
+    "y": 435,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.499,
+    "y": 0.4075
+   }
+  },
+  "desert_gen_slab_cracked": {
+   "frame": {
+    "x": 1630,
+    "y": 661,
+    "w": 146,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.5016,
+    "y": 0.4056
+   }
+  },
+  "desert_gen_slab_sandstone": {
+   "frame": {
+    "x": 1778,
+    "y": 661,
+    "w": 146,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.4974,
+    "y": 0.4
+   }
+  },
+  "desert_gen_stones_stepping": {
+   "frame": {
+    "x": 2,
+    "y": 773,
+    "w": 146,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.5016,
+    "y": 0.4056
+   }
+  },
+  "desert_gen_tp_corner_b": {
+   "frame": {
+    "x": 1795,
+    "y": 435,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.499,
+    "y": 0.4075
+   }
+  },
+  "desert_gen_tp_corner_l": {
+   "frame": {
+    "x": 2,
+    "y": 548,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.499,
+    "y": 0.4075
+   }
+  },
+  "desert_gen_tp_corner_r": {
+   "frame": {
+    "x": 152,
+    "y": 548,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.499,
+    "y": 0.4075
+   }
+  },
+  "desert_gen_tp_corner_t": {
+   "frame": {
+    "x": 302,
+    "y": 548,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.499,
+    "y": 0.4075
+   }
+  },
+  "desert_gen_tp_cross": {
+   "frame": {
+    "x": 452,
+    "y": 548,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.499,
+    "y": 0.4075
+   }
+  },
+  "desert_gen_tp_end": {
+   "frame": {
+    "x": 602,
+    "y": 548,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.499,
+    "y": 0.4075
+   }
+  },
+  "desert_gen_tp_straight_x": {
+   "frame": {
+    "x": 752,
+    "y": 548,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.499,
+    "y": 0.4075
+   }
+  },
+  "desert_gen_tp_straight_y": {
+   "frame": {
+    "x": 902,
+    "y": 548,
+    "w": 148,
+    "h": 111
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 148,
+    "h": 111
+   },
+   "sourceSize": {
+    "w": 148,
+    "h": 111
+   },
+   "pivot": {
+    "x": 0.499,
+    "y": 0.4075
+   }
+  },
+  "desert_gen_wet_ripples": {
+   "frame": {
+    "x": 150,
+    "y": 773,
+    "w": 146,
+    "h": 110
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 146,
+    "h": 110
+   },
+   "sourceSize": {
+    "w": 146,
+    "h": 110
+   },
+   "pivot": {
+    "x": 0.5016,
+    "y": 0.4
+   }
+  },
   "desert_oasis_deep": {
    "frame": {
-    "x": 449,
-    "y": 207,
+    "x": 298,
+    "y": 773,
     "w": 146,
     "h": 110
    },
@@ -50,8 +1586,8 @@
   },
   "desert_oasis_fish": {
    "frame": {
-    "x": 1792,
-    "y": 2,
+    "x": 1052,
+    "y": 548,
     "w": 147,
     "h": 111
    },
@@ -74,8 +1610,8 @@
   },
   "desert_oasis_frog": {
    "frame": {
-    "x": 2,
-    "y": 207,
+    "x": 1201,
+    "y": 548,
     "w": 147,
     "h": 111
    },
@@ -98,8 +1634,8 @@
   },
   "desert_oasis_lily": {
    "frame": {
-    "x": 597,
-    "y": 207,
+    "x": 446,
+    "y": 773,
     "w": 147,
     "h": 110
    },
@@ -122,8 +1658,8 @@
   },
   "desert_oasis_lotus": {
    "frame": {
-    "x": 746,
-    "y": 207,
+    "x": 595,
+    "y": 773,
     "w": 147,
     "h": 110
    },
@@ -146,8 +1682,8 @@
   },
   "desert_oasis_open": {
    "frame": {
-    "x": 895,
-    "y": 207,
+    "x": 744,
+    "y": 773,
     "w": 147,
     "h": 110
    },
@@ -170,7 +1706,7 @@
   },
   "desert_oasis_reeds": {
    "frame": {
-    "x": 599,
+    "x": 895,
     "y": 2,
     "w": 147,
     "h": 123
@@ -194,7 +1730,7 @@
   },
   "desert_oasis_shore_bottom": {
    "frame": {
-    "x": 449,
+    "x": 745,
     "y": 2,
     "w": 148,
     "h": 124
@@ -218,7 +1754,7 @@
   },
   "desert_oasis_shore_left": {
    "frame": {
-    "x": 1046,
+    "x": 1342,
     "y": 2,
     "w": 148,
     "h": 114
@@ -242,8 +1778,8 @@
   },
   "desert_oasis_shore_ll": {
    "frame": {
-    "x": 1044,
-    "y": 207,
+    "x": 893,
+    "y": 773,
     "w": 147,
     "h": 110
    },
@@ -266,8 +1802,8 @@
   },
   "desert_oasis_shore_ll_m": {
    "frame": {
-    "x": 1193,
-    "y": 207,
+    "x": 1042,
+    "y": 773,
     "w": 147,
     "h": 110
    },
@@ -290,8 +1826,8 @@
   },
   "desert_oasis_shore_lr": {
    "frame": {
-    "x": 1342,
-    "y": 207,
+    "x": 1191,
+    "y": 773,
     "w": 147,
     "h": 110
    },
@@ -314,8 +1850,8 @@
   },
   "desert_oasis_shore_lr_m": {
    "frame": {
-    "x": 1491,
-    "y": 207,
+    "x": 1340,
+    "y": 773,
     "w": 147,
     "h": 110
    },
@@ -338,8 +1874,8 @@
   },
   "desert_oasis_shore_right": {
    "frame": {
-    "x": 1640,
-    "y": 207,
+    "x": 1489,
+    "y": 773,
     "w": 147,
     "h": 110
    },
@@ -362,7 +1898,7 @@
   },
   "desert_oasis_shore_top": {
    "frame": {
-    "x": 1494,
+    "x": 1790,
     "y": 2,
     "w": 147,
     "h": 113
@@ -386,8 +1922,8 @@
   },
   "desert_oasis_shore_ul": {
    "frame": {
-    "x": 151,
-    "y": 207,
+    "x": 1350,
+    "y": 548,
     "w": 147,
     "h": 111
    },
@@ -410,8 +1946,8 @@
   },
   "desert_oasis_shore_ul_m": {
    "frame": {
-    "x": 300,
-    "y": 207,
+    "x": 1499,
+    "y": 548,
     "w": 147,
     "h": 111
    },
@@ -434,7 +1970,7 @@
   },
   "desert_oasis_shore_ur": {
    "frame": {
-    "x": 1196,
+    "x": 1492,
     "y": 2,
     "w": 147,
     "h": 114
@@ -458,7 +1994,7 @@
   },
   "desert_oasis_shore_ur_m": {
    "frame": {
-    "x": 1345,
+    "x": 1641,
     "y": 2,
     "w": 147,
     "h": 114
@@ -482,7 +2018,7 @@
   },
   "desert_ore_01": {
    "frame": {
-    "x": 748,
+    "x": 1044,
     "y": 2,
     "w": 147,
     "h": 123
@@ -506,7 +2042,7 @@
   },
   "desert_ore_crystal": {
    "frame": {
-    "x": 151,
+    "x": 447,
     "y": 2,
     "w": 147,
     "h": 142
@@ -530,8 +2066,8 @@
   },
   "desert_rocks": {
    "frame": {
-    "x": 1643,
-    "y": 2,
+    "x": 2,
+    "y": 208,
     "w": 147,
     "h": 112
    },
@@ -554,7 +2090,7 @@
   },
   "desert_succulent": {
    "frame": {
-    "x": 897,
+    "x": 1193,
     "y": 2,
     "w": 147,
     "h": 119
@@ -578,7 +2114,7 @@
   },
   "desert_thorn_bush": {
    "frame": {
-    "x": 300,
+    "x": 596,
     "y": 2,
     "w": 147,
     "h": 130
@@ -605,8 +2141,8 @@
   "app": "stray-fev2 tools/tiles/slice.ts",
   "image": "desert_atlas.png",
   "size": {
-   "w": 1941,
-   "h": 320
+   "w": 1945,
+   "h": 885
   },
   "scale": "1",
   "tileWidth": 144
