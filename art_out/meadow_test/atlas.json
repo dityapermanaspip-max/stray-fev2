@@ -1,0 +1,262 @@
+{
+ "size": 256,
+ "columns": 8,
+ "tiles": [
+  {
+   "key": "grass_a",
+   "cell": 0
+  },
+  {
+   "key": "grass_b",
+   "cell": 1
+  },
+  {
+   "key": "grass_c",
+   "cell": 2
+  },
+  {
+   "key": "grass_d",
+   "cell": 3
+  },
+  {
+   "key": "grass_short",
+   "cell": 4
+  },
+  {
+   "key": "grass_tall",
+   "cell": 5
+  },
+  {
+   "key": "grass_clover",
+   "cell": 6
+  },
+  {
+   "key": "grass_dry",
+   "cell": 7
+  },
+  {
+   "key": "flowers_white",
+   "cell": 8
+  },
+  {
+   "key": "flowers_yellow",
+   "cell": 9
+  },
+  {
+   "key": "flowers_blue",
+   "cell": 10
+  },
+  {
+   "key": "flowers_red",
+   "cell": 11
+  },
+  {
+   "key": "flowers_mixed",
+   "cell": 12
+  },
+  {
+   "key": "flowers_daisy",
+   "cell": 13
+  },
+  {
+   "key": "flowers_dandelion",
+   "cell": 14
+  },
+  {
+   "key": "flowers_buttercup",
+   "cell": 15
+  },
+  {
+   "key": "grass_pebbles",
+   "cell": 16
+  },
+  {
+   "key": "grass_rocks",
+   "cell": 17
+  },
+  {
+   "key": "grass_leaves",
+   "cell": 18
+  },
+  {
+   "key": "grass_twigs",
+   "cell": 19
+  },
+  {
+   "key": "grass_molehill",
+   "cell": 20
+  },
+  {
+   "key": "grass_burrow",
+   "cell": 21
+  },
+  {
+   "key": "grass_trampled",
+   "cell": 22
+  },
+  {
+   "key": "grass_wet",
+   "cell": 23
+  },
+  {
+   "key": "dirt_a",
+   "cell": 24
+  },
+  {
+   "key": "dirt_b",
+   "cell": 25
+  },
+  {
+   "key": "dirt_c",
+   "cell": 26
+  },
+  {
+   "key": "dirt_pebbles",
+   "cell": 27
+  },
+  {
+   "key": "dirt_cracked",
+   "cell": 28
+  },
+  {
+   "key": "dirt_mud",
+   "cell": 29
+  },
+  {
+   "key": "dirt_puddle",
+   "cell": 30
+  },
+  {
+   "key": "dirt_hoof",
+   "cell": 31
+  },
+  {
+   "key": "gd_edge_bl",
+   "cell": 32
+  },
+  {
+   "key": "gd_edge_br",
+   "cell": 33
+  },
+  {
+   "key": "gd_edge_tl",
+   "cell": 34
+  },
+  {
+   "key": "gd_edge_tr",
+   "cell": 35
+  },
+  {
+   "key": "gd_corner_b",
+   "cell": 36
+  },
+  {
+   "key": "gd_corner_t",
+   "cell": 37
+  },
+  {
+   "key": "gd_corner_l",
+   "cell": 38
+  },
+  {
+   "key": "gd_corner_r",
+   "cell": 39
+  },
+  {
+   "key": "dp_straight_x",
+   "cell": 40
+  },
+  {
+   "key": "dp_straight_y",
+   "cell": 41
+  },
+  {
+   "key": "dp_corner_t",
+   "cell": 42
+  },
+  {
+   "key": "dp_corner_r",
+   "cell": 43
+  },
+  {
+   "key": "dp_corner_b",
+   "cell": 44
+  },
+  {
+   "key": "dp_corner_l",
+   "cell": 45
+  },
+  {
+   "key": "dp_cross",
+   "cell": 46
+  },
+  {
+   "key": "dp_end",
+   "cell": 47
+  },
+  {
+   "key": "cp_straight_x",
+   "cell": 48
+  },
+  {
+   "key": "cp_straight_y",
+   "cell": 49
+  },
+  {
+   "key": "cp_corner_t",
+   "cell": 50
+  },
+  {
+   "key": "cp_corner_r",
+   "cell": 51
+  },
+  {
+   "key": "cp_corner_b",
+   "cell": 52
+  },
+  {
+   "key": "cp_corner_l",
+   "cell": 53
+  },
+  {
+   "key": "cp_cross",
+   "cell": 54
+  },
+  {
+   "key": "cp_end",
+   "cell": 55
+  },
+  {
+   "key": "stones_stepping",
+   "cell": 56
+  },
+  {
+   "key": "wear_a",
+   "cell": 57
+  },
+  {
+   "key": "wear_b",
+   "cell": 58
+  },
+  {
+   "key": "wear_c",
+   "cell": 59
+  },
+  {
+   "key": "patch_dirt_a",
+   "cell": 60
+  },
+  {
+   "key": "patch_dirt_b",
+   "cell": 61
+  },
+  {
+   "key": "patch_dirt_c",
+   "cell": 62
+  },
+  {
+   "key": "patch_dirt_d",
+   "cell": 63
+  }
+ ]
+}

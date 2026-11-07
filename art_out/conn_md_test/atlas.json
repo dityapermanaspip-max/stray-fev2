@@ -1,0 +1,26 @@
+{
+ "size": 256,
+ "columns": 5,
+ "tiles": [
+  {
+   "key": "md_edge_bl",
+   "cell": 0
+  },
+  {
+   "key": "md_edge_tl",
+   "cell": 1
+  },
+  {
+   "key": "md_corner_t",
+   "cell": 2
+  },
+  {
+   "key": "md_corner_b",
+   "cell": 3
+  },
+  {
+   "key": "md_corner_l",
+   "cell": 4
+  }
+ ]
+}

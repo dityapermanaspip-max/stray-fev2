@@ -4,9 +4,11 @@ import { actorAssets, PLAYER_ACTOR } from '../assets/manifest.ts';
 import { animKey, metaOf } from '../field/actor.ts';
 import { TILE_W } from '../field/iso.ts';
 import { slotPoint } from './board.ts';
+import { makeFigureSprite } from './figure_art.ts';
+import { creaturePose, hasCreatureArt, makeCreature, type CreatureArt } from './creature_art.ts';
 
 // Fighters on the battle board. Party members wear the player's battle sheet (seen from behind, facing the foes);
-// foes are coloured tokens until creatures have art. Nothing stays on screen about a body: a word floats up only
+// foes are creature sprites (creature_art.ts) or, without art, coloured tokens. Nothing stays on screen about a body: a word floats up only
 // when a body tier changes (the server sends it then), damage and healing show as numbers, and crits, misses and
 // counters get a mark. The rest is poses: stance, attack, hurt, stagger, dodge, down, cheer.
 
@@ -26,6 +28,9 @@ export type Token = {
   top: number; // height of the figure above the feet
   home: { x: number; y: number }; // the figure's rest spot in its container (sways return here)
   attacks: number;
+  art?: CreatureArt; // a foe drawn from its 8 frames
+  atlas?: string; // a vice or boss drawn from a character sheet (not the player's)
+  wounded?: boolean; // the body is at its lowest tier
 };
 
 type Formation = { front: number; back: number };
@@ -39,6 +44,9 @@ export function makeToken(scene: Phaser.Scene, f: BattleFighter, formation: Form
   const parts: Phaser.GameObjects.GameObject[] = [ring];
   let figure: Token['figure'];
   let top = RADIUS * 2;
+  let creature: ReturnType<typeof makeCreature> = null;
+  let atlas: string | undefined;
+  const fig = f.side === 'enemy' && f.figure ? makeFigureSprite(scene, f, FIGURE_H) : null;
   if (f.side === 'party' && hasSheet(scene)) {
     const sprite = scene.add.sprite(0, 0, atlasKey); // the back sheet already faces up-right
     sprite.setScale(FIGURE_H / (metaOf(scene, atlasKey).actorHeight ?? 192));
@@ -46,6 +54,15 @@ export function makeToken(scene: Phaser.Scene, f: BattleFighter, formation: Form
     sprite.setInteractive({ pixelPerfect: false, useHandCursor: true });
     figure = sprite;
     top = FIGURE_H;
+  } else if (fig) {
+    atlas = fig.atlas;
+    if (!fig.shadow) parts.push(scene.add.ellipse(0, 0, 40 * f.figure!.scale, 14, 0x000000, 0.35));
+    figure = fig.sprite;
+    top = FIGURE_H * f.figure!.scale;
+  } else if (hasCreatureArt(f) && (creature = makeCreature(scene, f, FIGURE_H * 0.8))) {
+    parts.push(scene.add.ellipse(0, 0, 54, 16, 0x000000, 0.3));
+    figure = creature.sprite;
+    top = FIGURE_H * 0.8;
   } else {
     const color = f.you ? COLORS.you : f.corrupted ? COLORS.corrupted : COLORS[f.side];
     parts.push(scene.add.ellipse(0, 0, RADIUS * 2.2, RADIUS * 0.7, 0x000000, 0.35));
@@ -56,7 +73,7 @@ export function makeToken(scene: Phaser.Scene, f: BattleFighter, formation: Form
   const name = scene.add.text(0, -top - 6, f.name, { ...TEXT, fontSize: '14px', color: f.you ? '#f5d06f' : '#ffffff' }).setOrigin(0.5, 1);
   parts.push(name);
   const body = scene.add.container(0, 0, parts);
-  const token: Token = { fighter: f, body, figure, hit: figure, ring, top, home: { x: figure.x, y: figure.y }, attacks: 0 };
+  const token: Token = { fighter: f, body, figure, hit: figure, ring, top, home: { x: figure.x, y: figure.y }, attacks: 0, art: creature?.art, atlas };
   place(token, formation);
   pose(token, f.downed ? 'down' : 'stance');
   refresh(token);
@@ -71,7 +88,8 @@ function place(t: Token, formation: Formation): void {
 // Plays a pose on a sprite figure. One-shot poses fall back to the stance (or stay down).
 export function pose(t: Token, name: string): void {
   if (!(t.figure instanceof Phaser.GameObjects.Sprite)) return;
-  const key = animKey(atlasKey, `${name}_${view(t.fighter)}`);
+  if (t.art) return creaturePose(t.figure, t.art, name, !!t.wounded && !t.fighter.downed);
+  const key = animKey(t.atlas ?? atlasKey, `${name}_${view(t.fighter)}`);
   if (!t.figure.scene.anims.exists(key)) return;
   const sprite = t.figure;
   sprite.off(Phaser.Animations.Events.ANIMATION_COMPLETE);
@@ -89,8 +107,9 @@ export function refresh(t: Token): void {
 export function setWord(scene: Phaser.Scene, t: Token, resource: 'hp' | 'stamina' | 'mana', word: Word): void {
   if (resource !== 'hp' && !t.fighter[resource]) return;
   t.fighter[resource] = word;
-  if (!word.text || t.fighter.downed) return;
   const dying = resource === 'hp' && word.tier <= DYING_TIER;
+  if (resource === 'hp') t.wounded = dying;
+  if (!word.text || t.fighter.downed) return;
   rise(scene, t, word.text, { fontSize: dying ? '16px' : '13px', color: dying ? '#ff7a6a' : '#e8e0cc' }, 1800, 18);
   if (dying) pose(t, 'stagger');
 }

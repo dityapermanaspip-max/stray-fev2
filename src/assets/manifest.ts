@@ -48,3 +48,15 @@ export const buildingAssets = (style: string) => ({
   image: `${BUILDING_DIR}/${style}/${style}_atlas.png`,
   atlas: `${BUILDING_DIR}/${style}/${style}.json`,
 });
+
+// Foe art for the battle board: 8 frames per look (`npm run comfy:creature`), copied to public/assets/battle/creatures/<look>[_corrupted]/.
+// A look not listed keeps the coloured token; a corrupted foe without its own frames wears the normal ones, tinted.
+const CREATURE_DIR = 'assets/battle/creatures';
+export const CREATURE_FRAMES = ['idle_1', 'idle_2', 'attack_1', 'attack_2', 'hit_1', 'hit_2', 'wounded', 'dead'] as const;
+export const CREATURE_LOOKS = ['chicken', 'lizard', 'cat'];
+export const CREATURE_CORRUPTED_LOOKS: string[] = ['chicken', 'lizard', 'cat'];
+export const creatureAssets = (look: string, corrupted: boolean) => {
+  const own = corrupted && CREATURE_CORRUPTED_LOOKS.includes(look);
+  const name = own ? `${look}_corrupted` : look;
+  return { id: name, tint: corrupted && !own, frames: CREATURE_FRAMES.map((f) => ({ key: `creature_${name}_${f}`, path: `${CREATURE_DIR}/${name}/${f}.png`, frame: f })) };
+};

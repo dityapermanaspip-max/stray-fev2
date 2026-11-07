@@ -1,0 +1,262 @@
+{
+ "size": 256,
+ "columns": 8,
+ "tiles": [
+  {
+   "key": "leaves_a",
+   "cell": 0
+  },
+  {
+   "key": "leaves_b",
+   "cell": 1
+  },
+  {
+   "key": "leaves_c",
+   "cell": 2
+  },
+  {
+   "key": "leaves_d",
+   "cell": 3
+  },
+  {
+   "key": "moss_a",
+   "cell": 4
+  },
+  {
+   "key": "moss_b",
+   "cell": 5
+  },
+  {
+   "key": "needles",
+   "cell": 6
+  },
+  {
+   "key": "forest_grass",
+   "cell": 7
+  },
+  {
+   "key": "roots_flat",
+   "cell": 8
+  },
+  {
+   "key": "fern_ground",
+   "cell": 9
+  },
+  {
+   "key": "mushrooms_small",
+   "cell": 10
+  },
+  {
+   "key": "acorns",
+   "cell": 11
+  },
+  {
+   "key": "stones_mossy",
+   "cell": 12
+  },
+  {
+   "key": "bark_bits",
+   "cell": 13
+  },
+  {
+   "key": "violets",
+   "cell": 14
+  },
+  {
+   "key": "clover_shade",
+   "cell": 15
+  },
+  {
+   "key": "soil_dark",
+   "cell": 16
+  },
+  {
+   "key": "soil_rich",
+   "cell": 17
+  },
+  {
+   "key": "mud_a",
+   "cell": 18
+  },
+  {
+   "key": "mud_b",
+   "cell": 19
+  },
+  {
+   "key": "puddle_forest",
+   "cell": 20
+  },
+  {
+   "key": "clay_brown",
+   "cell": 21
+  },
+  {
+   "key": "peat",
+   "cell": 22
+  },
+  {
+   "key": "wet_leaves",
+   "cell": 23
+  },
+  {
+   "key": "flag_mossy",
+   "cell": 24
+  },
+  {
+   "key": "cobble_mossy",
+   "cell": 25
+  },
+  {
+   "key": "paving_roots",
+   "cell": 26
+  },
+  {
+   "key": "slab_moss",
+   "cell": 27
+  },
+  {
+   "key": "rubble_moss",
+   "cell": 28
+  },
+  {
+   "key": "tiles_ancient",
+   "cell": 29
+  },
+  {
+   "key": "streambed",
+   "cell": 30
+  },
+  {
+   "key": "rock_flat_moss",
+   "cell": 31
+  },
+  {
+   "key": "gs_edge_bl",
+   "cell": 32
+  },
+  {
+   "key": "gs_edge_br",
+   "cell": 33
+  },
+  {
+   "key": "gs_edge_tl",
+   "cell": 34
+  },
+  {
+   "key": "gs_edge_tr",
+   "cell": 35
+  },
+  {
+   "key": "gs_corner_b",
+   "cell": 36
+  },
+  {
+   "key": "gs_corner_t",
+   "cell": 37
+  },
+  {
+   "key": "gs_corner_l",
+   "cell": 38
+  },
+  {
+   "key": "gs_corner_r",
+   "cell": 39
+  },
+  {
+   "key": "ft_straight_x",
+   "cell": 40
+  },
+  {
+   "key": "ft_straight_y",
+   "cell": 41
+  },
+  {
+   "key": "ft_corner_t",
+   "cell": 42
+  },
+  {
+   "key": "ft_corner_r",
+   "cell": 43
+  },
+  {
+   "key": "ft_corner_b",
+   "cell": 44
+  },
+  {
+   "key": "ft_corner_l",
+   "cell": 45
+  },
+  {
+   "key": "ft_cross",
+   "cell": 46
+  },
+  {
+   "key": "ft_end",
+   "cell": 47
+  },
+  {
+   "key": "mp_straight_x",
+   "cell": 48
+  },
+  {
+   "key": "mp_straight_y",
+   "cell": 49
+  },
+  {
+   "key": "mp_corner_t",
+   "cell": 50
+  },
+  {
+   "key": "mp_corner_r",
+   "cell": 51
+  },
+  {
+   "key": "mp_corner_b",
+   "cell": 52
+  },
+  {
+   "key": "mp_corner_l",
+   "cell": 53
+  },
+  {
+   "key": "mp_cross",
+   "cell": 54
+  },
+  {
+   "key": "mp_end",
+   "cell": 55
+  },
+  {
+   "key": "bw_straight_x",
+   "cell": 56
+  },
+  {
+   "key": "bw_straight_y",
+   "cell": 57
+  },
+  {
+   "key": "bw_cross",
+   "cell": 58
+  },
+  {
+   "key": "bw_end",
+   "cell": 59
+  },
+  {
+   "key": "mud_reeds",
+   "cell": 60
+  },
+  {
+   "key": "shallows",
+   "cell": 61
+  },
+  {
+   "key": "lily_mud",
+   "cell": 62
+  },
+  {
+   "key": "wet_moss",
+   "cell": 63
+  }
+ ]
+}

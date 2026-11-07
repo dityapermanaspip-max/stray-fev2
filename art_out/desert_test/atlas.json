@@ -1,0 +1,262 @@
+{
+ "size": 256,
+ "columns": 8,
+ "tiles": [
+  {
+   "key": "sand_a",
+   "cell": 0
+  },
+  {
+   "key": "sand_b",
+   "cell": 1
+  },
+  {
+   "key": "sand_c",
+   "cell": 2
+  },
+  {
+   "key": "sand_d",
+   "cell": 3
+  },
+  {
+   "key": "sand_fine",
+   "cell": 4
+  },
+  {
+   "key": "sand_ripples",
+   "cell": 5
+  },
+  {
+   "key": "sand_red",
+   "cell": 6
+  },
+  {
+   "key": "sand_pale",
+   "cell": 7
+  },
+  {
+   "key": "sand_pebbles",
+   "cell": 8
+  },
+  {
+   "key": "sand_rocks",
+   "cell": 9
+  },
+  {
+   "key": "sand_prints",
+   "cell": 10
+  },
+  {
+   "key": "sand_bones",
+   "cell": 11
+  },
+  {
+   "key": "sand_scrub",
+   "cell": 12
+  },
+  {
+   "key": "sand_streaks",
+   "cell": 13
+  },
+  {
+   "key": "sand_dark",
+   "cell": 14
+  },
+  {
+   "key": "sand_shells",
+   "cell": 15
+  },
+  {
+   "key": "cracked_a",
+   "cell": 16
+  },
+  {
+   "key": "cracked_b",
+   "cell": 17
+  },
+  {
+   "key": "salt_crust",
+   "cell": 18
+  },
+  {
+   "key": "hardpan_red",
+   "cell": 19
+  },
+  {
+   "key": "hardpan_pebbles",
+   "cell": 20
+  },
+  {
+   "key": "gravel",
+   "cell": 21
+  },
+  {
+   "key": "clay_orange",
+   "cell": 22
+  },
+  {
+   "key": "salt_flat",
+   "cell": 23
+  },
+  {
+   "key": "slab_sandstone",
+   "cell": 24
+  },
+  {
+   "key": "slab_cracked",
+   "cell": 25
+  },
+  {
+   "key": "rocky_ground",
+   "cell": 26
+  },
+  {
+   "key": "rock_red",
+   "cell": 27
+  },
+  {
+   "key": "basalt_gravel",
+   "cell": 28
+  },
+  {
+   "key": "sandstone_stripes",
+   "cell": 29
+  },
+  {
+   "key": "cobbles_scattered",
+   "cell": 30
+  },
+  {
+   "key": "ruin_paving",
+   "cell": 31
+  },
+  {
+   "key": "se_edge_bl",
+   "cell": 32
+  },
+  {
+   "key": "se_edge_br",
+   "cell": 33
+  },
+  {
+   "key": "se_edge_tl",
+   "cell": 34
+  },
+  {
+   "key": "se_edge_tr",
+   "cell": 35
+  },
+  {
+   "key": "se_corner_b",
+   "cell": 36
+  },
+  {
+   "key": "se_corner_t",
+   "cell": 37
+  },
+  {
+   "key": "se_corner_l",
+   "cell": 38
+  },
+  {
+   "key": "se_corner_r",
+   "cell": 39
+  },
+  {
+   "key": "tp_straight_x",
+   "cell": 40
+  },
+  {
+   "key": "tp_straight_y",
+   "cell": 41
+  },
+  {
+   "key": "tp_corner_t",
+   "cell": 42
+  },
+  {
+   "key": "tp_corner_r",
+   "cell": 43
+  },
+  {
+   "key": "tp_corner_b",
+   "cell": 44
+  },
+  {
+   "key": "tp_corner_l",
+   "cell": 45
+  },
+  {
+   "key": "tp_cross",
+   "cell": 46
+  },
+  {
+   "key": "tp_end",
+   "cell": 47
+  },
+  {
+   "key": "fp_straight_x",
+   "cell": 48
+  },
+  {
+   "key": "fp_straight_y",
+   "cell": 49
+  },
+  {
+   "key": "fp_corner_t",
+   "cell": 50
+  },
+  {
+   "key": "fp_corner_r",
+   "cell": 51
+  },
+  {
+   "key": "fp_corner_b",
+   "cell": 52
+  },
+  {
+   "key": "fp_corner_l",
+   "cell": 53
+  },
+  {
+   "key": "fp_cross",
+   "cell": 54
+  },
+  {
+   "key": "fp_end",
+   "cell": 55
+  },
+  {
+   "key": "oasis_grass",
+   "cell": 56
+  },
+  {
+   "key": "damp_sand",
+   "cell": 57
+  },
+  {
+   "key": "dune_crest",
+   "cell": 58
+  },
+  {
+   "key": "dry_grass",
+   "cell": 59
+  },
+  {
+   "key": "palm_litter",
+   "cell": 60
+  },
+  {
+   "key": "sand_clay_mix",
+   "cell": 61
+  },
+  {
+   "key": "wet_ripples",
+   "cell": 62
+  },
+  {
+   "key": "stones_stepping",
+   "cell": 63
+  }
+ ]
+}

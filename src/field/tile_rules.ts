@@ -17,6 +17,7 @@ export type UseTable = {
   markerGround: string;
   node: Record<string, string[]>; // resource node kind -> frames with the node standing on its ground
   bank: Record<string, Sided>; // water terrain -> pieces for a land tile beside it, by the side the water is on
+  shade: number | null; // colour wash on every tile of the biome (0xRRGGBB, multiplied: grey darkens), for sheets drawn too bright
   connect: string[]; // ground terrains of this biome that may wear a connector piece toward a harsher neighbour biome
 };
 
@@ -36,6 +37,7 @@ export function parseUseTable(raw: Record<string, unknown>): UseTable {
     markerGround: String(raw.marker_ground ?? ''),
     node: (raw.node as Record<string, string[]>) ?? {},
     bank: (raw.bank as Record<string, Sided>) ?? {},
+    shade: typeof raw.shade === 'string' ? parseInt(raw.shade.replace('#', ''), 16) : null,
     connect: Array.isArray(raw.connect) ? raw.connect.map(String) : [],
   };
 }

@@ -49,6 +49,7 @@ export function place(scene: Phaser.Scene, sheet: Sheet, frame: string, x: numbe
   const at = tileCenter(x, y, h);
   const img = scene.add.image(at.x, at.y, sheet.atlasKey, frame).setScale(sheet.scale).setDepth(depth);
   if (img.frame.customPivot) img.setOrigin(img.frame.pivotX, img.frame.pivotY);
+  if (sheet.table.shade !== null) img.setTint(sheet.table.shade);
 }
 
 // Draws the field's ground. Resolves once it is on screen (or right away if the scene closed while sheets loaded).
@@ -69,8 +70,10 @@ export async function drawField(scene: Phaser.Scene, view: FieldView): Promise<v
   for (const p of pairs) sheets.set(p, sheetOf(scene, p));
   const sprited: SpriteGround = new Map();
   const nodes = new Map(view.nodes.map((n) => [n.y * view.width + n.x, n.kind]));
+  const exits = new Set(view.exits.map((e) => e.y * view.width + e.x));
   for (const i of drawOrder(view)) {
     const tile = view.tiles[i];
+    if (exits.has(i)) continue; // ground.ts draws exit tiles black
     const sheet = sheets.get(tile.b);
     const look = sheet ? tileLook(sheet.table, sheet.frames, tile.b, view, i, nodes.get(i) ?? null) : null;
     if (built.has(i)) continue;

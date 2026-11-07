@@ -1,4 +1,5 @@
 {
+  "shade": "#a8a8a8",
   "about": "How the field uses this biome's sheets. Same fields as meadow/meadow.tiles.json (see its about). Objects only so far: grove is not in TILE_BIOMES until a ground sheet exists.",
   "sheets": [
     {

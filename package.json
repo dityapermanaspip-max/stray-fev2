@@ -16,6 +16,7 @@
     "tiles:catalog": "node tools/tiles/catalog.ts",
     "lora:tiles": "node tools/lora/export.ts",
     "comfy:tiles": "node tools/comfy/tileset.ts",
+    "comfy:creature": "node tools/comfy/creature/creatures.ts",
     "actors:slice": "node tools/actors/slice.ts",
     "buildings:slice": "node tools/buildings/slice.ts"
   },

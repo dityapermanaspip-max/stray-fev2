@@ -14,6 +14,7 @@ const LIGHT = 0x5d6b45;
 const DARK = 0x52603d;
 const EDGE = 0x2c3322;
 const MENU_SPACE = 230; // screen pixels under the board kept for the sentence box and the move menu
+const SIDE_SPACE = 230; // screen pixels at the left kept for the turn order and the party cards (wide screens)
 const TOP_SPACE = 110; // screen pixels over the far row for the foes' figures
 
 export type Side = 'party' | 'enemy';
@@ -53,9 +54,10 @@ export function fitBoard(scene: Phaser.Scene): void {
   const { width, height } = scene.scale;
   const left = tileCenter(0, BOARD.rows - 1, 0).x - TILE_W / 2, right = tileCenter(BOARD.cols - 1, 0, 0).x + TILE_W / 2;
   const top = -TILE_H / 2 - TOP_SPACE, bottom = tileCenter(BOARD.cols - 1, BOARD.rows - 1, 0).y + TILE_H / 2;
-  const zoom = Math.min(width / (right - left + 32), Math.max(120, height - MENU_SPACE) / (bottom - top));
+  const side = width > 760 ? SIDE_SPACE : 0;
+  const zoom = Math.min((width - side) / (right - left + 32), Math.max(120, height - MENU_SPACE) / (bottom - top));
   const cam = scene.cameras.main.setZoom(zoom);
   // Keep the board's middle in the middle of the space above the menu.
   const shift = MENU_SPACE / 2 / zoom;
-  cam.centerOn((left + right) / 2, (top + bottom) / 2 + shift);
+  cam.centerOn((left + right) / 2 - side / 2 / zoom, (top + bottom) / 2 + shift);
 }

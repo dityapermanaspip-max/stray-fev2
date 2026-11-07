@@ -1,11 +1,12 @@
 import Phaser from 'phaser';
 import type { Room } from '@colyseus/sdk';
 import type {
-  ActRequest, AutoRequest, BattleEventView, BattleLine, BattleMoveView, BattleResultView, BattleView,
+  ActRequest, AutoRequest, SetTargetRequest, BattleEventView, BattleLine, BattleGearView, BattleMoveView, BattleResultView, BattleView,
 } from '../../../stray-bev1/shared/battle.ts';
 import { drawBoard, fitBoard } from '../battle/board.ts';
 import { cheer, counter, dodge, fall, floatNumber, jolt, layout, lunge, makeToken, moveTo, pose, setWord, type Token } from '../battle/fighters.ts';
 import { loadActors } from '../field/actor.ts';
+import { loadCreatures } from '../battle/creature_art.ts';
 import { BattleOverlay } from '../battle/overlay.ts';
 import { SceneKeys } from '../keys.ts';
 import { joinBattle, type Seat } from '../net/game_net.ts';
@@ -24,8 +25,9 @@ export class BattleScene extends Phaser.Scene {
   private view?: BattleView;
   private tokens = new Map<string, Token>();
   private overlay?: BattleOverlay;
-  private choosing: BattleMoveView | null = null;
-  private aim: string | null = null; // the target the keyboard points at while choosing
+  private lastMove: string | null = null;
+  private wantGear = false; // the menu asked for the gear list
+  private lock: string | null = null; // the remembered foe target (the server keeps the real one)
   private queued: string | null = null;
   private ready = false;
   private finished = false;
@@ -39,8 +41,8 @@ export class BattleScene extends Phaser.Scene {
     this.view = undefined;
     this.tokens = new Map();
     this.overlay = undefined;
-    this.choosing = null;
-    this.aim = null;
+    this.lastMove = null;
+    this.lock = null;
     this.queued = null;
     this.ready = false;
     this.finished = false;
@@ -61,14 +63,18 @@ export class BattleScene extends Phaser.Scene {
       if (!this.scene.isActive()) return void room.leave();
       this.room = room;
       this.view = view;
+      await loadActors(this, view.fighters.flatMap((f) => (f.figure ? [f.figure.sheet] : []))); // vices and the boss
       await drawBoard(this, view.ground);
+      await loadCreatures(this, view.fighters);
       for (const f of view.fighters) this.addToken(f);
       this.relayout();
-      this.overlay = new BattleOverlay(view.moves, view.slots, { pick: (m) => this.pick(m), done: () => this.toField(), auto: (on) => this.setAuto(on) });
+      this.overlay = new BattleOverlay(view.moves, view.slots, { pick: (m) => this.pick(m), done: () => this.toField(), auto: (on) => this.setAuto(on), flee: () => this.room?.send('flee'), menu: () => { this.wantGear = true; this.room?.send('gear_view'); }, wear: (ref) => this.room?.send('gear', { wear: ref }), remove: (slot) => this.room?.send('gear', { remove: slot }) });
+      this.overlay.setParty(view.fighters);
       this.updateReach();
       this.ready = view.ready;
       this.mark();
       room.onMessage('events', (events: BattleEventView[]) => events.forEach((e) => this.onEvent(e)));
+      room.onMessage('gear_view', (v: BattleGearView) => { if (this.wantGear) this.overlay?.gear.show(v); this.wantGear = false; }); // the reply after a swap leaves the panel closed
       room.onMessage('line', (line: BattleLine) => line.text && this.overlay?.say(line.text, null));
       room.onMessage('result', (r: BattleResultView) => this.onResult(r));
       room.onLeave(() => {
@@ -98,82 +104,42 @@ export class BattleScene extends Phaser.Scene {
     if (this.view) layout([...this.tokens.values()], this.view.formation);
   }
 
-  // A move from the menu: moves with one target wait for a click on a fighter; the rest go at once.
+  // A move from the menu goes at once on the remembered target; the server keeps it, picks a random one when it
+  // dies, and refuses with a line if the move cannot reach it. Click a foe to change the target.
   private pick(move: BattleMoveView): void {
     if (this.finished || !this.view) return;
-    if (this.choosing?.move === move.move) return void this.setChoosing(null);
-    const you = this.view.you;
-    const firstFoe = [...this.tokens.values()].find((t) => t.fighter.side === 'enemy' && !t.fighter.downed)?.fighter.id;
-    switch (move.target) {
-      case 'self': case 'all_allies': return this.act(move.move, you);
-      case 'all_enemies': return firstFoe ? this.act(move.move, firstFoe) : undefined;
-      default: return this.setChoosing(move);
-    }
+    this.lastMove = move.move;
+    this.act(move.move);
   }
 
-  private setChoosing(move: BattleMoveView | null): void {
-    this.choosing = move;
-    const allies = move?.target === 'one_ally';
-    // A front-row move reaches the foes' back row only once their front row is down (the server checks it too).
-    const frontUp = [...this.tokens.values()].some((t) => t.fighter.side === 'enemy' && t.fighter.row === 'front' && !t.fighter.downed);
-    for (const t of this.tokens.values()) {
-      const reachable = allies || !move?.front || !frontUp || t.fighter.row === 'front';
-      const pickable = !!move && !t.fighter.downed && reachable && (allies ? t.fighter.side === 'party' : t.fighter.side === 'enemy');
-      t.ring.setVisible(pickable).setStrokeStyle(3, 0xffffff, 0.9);
-    }
-    this.aim = this.pickable()[0]?.fighter.id ?? null;
-    this.showAim();
-    this.mark();
-  }
-
-  private pickable(): Token[] {
-    return [...this.tokens.values()].filter((t) => t.ring.visible);
-  }
-
-  private showAim(): void {
-    for (const t of this.pickable()) t.ring.setStrokeStyle(t.fighter.id === this.aim ? 5 : 3, t.fighter.id === this.aim ? 0xf5d06f : 0xffffff, 0.9);
-  }
-
-  // While a move waits for a target: arrows or Tab move the aim, Enter or Space uses it, Esc puts the move back.
-  // The move keys 1-8 are the overlay's.
+  // Enter or Space repeats the last move.
   private onKey = (e: KeyboardEvent) => {
-    if (!this.choosing) return;
-    const all = this.pickable();
-    const i = all.findIndex((t) => t.fighter.id === this.aim);
-    switch (e.code) {
-      case 'ArrowRight': case 'ArrowDown': case 'Tab': case 'KeyD': case 'KeyS':
-        e.preventDefault();
-        this.aim = all[(i + 1) % all.length]?.fighter.id ?? null;
-        return this.showAim();
-      case 'ArrowLeft': case 'ArrowUp': case 'KeyA': case 'KeyW':
-        e.preventDefault();
-        this.aim = all[(i - 1 + all.length) % all.length]?.fighter.id ?? null;
-        return this.showAim();
-      case 'Enter': case 'Space': {
-        e.preventDefault();
-        const t = all[i];
-        if (t) this.target(t);
-        return;
-      }
-      case 'Escape': return this.setChoosing(null);
-    }
+    if ((e.code !== 'Enter' && e.code !== 'Space') || !this.lastMove || this.finished || !this.ready) return;
+    e.preventDefault();
+    this.act(this.lastMove);
   };
 
   private target(t: Token): void {
-    if (!this.choosing || !t.ring.visible) return;
-    const move = this.choosing.move;
-    this.setChoosing(null);
-    this.act(move, t.fighter.id);
+    if (this.finished || t.fighter.downed || t.fighter.side !== 'enemy') return;
+    this.showLock(t.fighter.id);
+    this.room?.send('set_target', { target: t.fighter.id } satisfies SetTargetRequest);
+  }
+
+  private showLock(id: string): void {
+    this.lock = id;
+    for (const t of this.tokens.values()) {
+      if (t.fighter.side !== 'enemy') continue;
+      t.ring.setVisible(t.fighter.id === id && !t.fighter.downed).setStrokeStyle(4, 0xf5d06f, 0.9);
+    }
   }
 
   // The dice: the server fights for the party leader by the AI's rule while it is on.
   private setAuto(on: boolean): void {
-    this.setChoosing(null);
     this.room?.send('auto', { on } satisfies AutoRequest);
   }
 
-  private act(move: string, target: string): void {
-    const msg: ActRequest = { move, target };
+  private act(move: string): void {
+    const msg: ActRequest = { move };
     this.room?.send('act', msg);
     this.queued = move; // the server answers with a line if it refuses; the 'use' event clears it
     this.ready = false;
@@ -181,9 +147,9 @@ export class BattleScene extends Phaser.Scene {
   }
 
   private mark(): void {
-    this.overlay?.mark({ ready: this.ready, choosing: this.choosing?.move ?? null, queued: this.queued });
+    this.overlay?.mark({ ready: this.ready, choosing: null, queued: this.queued });
     const me = this.view && this.tokens.get(this.view.you);
-    if (me && !this.choosing) me.ring.setVisible(this.ready).setStrokeStyle(3, 0xf5d06f, 1);
+    if (me) me.ring.setVisible(this.ready).setStrokeStyle(3, 0xf5d06f, 1);
   }
 
   private onEvent(e: BattleEventView): void {
@@ -203,12 +169,13 @@ export class BattleScene extends Phaser.Scene {
       case 'interrupt': { const t = at(e.entity); if (t) { jolt(this, t, 8); pose(t, 'stagger'); } break; }
       case 'counter': { const t = at(e.entity); if (t) counter(this, t); break; }
       case 'line': this.overlay?.say(e.text, nameOf(e.entity)); break;
-      case 'tier': { const t = at(e.entity); if (t) setWord(this, t, e.resource, e.word); break; }
+      case 'tier': { const t = at(e.entity); if (t) setWord(this, t, e.resource, e.word); this.overlay?.refreshParty(); break; }
       case 'downed': {
         const t = at(e.entity);
         if (t) {
           fall(t);
           this.updateReach();
+          this.overlay?.refreshParty();
         }
         break;
       }
@@ -220,7 +187,9 @@ export class BattleScene extends Phaser.Scene {
       }
       case 'learned': this.overlay?.say(`✦ ${e.name}`, null); break;
       case 'ready': this.ready = true; this.mark(); break;
-      case 'end': this.finished = true; this.setChoosing(null); this.overlay?.lock(); break;
+      case 'lock': if (e.entity === this.view?.you && at(e.target)?.fighter.side === 'enemy') this.showLock(e.target); break;
+      case 'order': this.overlay?.order(e.ids.flatMap((id) => at(id)?.fighter ?? []).filter((f) => !f.downed)); break;
+      case 'end': this.finished = true; this.overlay?.lock(); break;
     }
   }
 
@@ -228,7 +197,7 @@ export class BattleScene extends Phaser.Scene {
     this.finished = true;
     this.ready = false;
     this.mark();
-    this.cameras.main.flash(250, r.won ? 255 : 120, r.won ? 240 : 40, r.won ? 200 : 40);
+    this.cameras.main.flash(250, r.won || r.fled ? 255 : 120, r.won || r.fled ? 240 : 40, r.won || r.fled ? 200 : 40);
     if (r.won) cheer([...this.tokens.values()]);
     this.overlay?.result(r);
   }

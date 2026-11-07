@@ -1,4 +1,6 @@
-import type { BattleMoveView, BattleResultView } from '../../../stray-bev1/shared/battle.ts';
+import type { BattleFighter, BattleMoveView, BattleResultView } from '../../../stray-bev1/shared/battle.ts';
+import { orderCard, partyCard } from './cards.ts';
+import { GearPanel } from './gear_panel.ts';
 import './battle.css';
 
 // DOM parts of the battle screen: the 8-slot move menu, the sentence box (visual novel style) and the
@@ -7,27 +9,36 @@ import './battle.css';
 const LINE_MS = 3200;
 const MAX_LINES = 3;
 
-export type OverlayHandlers = { pick: (move: BattleMoveView) => void; done: () => void; auto: (on: boolean) => void };
+export type OverlayHandlers = { pick: (move: BattleMoveView) => void; done: () => void; auto: (on: boolean) => void; flee: () => void; menu: () => void; wear: (ref: string) => void; remove: (slot: string) => void };
+
+// The move's picture, when the art exists (assets/icons/moves/<move>.png); the label shows either way.
+const icon = (move: string) => Object.assign(new Image(), { src: `assets/icons/moves/${move}.png`, alt: '', className: 'icon', onerror: (e: Event) => (e.target as HTMLElement).remove() });
 
 export class BattleOverlay {
   private root = document.createElement('div');
   private menu = document.createElement('div');
   private box = document.createElement('div');
+  private turns = document.createElement('div'); // who acts next, first to last
+  private party = document.createElement('div'); // the party's cards, bottom left
+  private members: BattleFighter[] = [];
   private buttons = new Map<string, HTMLButtonElement>();
   private front: string[] = []; // moves only usable from the front row
   private dice?: HTMLButtonElement;
   private auto = false;
+  gear: GearPanel;
 
   constructor(moves: BattleMoveView[], slots: number, private handlers: OverlayHandlers) {
     this.root.className = 'battle-ui';
     this.menu.className = 'battle-menu';
     this.box.className = 'battle-box';
+    this.turns.className = 'battle-order';
+    this.party.className = 'battle-party';
     for (let slot = 1; slot <= slots; slot++) {
       const move = moves.find((m) => m.slot === slot);
       const b = document.createElement('button');
       b.type = 'button';
-      b.innerHTML = `<span class="slot">${slot}</span>`;
-      b.append(move ? move.name : '');
+      b.innerHTML = `<span class="slot">F${slot}</span>`;
+      if (move) b.append(icon(move.move), Object.assign(document.createElement('span'), { className: 'label', textContent: move.name }));
       b.disabled = !move;
       if (move) {
         b.addEventListener('click', () => handlers.pick(move));
@@ -40,18 +51,35 @@ export class BattleOverlay {
     const dice = document.createElement('button');
     dice.type = 'button';
     dice.className = 'auto-button';
-    dice.textContent = '🎲';
+    dice.textContent = 'AUTO-BATTLE';
     dice.addEventListener('click', () => this.toggleAuto());
     this.menu.append(dice);
+    // Flee: the whole party tries to run (one roll on the server; it answers with a line when it fails).
+    const flee = document.createElement('button');
+    flee.type = 'button';
+    flee.className = 'flee-button';
+    flee.textContent = 'FLEE';
+    flee.addEventListener('click', () => handlers.flee());
+    this.menu.append(flee);
+    // Menu: change the weapon or the thrown things in hand (costs the turn).
+    const menu = document.createElement('button');
+    menu.type = 'button';
+    menu.className = 'menu-button';
+    menu.textContent = 'MENU';
+    menu.addEventListener('click', () => this.gear.toggleWith(handlers.menu));
+    this.menu.append(menu);
     this.dice = dice;
-    this.root.append(this.box, this.menu);
+    this.root.append(this.turns, this.party, this.box, this.menu);
+    this.gear = new GearPanel(this.root, { wear: handlers.wear, remove: handlers.remove });
     document.body.append(this.root);
     window.addEventListener('keydown', this.onKey);
   }
 
   private onKey = (e: KeyboardEvent) => {
     if (e.key === 'r' || e.key === 'R') return this.toggleAuto();
-    const slot = Number(e.key);
+    const fkey = /^F([1-8])$/.exec(e.key);
+    if (fkey) e.preventDefault(); // F1 to F8 are the move slots
+    const slot = Number(fkey ? fkey[1] : e.key);
     if (!Number.isInteger(slot) || slot < 1) return;
     this.menu.children[slot - 1]?.dispatchEvent(new MouseEvent('click'));
   };
@@ -71,6 +99,22 @@ export class BattleOverlay {
       b.classList.toggle('choosing', move === state.choosing);
       b.classList.toggle('queued', move === state.queued);
     }
+  }
+
+  // The turn-order list: names in the order the server sends (no gauge, no speed).
+  order(fighters: BattleFighter[]): void {
+    this.turns.replaceChildren(...fighters.map(orderCard));
+    this.turns.firstElementChild?.classList.add('active');
+  }
+
+  // The party cards (the fighters are the scene's own objects: tiers and downs show on the next call).
+  setParty(fighters: BattleFighter[]): void {
+    this.members = fighters.filter((f) => f.side === 'party');
+    this.refreshParty();
+  }
+
+  refreshParty(): void {
+    this.party.replaceChildren(...this.members.map(partyCard));
   }
 
   // Greys the front-row-only moves while the player stands in the back row.
@@ -99,7 +143,7 @@ export class BattleOverlay {
   result(r: BattleResultView): void {
     this.lock();
     const panel = document.createElement('div');
-    panel.className = `battle-result ${r.won ? 'won' : 'lost'}`;
+    panel.className = `battle-result ${r.won ? 'won' : r.fled ? 'fled' : 'lost'}`;
     for (const line of r.lines) {
       const p = document.createElement('p');
       p.textContent = line;

@@ -1,22 +1,43 @@
 /* Battle screen DOM overlay (placeholder look). */
 .battle-ui { position: fixed; inset: 0; pointer-events: none; font: 16px Georgia, serif; color: #f2ead8; }
+/* Turn order (left column) and the party's cards (bottom left): a face, a name, body words. No bars, no numbers. */
+.battle-order { position: absolute; top: 12px; left: 12px; width: 206px; display: flex; flex-direction: column; gap: 4px; max-height: calc(100% - 300px); overflow: hidden; }
+.battle-party { position: absolute; left: 12px; bottom: 12px; width: 232px; display: flex; flex-direction: column; gap: 6px; }
+.card { display: flex; align-items: center; gap: 8px; padding: 4px 8px 4px 4px; background: #14181cd9; border: 1px solid #4a4538; border-radius: 6px; min-width: 0; }
+.card .name { font-size: 15px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.card.you .name { color: #f5d06f; }
+.card.enemy .name { color: #e8c0b8; }
+.card.active { border-color: #f5d06f; background: #2a2616e6; }
+.card .text { display: flex; flex-direction: column; min-width: 0; }
+.card .words { font-size: 12px; color: #b8b09c; font-style: italic; }
+.card.downed { opacity: 0.5; }
+.face { width: 44px; height: 44px; flex: none; overflow: hidden; border: 2px solid #5a5240; border-radius: 4px; background: #0d1014; display: flex; justify-content: center; align-items: flex-start; }
+.face .figure { flex: none; }
+.face img { width: 100%; height: 100%; object-fit: contain; }
+.face img.tinted { filter: hue-rotate(250deg) saturate(0.8) brightness(0.8); }
+.face .dot { width: 22px; height: 22px; margin-top: 10px; border-radius: 50%; background: #d98c6a; }
+.face .dot.corrupted { background: #8e5bb5; }
 .battle-box {
-  position: absolute; left: 50%; bottom: 128px; transform: translateX(-50%); width: min(640px, calc(100% - 32px));
+  position: absolute; left: 50%; top: 12px; transform: translateX(-50%); width: min(520px, calc(100% - 520px));
   display: flex; flex-direction: column; gap: 4px;
 }
 .battle-box p { margin: 0; padding: 8px 14px; background: #000000b3; border-radius: 6px; transition: opacity 0.6s; }
 .battle-box p.old { opacity: 0.45; }
 .battle-box b { color: #f5d06f; font-weight: normal; }
 .battle-menu {
-  position: absolute; left: 50%; bottom: 16px; transform: translateX(-50%); width: min(760px, calc(100% - 32px));
+  position: absolute; right: 12px; bottom: 12px; width: min(500px, calc(100% - 270px)); padding: 8px; box-sizing: border-box;
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; pointer-events: auto;
+  background: #1a1510e6; border: 2px solid #6b5a3a; border-radius: 8px;
 }
 .battle-menu button {
-  font: 15px Georgia, serif; color: #f2ead8; background: #15181c; border: 1px solid #4a4a4a; border-radius: 6px;
-  padding: 8px 10px; min-height: 44px; text-align: left; cursor: pointer; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  position: relative; font: 12px Georgia, serif; color: #f2ead8; background: #15181c; border: 1px solid #4a4a4a; border-radius: 6px;
+  padding: 4px; min-height: 66px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+  cursor: pointer; overflow: hidden;
 }
+.battle-menu .icon { width: 36px; height: 36px; object-fit: contain; }
+.battle-menu .label { max-width: 100%; text-align: center; line-height: 1.1; font-size: 12px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
 .battle-menu button:disabled { opacity: 0.35; cursor: default; }
-.battle-menu .slot { color: #8f8a7c; margin-right: 6px; font-size: 12px; }
+.battle-menu .slot { position: absolute; top: 2px; left: 4px; color: #a09a88; font-size: 10px; }
 .battle-menu.ready button:not(:disabled) { border-color: #f5d06f; }
 .battle-menu button.choosing { background: #3a3220; border-color: #f5d06f; }
 .battle-menu button.queued { background: #1f2e22; border-color: #7ee08a; }
@@ -27,14 +48,31 @@
 }
 .battle-result.won { border-color: #7ea86a; }
 .battle-result.lost { border-color: #a8584a; }
+.battle-result.fled { border-color: #a8a070; }
 .battle-result p { margin: 0 0 8px; }
 .battle-result ul { margin: 4px 0 12px; padding-left: 20px; color: #e8e0cc; }
 .battle-result button {
   font: 18px Georgia, serif; color: #f2ead8; background: #15181c; border: 1px solid #4a4a4a; border-radius: 6px;
   padding: 6px 18px; cursor: pointer; float: right;
 }
-@media (max-width: 520px) { .battle-menu { grid-template-columns: repeat(2, 1fr); } .battle-box { bottom: 236px; } }
+@media (max-width: 760px) {
+  .battle-order { width: 52px; } .battle-order .name { display: none; } .battle-order .card { padding: 4px; }
+  .battle-party { width: 52px; } .battle-party .text { display: none; } .battle-party .card { padding: 4px; }
+  .battle-menu { width: calc(100% - 80px); } .battle-box { width: calc(100% - 100px); left: 62px; transform: none; }
+}
 /* The dice button: fight on its own. While it is on, the move slots stand back. */
-.battle-menu .auto-button { grid-column: 1 / -1; text-align: center; min-height: 34px; }
+.battle-menu .auto-button { grid-column: 1 / 3; min-height: 34px; font-size: 14px; letter-spacing: 1px; color: #cfe0ff; background: #1d2d52; border-color: #4a6aa8; }
 .battle-menu .auto-button.on { border-color: #f5d06f; background: #3a3220; }
-.battle-menu.auto button:not(.auto-button) { opacity: 0.35; pointer-events: none; }
+.battle-menu.auto button:not(.auto-button):not(.flee-button) { opacity: 0.35; pointer-events: none; }
+
+.battle-menu .flee-button { min-height: 34px; font-size: 14px; letter-spacing: 1px; color: #ffe3c4; background: #5a3416; border-color: #a8703a; }
+
+.battle-menu .menu-button { min-height: 34px; font-size: 14px; letter-spacing: 1px; color: #d8f0d0; background: #1f3a22; border-color: #5a8a50; }
+.battle-gear {
+  position: absolute; right: 12px; bottom: 210px; width: min(320px, calc(100% - 270px)); padding: 8px; box-sizing: border-box;
+  display: flex; flex-direction: column; gap: 4px; background: #1a1510f2; border: 2px solid #6b5a3a; border-radius: 8px; pointer-events: auto;
+}
+.battle-gear[hidden] { display: none; }
+.battle-gear .held { margin: 0 0 4px; font-style: italic; color: #cfc6ae; }
+.battle-gear button { font: 14px Georgia, serif; text-align: left; color: #f2ead8; background: #15181c; border: 1px solid #4a4a4a; border-radius: 6px; padding: 8px 10px; cursor: pointer; }
+.battle-gear button.on { border-color: #f5d06f; background: #3a3220; }

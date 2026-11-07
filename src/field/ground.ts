@@ -22,13 +22,13 @@ const COLORS: Record<string, number> = {
   wet_sand: 0xbfa877, shingle: 0x9b958a, driftwood: 0x8f7a5e, dune_grass: 0x9fb06a, sea: 0x2f6c9e,
   // rooms (shop, inn, training ground), camp and cave
   floor_wood: 0x9a7048, floor_sand: 0xd2b98a, wall_wood: 0x6b4a32, shelf: 0x7a5538, counter: 0x8a5f3c, hearth: 0x5a4a44,
-  table: 0x8d6540, rack: 0x6e5a42, dummy: 0xb89b62, camp_ground: 0x7d8a52, camp_trees: 0x2a5a33, campfire: 0xe0762c, log: 0x74552f,
+  table: 0x8d6540, rack: 0x6e5a42, dummy: 0xb89b62, camp_ground: 0x7d8a52, camp_trees: 0x2a5a33, campfire: 0xe0762c, log: 0x74552f, bed: 0xa5594a,
   cave_floor: 0x59524e, cave_wall: 0x2e2a2c, stalagmite: 0x6d6560,
 };
 // Blocked terrains drawn as raised blocks (height levels above the floor): walls, furniture. No cone on top.
 const RAISED: Record<string, number> = {
   wall_wood: 2.5, cave_wall: 2.5, camp_trees: 2, shelf: 1.6, hearth: 1.4, counter: 0.9, table: 0.8, rack: 1.4, dummy: 1.2,
-  campfire: 0.4, log: 0.5, stalagmite: 1.4,
+  campfire: 0.4, log: 0.5, bed: 0.4, stalagmite: 1.4,
 };
 const BUILDING_LIFT = 2.5; // height levels a building block stands above its tile (drawing only)
 const FLAT_OBSTACLES = new Set(['water', 'swamp', 'building', 'frozen_lake', 'lava', 'sea', ...Object.keys(RAISED)]); // blocked, but no cone
@@ -36,7 +36,7 @@ const FALLBACK = 0x999999;
 
 // Tiles already drawn from a tile sheet; marker = keep the obstacle mark on top, node = the sprite shows the node.
 export type SpriteGround = Map<number, { marker: boolean; node: boolean }>;
-const EXIT_COLOR = 0xf2e7c4;
+const EXIT_COLOR = 0x000000; // exit tiles (3 wide) are plain black: no sprite, no ring
 // Corners of a tile's top face in grid offsets and screen offsets: top, right, bottom, left.
 const CORNERS = [
   { gx: -0.5, gy: -0.5, sx: 0, sy: -TILE_H / 2 },
@@ -87,7 +87,7 @@ function drawTile(
   g: Phaser.GameObjects.Graphics, x: number, y: number, tile: FieldTileView, exit: boolean, node: string | null,
   sprite?: { marker: boolean; node: boolean },
 ): void {
-  const color = COLORS[tile.t] ?? FALLBACK;
+  const color = exit ? EXIT_COLOR : COLORS[tile.t] ?? FALLBACK;
   if (sprite) return drawMarks(g, tileCenter(x, y, surfaceHeight(tile)), tile, exit, sprite.node ? null : node, sprite.marker);
   const base = tileCenter(x, y, 0);
   const heights = cornerHeights(tile);
@@ -106,7 +106,7 @@ function drawTile(
   drawMarks(g, tileCenter(x, y, surfaceHeight(tile)), tile, exit, node, !tile.w && !node && !FLAT_OBSTACLES.has(tile.t)); // a node is its own obstacle
 }
 
-// What stands on a tile: the obstacle cone, a doorstep, the exit ring, a resource node.
+// What stands on a tile: the obstacle cone, a doorstep, a resource node (an exit is the tile's own black colour).
 function drawMarks(g: Phaser.GameObjects.Graphics, mid: { x: number; y: number }, tile: FieldTileView, exit: boolean, node: string | null, cone: boolean): void {
   if (cone) {
     g.fillStyle(shade(COLORS[tile.t] ?? FALLBACK, 0.6));
@@ -115,10 +115,6 @@ function drawMarks(g: Phaser.GameObjects.Graphics, mid: { x: number; y: number }
   if (tile.door) {
     g.fillStyle(0xf2e7c4, 0.9);
     g.fillRect(mid.x - 5, mid.y - 4, 10, 6); // a lit doorstep
-  }
-  if (exit) {
-    g.lineStyle(2, EXIT_COLOR, 0.9);
-    g.strokeEllipse(mid.x, mid.y, TILE_W * 0.6, TILE_H * 0.6);
   }
   if (node) drawNode(g, mid, node);
 }
